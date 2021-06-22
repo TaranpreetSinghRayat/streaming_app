@@ -16,6 +16,8 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "tommyknocker/pdo-database-class": "dev-master"
+        "tommyknocker/pdo-database-class": "dev-master",
+        "vlucas/phpdotenv": "4.2.x-dev",
+        "phpmailer/phpmailer": "dev-master"
     }
 }

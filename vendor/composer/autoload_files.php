@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
     '4e0dc17ffaf28ec98f12a50d6e181361' => $vendorDir . '/tommyknocker/pdo-database-class/PDODb.php',
 );
