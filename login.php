@@ -12,8 +12,9 @@ include "./config/config.php";
 <?php
 $TPL = new \App\Template(TEMPLATE.'/'. \App\Settings::get_value('app.theme'));
 echo $TPL->render('include/header',[
-    'app_auth' => $_ENV['DEV'],
-    'page_title' => 'Login | '. APP_NAME
+        'page_description' => 'Please login to watch all your favorite shows and movies.',
+        'app_auth' => $_ENV['DEV'],
+        'page_title' => 'Login | '. APP_NAME
 ]);
 
 ?>
@@ -21,11 +22,13 @@ echo $TPL->render('include/header',[
 
 <!-- Body Section -->
 <?php
-
+echo $TPL->render('auth/login',[]);
 ?>
 <!-- //Body Section -->
 
 <!-- Footer Section -->
-
+<?php
+echo $TPL->render('include/footer',[]);
+?>
 <!-- //Footer Section -->
 

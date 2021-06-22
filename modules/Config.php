@@ -12,4 +12,8 @@ namespace App;
 class Config
 {
 
+    const TBL_NAMES = [
+        'SETTINGS' => 'settings',
+    ];
+
 }
