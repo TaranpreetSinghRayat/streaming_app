@@ -11,9 +11,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "modules/"
         }
     },
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "tommyknocker/pdo-database-class": "dev-master"
+    }
 }
