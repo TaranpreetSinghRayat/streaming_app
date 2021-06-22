@@ -16,5 +16,4 @@ class Config
         'SETTINGS' => 'settings',
         'USERS' => 'users'
     ];
-
 }
