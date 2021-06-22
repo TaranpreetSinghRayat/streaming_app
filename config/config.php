@@ -31,7 +31,6 @@ $pdo = new PDO("mysql:host={$_ENV['DB_HOST']};dbname={$_ENV['DB_DB']}", $_ENV['D
     \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
 ]);
 $DB = new \PDODb($pdo);
-
 /**
  * Load Settings
  */

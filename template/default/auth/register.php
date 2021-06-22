@@ -9,23 +9,23 @@
 
 <!-- register -->
 <section class="position-relative pb-0">
-    <div class="gen-register-page-background" style="background-image: url('images/background/asset-3.jpg');">
+    <div class="gen-register-page-background" style="background-image: url('<?= BASE_URL_ASSETS ?>images/background/asset-3.jpg');">
     </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center">
-                    <form id="pms_register-form" class="pms-form" method="POST">
+                    <form id="pms_register-form" class="pms-form register-form" method="POST">
                         <h4>Register</h4>
 
                         <ul class="pms-form-fields-wrapper pl-0">
                             <li class="pms-field pms-user-login-field ">
                                 <label for="pms_user_login">Username *</label>
-                                <input id="pms_user_login" name="user_login" type="text" value="">
+                                <input id="pms_user_login" name="user_name" type="text" value="" required>
                             </li>
                             <li class="pms-field pms-user-email-field ">
                                 <label for="pms_user_email">E-mail *</label>
-                                <input id="pms_user_email" name="user_email" type="text" value="">
+                                <input id="pms_user_email" name="user_email" type="email" value="" required>
                             </li>
                             <li class="pms-field pms-first-name-field ">
                                 <label for="pms_first_name">First Name</label>
@@ -37,7 +37,7 @@
                             </li>
                             <li class="pms-field pms-pass1-field">
                                 <label for="pms_pass1">Password *</label>
-                                <input id="pms_pass1" name="pass1" type="password">
+                                <input id="pms_pass1" name="pass1" type="password" required>
                             </li>
                             <li class="pms-field pms-pass2-field">
                                 <label for="pms_pass2">Repeat Password *</label>

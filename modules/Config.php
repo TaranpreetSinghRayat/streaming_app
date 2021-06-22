@@ -14,6 +14,7 @@ class Config
 
     const TBL_NAMES = [
         'SETTINGS' => 'settings',
+        'USERS' => 'users'
     ];
 
 }
