@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ajax/ajax-auth.php" afterPath="$PROJECT_DIR$/ajax/ajax-auth.php" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Config.php" afterPath="$PROJECT_DIR$/modules/Config.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Cookies.php" afterPath="$PROJECT_DIR$/modules/Cookies.php" />
-      <change beforePath="$PROJECT_DIR$/modules/MSG.php" afterPath="$PROJECT_DIR$/modules/MSG.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Mailer.php" afterPath="$PROJECT_DIR$/modules/Mailer.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Security.php" afterPath="$PROJECT_DIR$/modules/Security.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Validator.php" afterPath="$PROJECT_DIR$/modules/Validator.php" />
-      <change beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/auth/register.php" afterPath="$PROJECT_DIR$/template/default/auth/register.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/ajax/ajax-auth.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -344,12 +334,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624343902926</updated>
-      <workItem from="1624343904220" duration="19549000" />
+      <workItem from="1624343904220" duration="20189000" />
     </task>
+    <task id="LOCAL-00001" summary="register page js done&#10;new modules added">
+      <created>1624370065659</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624370065659</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19549000" />
+    <option name="totallyTimeSpent" value="20189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="0" width="974" height="1047" extended-state="0" />
@@ -633,7 +631,7 @@
     <entry file="file://$PROJECT_DIR$/ajax/ajax-auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding />
         </state>
       </provider>
