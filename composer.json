@@ -1,0 +1,19 @@
+{
+    "name": "tweekersnut/netflix",
+    "description": "Complete online streaming platform with subscriptions",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "TweekersNut Network",
+            "email": "dmin@tweekersnut.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
