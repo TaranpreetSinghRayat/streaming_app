@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/modules/Users.php" afterPath="$PROJECT_DIR$/modules/Users.php" />
-      <change beforePath="$PROJECT_DIR$/recover-password.php" afterPath="$PROJECT_DIR$/recover-password.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -317,7 +315,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624343902926</updated>
-      <workItem from="1624343904220" duration="35676000" />
+      <workItem from="1624343904220" duration="35696000" />
     </task>
     <task id="LOCAL-00001" summary="register page js done&#10;new modules added">
       <created>1624370065659</created>
@@ -347,11 +345,18 @@
       <option name="project" value="LOCAL" />
       <updated>1624451241811</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="updates">
+      <created>1624456348651</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624456348651</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35676000" />
+    <option name="totallyTimeSpent" value="35696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="0" width="1026" height="1047" extended-state="0" />
@@ -389,7 +394,8 @@
     <MESSAGE value="Sql Dump" />
     <MESSAGE value="Registration process completed with email&#10;new user module added&#10;bug fix and performance updates" />
     <MESSAGE value="recover password js event update" />
-    <option name="LAST_COMMIT_MESSAGE" value="recover password js event update" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
