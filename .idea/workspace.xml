@@ -2,34 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/css/bootstrap-toaster.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/css/bootstrap-toaster.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/css/bootstrap-toaster.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/images/avatars/default.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/js/bootstrap-toaster.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/js/bootstrap-toaster.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/helper/auth.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/modules/Users.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/recover-password.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/default/auth/recover.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/default/emails/account_active.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/tommyknocker/pdo-database-class" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ajax/ajax-auth.php" afterPath="$PROJECT_DIR$/ajax/ajax-auth.php" />
-      <change beforePath="$PROJECT_DIR$/helper/server.php" afterPath="$PROJECT_DIR$/helper/server.php" />
-      <change beforePath="$PROJECT_DIR$/modules/MSG.php" afterPath="$PROJECT_DIR$/modules/MSG.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Security.php" afterPath="$PROJECT_DIR$/modules/Security.php" />
-      <change beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/auth/register.php" afterPath="$PROJECT_DIR$/template/default/auth/register.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/include/footer.php" afterPath="$PROJECT_DIR$/template/default/include/footer.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/include/header.php" afterPath="$PROJECT_DIR$/template/default/include/header.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+      <change beforePath="$PROJECT_DIR$/recover-password.php" afterPath="$PROJECT_DIR$/recover-password.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,32 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-              <folding>
-                <element signature="e#6#78#0#PHP" expanded="true" />
-                <element signature="e#2482#3592#0#HTML" expanded="false" />
-                <element signature="e#3695#4775#0#HTML" expanded="false" />
-                <element signature="e#4886#5783#0#HTML" expanded="false" />
-                <marker date="1624449739275" expanded="true" signature="3067:3079" ph="..." />
-                <marker date="1624449739275" expanded="true" signature="3291:3301" ph="..." />
-                <marker date="1624449739275" expanded="true" signature="4204:4216" ph="..." />
-                <marker date="1624449739275" expanded="true" signature="4415:4425" ph="..." />
-                <marker date="1624449739275" expanded="true" signature="5309:5321" ph="..." />
-                <marker date="1624449739275" expanded="true" signature="5520:5530" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="recover-password.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recover-password.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+            <state relative-caret-position="629">
+              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -77,8 +30,8 @@
       <file leaf-file-name="recover.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/default/auth/recover.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="27" column="96" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="96" />
+            <state relative-caret-position="323">
+              <caret line="23" column="91" lean-forward="false" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="91" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
@@ -223,9 +176,9 @@
         <option value="$PROJECT_DIR$/template/default/include/header.php" />
         <option value="$PROJECT_DIR$/template/default/include/footer.php" />
         <option value="$PROJECT_DIR$/register.php" />
-        <option value="$PROJECT_DIR$/recover-password.php" />
         <option value="$PROJECT_DIR$/template/default/auth/recover.php" />
         <option value="$PROJECT_DIR$/template/default/auth/register.php" />
+        <option value="$PROJECT_DIR$/recover-password.php" />
       </list>
     </option>
   </component>
@@ -353,7 +306,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624343902926</updated>
-      <workItem from="1624343904220" duration="33717000" />
+      <workItem from="1624343904220" duration="34645000" />
     </task>
     <task id="LOCAL-00001" summary="register page js done&#10;new modules added">
       <created>1624370065659</created>
@@ -369,11 +322,18 @@
       <option name="project" value="LOCAL" />
       <updated>1624374049501</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Registration process completed with email&#10;new user module added&#10;bug fix and performance updates">
+      <created>1624450015688</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624450015688</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33717000" />
+    <option name="totallyTimeSpent" value="34645000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="0" width="1026" height="1047" extended-state="0" />
@@ -409,7 +369,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="register page js done&#10;new modules added" />
     <MESSAGE value="Sql Dump" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sql Dump" />
+    <MESSAGE value="Registration process completed with email&#10;new user module added&#10;bug fix and performance updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registration process completed with email&#10;new user module added&#10;bug fix and performance updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -687,36 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="e#6#78#0#PHP" expanded="true" />
-            <element signature="e#2482#3592#0#HTML" expanded="false" />
-            <element signature="e#3695#4775#0#HTML" expanded="false" />
-            <element signature="e#4886#5783#0#HTML" expanded="false" />
-            <marker date="1624449739275" expanded="true" signature="3067:3079" ph="..." />
-            <marker date="1624449739275" expanded="true" signature="3291:3301" ph="..." />
-            <marker date="1624449739275" expanded="true" signature="4204:4216" ph="..." />
-            <marker date="1624449739275" expanded="true" signature="4415:4425" ph="..." />
-            <marker date="1624449739275" expanded="true" signature="5309:5321" ph="..." />
-            <marker date="1624449739275" expanded="true" signature="5520:5530" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/default/auth/recover.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="96" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="96" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/default/auth/register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -735,10 +666,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/template/default/auth/recover.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="91" lean-forward="false" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="91" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="111" column="37" lean-forward="true" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="37" />
+          <folding>
+            <element signature="e#6#78#0#PHP" expanded="true" />
+            <element signature="e#2482#3592#0#HTML" expanded="false" />
+            <element signature="e#4886#5783#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/recover-password.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+        <state relative-caret-position="629">
+          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
           <folding />
         </state>
       </provider>
