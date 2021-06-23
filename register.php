@@ -14,7 +14,7 @@ $TPL = new \App\Template(TEMPLATE.'/'. \App\Settings::get_value('app.theme'));
 echo $TPL->render('include/header',[
     'page_description' => 'Please login to watch all your favorite shows and movies.',
     'app_auth' => $_ENV['DEV'],
-    'page_title' => 'Login | '. APP_NAME
+    'page_title' => 'Register | '. APP_NAME
 ]);
 
 ?>
@@ -37,7 +37,44 @@ echo $TPL->render('include/footer',[]);
     $(".register-form").submit((e)=>{
         e.preventDefault();
 
+        var form_data = {
+            action:'process_registration',
+            username: $('.register-form input[name=user_name]').val(),
+            email: $('.register-form input[name=user_email]').val(),
+            first_name: $('.register-form input[name=first_name]').val(),
+            last_name: $('.register-form input[name=last_name]').val(),
+            password : $('.register-form input[name=pass1]').val(),
+            confirm_password: $('.register-form input[name=pass2]').val(),
+        }
 
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-auth.php",
+            data: form_data,
+            dataType: "html",
+            beforeSend: function () {
+                $("#gen-loading").css('display', 'flex');
+            },
+            success: function (resp) {
+                console.log(resp);
+                var parsed_data = JSON.parse(resp);
+
+                if(parsed_data.status == 1){
+                    Toast.create("Success", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+                }else if(parsed_data.status == 2){
+                    Toast.create("Success", parsed_data.msg, TOAST_STATUS.INFO, 5000);
+                }else{
+                    Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+                }
+            },
+            error: function (err) {
+                console.log(err)
+            },
+            complete: function () {
+                $("#gen-loading").css('display', 'none');
+                $(".register-form")[0].reset();
+            }
+        });
     });
 
     //validate email address on the goo
@@ -56,18 +93,72 @@ echo $TPL->render('include/footer',[]);
                     console.log(resp);
                     var parsed_data = JSON.parse(resp);
                     if(parsed_data.status == 1){
-                        $('.register-form input[name=user_email]').attr('disabled','disabled');
+                        $('#user_email_txt').html("<p style='color: green'>"+ parsed_data.msg +"</p>");
+                        $('.register-form input[name=pms_register]').prop('disabled',false);
                     }else{
-                        console.log('fail')
+                        $('#user_email_txt').html("<p style='color: red'>"+ parsed_data.msg +"</p>");
+                        $('.register-form input[name=pms_register]').prop('disabled',true);
                     }
                 },
                 error: function (err) {
                     console.log(err);
-                },
-                complete: function () {
-                    console.log("Task Complete");
                 }
             });
         }
+    });
+
+    //validate username on the goo
+    $('.register-form input[name=user_name]').keyup(function () {
+        var username = $(this).val();
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-auth.php",
+            data: {action:'check_username_exists',username},
+            dataType: "html",
+            beforeSend: function () {
+
+            },
+            success: function (resp) {
+                console.log(resp);
+                var parsed_data = JSON.parse(resp);
+                if(parsed_data.status == 1){
+                    $('#user_name_txt').html("<p style='color: green'>"+ parsed_data.msg +"</p>");
+                    $('.register-form input[name=pms_register]').prop('disabled',false);
+                }else{
+                    $('#user_name_txt').html("<p style='color: red'>"+ parsed_data.msg +"</p>");
+                    $('.register-form input[name=pms_register]').prop('disabled',true);
+                }
+            },
+            error: function (err) {
+                console.log(err);
+            },
+            complete: function () {
+                console.log("Task Complete");
+            }
+        });
+    });
+    
+    //check password complexity on the goo
+    $('.register-form input[name=pass1]').keyup(function () {
+        var password = $(this).val();
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-auth.php",
+            data: {action:'check_password_strength', password},
+            dataType: "html",
+            success: function (resp) {
+                var parsed_data = JSON.parse(resp);
+                if(parsed_data.status == 1){
+                    $('#user_pass_txt').html("<p style='color: green'>"+ parsed_data.msg +"</p>");
+                    $('.register-form input[name=pms_register]').prop('disabled',false);
+                }else{
+                    $('#user_pass_txt').html("<p style='color: red'>"+ parsed_data.msg +"</p>");
+                    $('.register-form input[name=pms_register]').prop('disabled',true);
+                }
+            },
+            error: function (err) {
+                console.log(err)
+            },
+        });
     })
 </script>

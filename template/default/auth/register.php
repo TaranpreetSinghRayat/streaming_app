@@ -22,10 +22,12 @@
                             <li class="pms-field pms-user-login-field ">
                                 <label for="pms_user_login">Username *</label>
                                 <input id="pms_user_login" name="user_name" type="text" value="" required>
+                                <small id="user_name_txt" class="form-text text-muted"></small>
                             </li>
                             <li class="pms-field pms-user-email-field ">
                                 <label for="pms_user_email">E-mail *</label>
                                 <input id="pms_user_email" name="user_email" type="email" value="" required>
+                                <small id="user_email_txt" class="form-text text-muted"></small>
                             </li>
                             <li class="pms-field pms-first-name-field ">
                                 <label for="pms_first_name">First Name</label>
@@ -38,6 +40,7 @@
                             <li class="pms-field pms-pass1-field">
                                 <label for="pms_pass1">Password *</label>
                                 <input id="pms_pass1" name="pass1" type="password" required>
+                                <small id="user_pass_txt" class="form-text text-muted"></small>
                             </li>
                             <li class="pms-field pms-pass2-field">
                                 <label for="pms_pass2">Repeat Password *</label>
@@ -48,6 +51,7 @@
                         <span id="pms-submit-button-loading-placeholder-text" class="d-none">Processing. Please
                                 wait...</span>
                         <input name="pms_register" type="submit" value="Register">
+                        <a href="<?= BASE_URL ?>login.php" style="float: right;">Go Back</a>
                     </form>
                 </div>
             </div>

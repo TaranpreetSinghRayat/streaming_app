@@ -70,4 +70,10 @@ class Security
         }
     }
 
+    public static function clean($str)
+    {
+        $str = trim($str);
+        $str = htmlspecialchars($str);
+        return $str;
+    }
 }

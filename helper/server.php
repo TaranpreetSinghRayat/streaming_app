@@ -23,3 +23,12 @@ function get_ip(){
     }
     return $IP;
 }
+
+function ip_lookup($ip = null){
+    if(!is_null($ip)){
+        $user_ip = $ip;
+        $ipData = json_decode(file_get_contents("http://extreme-ip-lookup.com/json/$user_ip"));
+        return $ipData;
+    }
+    return false;
+}

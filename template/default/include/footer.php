@@ -24,6 +24,15 @@
 
 <script src="<?= BASE_URL_ASSETS ?>js/slick.min.js"></script>
 
+<!-- Bootstrap Toaster -->
+<script src="<?= BASE_URL_ASSETS ?>js/bootstrap-toaster.min.js"></script>
+<!-- Toaster Defaults -->
+<script>
+    Toast.setTheme(TOAST_THEME.DARK);
+    Toast.enableTimers(true);
+    Toast.setMaxCount(5);
+</script>
+
 <script src="<?= BASE_URL_ASSETS ?>js/streamlab-core.js"></script>
 
 <script src="<?= BASE_URL_ASSETS ?>js/script.js"></script>

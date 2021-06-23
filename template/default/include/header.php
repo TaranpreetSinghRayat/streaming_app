@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="<?= BASE_URL_ASSETS ?>css/style.css" />
     <!--  Responsive -->
     <link rel="stylesheet" href="<?= BASE_URL_ASSETS ?>css/responsive.css" />
+    <!-- Boostrap Toaster -->
+    <link rel="stylesheet" href="<?= BASE_URL_ASSETS ?>css/bootstrap-toaster.min.css" />
 </head>
 
 <body>
