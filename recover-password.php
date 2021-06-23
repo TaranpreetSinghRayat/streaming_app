@@ -39,7 +39,8 @@ echo $TPL->render('include/footer',[]);
 
     //check if username or email exists on record on the goo
     $('#pms_recover_password_form input[name=pms_username_email]').keyup(function () {
-        console.log($(this).val());
+        var user = $(this).val();
+
     })
 </script>
 
