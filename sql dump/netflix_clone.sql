@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2021 at 04:59 PM
+-- Generation Time: Jun 24, 2021 at 04:19 PM
 -- Server version: 5.7.18-log
 -- PHP Version: 7.1.1
 
@@ -68,8 +68,17 @@ CREATE TABLE `users` (
   `last_login` datetime DEFAULT NULL,
   `account_key` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `is_subscribed` char(1) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
+  `role` char(1) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
+  `ip` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `status` char(1) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`, `password`, `created_at`, `avatar`, `last_login`, `account_key`, `is_subscribed`, `role`, `ip`, `status`) VALUES
+(3, 'fear126', 'fear126@live.com', 'Faer', 'Fear', 'c2RBbDgwSjNFbmkrUlI2UG1JMGh6dz09', '2021-06-23 11:43:11', 'http://netflix.local//assets/default/images/avatars/default.png', '2021-06-23 13:43:11', '60d45173e4088', '0', '0', '127.0.0.1', '1');
 
 --
 -- Indexes for dumped tables
@@ -100,7 +109,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

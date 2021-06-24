@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/home.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ajax/ajax-auth.php" afterPath="$PROJECT_DIR$/ajax/ajax-auth.php" />
-      <change beforePath="$PROJECT_DIR$/assets/default/js/script.js" afterPath="$PROJECT_DIR$/assets/default/js/script.js" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Cookies.php" afterPath="$PROJECT_DIR$/modules/Cookies.php" />
-      <change beforePath="$PROJECT_DIR$/modules/MSG.php" afterPath="$PROJECT_DIR$/modules/MSG.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Users.php" afterPath="$PROJECT_DIR$/modules/Users.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/auth/login.php" afterPath="$PROJECT_DIR$/template/default/auth/login.php" />
+      <change beforePath="$PROJECT_DIR$/sql dump/netflix_clone.sql" afterPath="$PROJECT_DIR$/sql dump/netflix_clone.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -339,7 +331,7 @@
       <updated>1624343902926</updated>
       <workItem from="1624343904220" duration="41293000" />
       <workItem from="1624522486478" duration="1358000" />
-      <workItem from="1624524245586" duration="13527000" />
+      <workItem from="1624524245586" duration="13640000" />
     </task>
     <task id="LOCAL-00001" summary="register page js done&#10;new modules added">
       <created>1624370065659</created>
@@ -390,11 +382,18 @@
       <option name="project" value="LOCAL" />
       <updated>1624528309321</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Bug fix&#10;login process completed&#10;cookies system added">
+      <created>1624544323131</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624544323131</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56178000" />
+    <option name="totallyTimeSpent" value="56291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="0" width="974" height="1047" extended-state="0" />
@@ -434,7 +433,8 @@
     <MESSAGE value="recover password js event update" />
     <MESSAGE value="updates" />
     <MESSAGE value="Bug fix&#10;registration &amp; forgot password process complete&#10;activation page added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fix&#10;registration &amp; forgot password process complete&#10;activation page added" />
+    <MESSAGE value="Bug fix&#10;login process completed&#10;cookies system added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix&#10;login process completed&#10;cookies system added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
