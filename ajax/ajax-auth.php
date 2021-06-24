@@ -11,6 +11,7 @@ header("Content-Type: application/json; charset=UTF-8");
 include dirname(__DIR__).'/config/config.php';
 
 if(isset($_POST) && isset($_POST['action'])){
+    $usrData = null;
     switch ($_POST['action'])
     {
         case 'check_email_exists':
@@ -74,7 +75,7 @@ if(isset($_POST) && isset($_POST['action'])){
                             'username' => \App\Security::clean($_POST['username']),
                             'user_email' => \App\Security::clean($_POST['email']),
                             'welcome_text' => \App\MSG::MAIL['ACC_ACTIVE_WLC'],
-                            'acc_activation_link' => BASE_URL . '/login?p=activate&k='. $acc_key,
+                            'acc_activation_link' => BASE_URL . '/login.php?p=activate&k='. $acc_key,
                             'btn_text' => 'Activate Account',
                             'emergency_note' => '',
                             'admin_mail' => \App\Settings::get_value('admin.email')
@@ -109,13 +110,45 @@ if(isset($_POST) && isset($_POST['action'])){
                 }else{
                     echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
                 }
-                exit();
+            break;
+        case 'check_username_email_exists':
+            $user = new \App\Users();
+            if($usrData = $user->find($_POST['user'])){
+                echo json_encode(['status' => 1, 'msg' => \App\MSG::AUTH['USR_FND'], 'data' =>  $usrData]);
+            }else{
+                echo json_encode(['status' => 0, 'msg' => \App\MSG::AUTH['USR_NT_FND']]);
+            }
+            break;
+        case 'process_password_recovery':
+            $user = new \App\Users();
+            $usr_data = $usr_data ?? $user->find($_POST['user']);
+            $MAILER = new \App\Mailer();
+            $TPL = new \App\Template();
+            $TPL->set_folder(TEMPLATE.'/'. \App\Settings::get_value('app.theme') . '/emails');
+            $MAILER->sendMail(
+                $usr_data['email'],
+                \App\Settings::get_value('app.name') . ' Password Recovery',
+                $TPL->render('recover_password',[
+                    'app_name' => \App\Settings::get_value('app.name'),
+                    'username' => \App\Security::clean($usr_data['username']),
+                    'user_email' => \App\Security::clean($usr_data['email']),
+                    'welcome_text' => \App\MSG::AUTH['ACC_PSS_RCV'],
+                    'acc_activation_link' => BASE_URL . '/login.php?p=recover&k='. $usr_data['account_key'],
+                    'btn_text' => 'Reset Password',
+                    'emergency_note' => '',
+                    'admin_mail' => \App\Settings::get_value('admin.email')
+                ])
+            );
+            if($MAILER->getStatus()){
+                echo json_encode(['status' => 1, 'msg' => \App\MSG::AUTH['ACC_RCV']]);
+            }else{
+                echo json_encode(['status' => 0, 'msg' => \App\MSG::AUTH['ERR_ACC_RCV']]);
+            }
             break;
         default:
             echo(json_encode(['status' => 0, 'msg' => 'Invalid parameters supplied.']));
             break;
     }
 }else{
-    echo(json_encode(['status' => 0, 'msg' => 'Invalid request.']));
-    exit();
+    echo json_encode(['status' => 0, 'msg' => 'Invalid request.']);
 }

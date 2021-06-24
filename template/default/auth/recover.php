@@ -22,9 +22,10 @@ password via email.</p>
                                 <li class="pms-field">
                                     <label for="pms_username_email">Username or Email</label>
                                     <input id="pms_username_email" name="pms_username_email" type="text" value="">
+                                    <small id="user_email_txt" class="form-text text-muted"></small>
                                 </li>
                             </ul>
-                            <input type="submit" name="submit" value="Reset Password">
+                            <input disabled="true" type="submit" name="submit" value="Reset Password">
                             <a href="<?= BASE_URL ?>login.php" style="float: right;">Go Back</a>
                         </form>
                     </div>

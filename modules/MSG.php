@@ -20,8 +20,15 @@ class MSG
         'PASS_ERR' => 'Please create a strong password.',
         'ERR_REGISTER' => 'Something went wrong while registration. Please try again later.',
         'ACC_CRET_ERR_MAIL' => 'Account created success. Something went wrong while sending account activation email. Please contact staff',
-        'ACC_CRET_CHK_MAIL' => 'Account created success. Please check your email for activation email.'
-
+        'ACC_CRET_CHK_MAIL' => 'Account created success. Please check your email for activation email.',
+        'USR_FND' => 'User found.',
+        'USR_NT_FND' => 'User not found in record.',
+        'ACC_PSS_RCV' => 'Please click the button below and set new password for your account.',
+        'ACC_RCV' => 'Account recovery instrctions has been sent to your registered email address. Please follow the instructions.',
+        'ERR_ACC_RCV' => 'Something went wrong while sending account recovery instructions.',
+        'ACC_ACTV' => 'Account marked activated.',
+        'ERR_ACC_ACTV' => 'Something went wrong while activating account. <br> Invalid key',
+        'INV_KEY' => 'Invalid key unable to process request.'
     ];
 
     const MAIL = [

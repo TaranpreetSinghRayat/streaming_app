@@ -16,11 +16,11 @@
                         <h4>Sign In</h4>
                         <p class="login-username">
                             <label for="user_login">Username or Email Address</label>
-                            <input type="text" name="log" id="user_login" class="input" value="" size="20">
+                            <input type="text" name="log" id="user_login" class="input" value="" size="20" required>
                         </p>
                         <p class="login-password">
                             <label for="user_pass">Password</label>
-                            <input type="password" name="pwd" id="user_pass" class="input" value="" size="20">
+                            <input type="password" name="pwd" id="user_pass" class="input" value="" size="20" required>
                         </p>
                         <p class="login-remember">
                             <label>
@@ -30,10 +30,8 @@
                         <p class="login-submit">
                             <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary"
                                    value="Log In">
-                            <input type="hidden" name="redirect_to">
                         </p>
-                        <input type="hidden" name="pms_login" value="1"><input type="hidden" name="pms_redirect"><a
-                            href="register.php">Register</a> | <a href="recover-password.php">Lost your
+                        <a href="register.php">Register</a> | <a href="recover-password.php">Lost your
                             password?</a>
                     </form>
                 </div>

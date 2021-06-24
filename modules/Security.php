@@ -76,4 +76,37 @@ class Security
         $str = htmlspecialchars($str);
         return $str;
     }
+
+    public static function filter($str,$opt = 'string')
+    {
+        switch ($opt){
+            case 'int':
+                if (filter_var($str, FILTER_VALIDATE_INT) === 0 || !filter_var($str, FILTER_VALIDATE_INT) === false) {
+                    return $str;
+                }
+                return false;
+                break;
+            case 'ip':
+                if (!filter_var($str, FILTER_VALIDATE_IP) === false) {
+                    return $str;
+                }
+                return false;
+                break;
+            case 'email':
+                if (!filter_var(filter_var($str, FILTER_SANITIZE_EMAIL), FILTER_VALIDATE_EMAIL) === false) {
+                    return filter_var($str, FILTER_SANITIZE_EMAIL);
+                }
+                return false;
+                break;
+            case 'url':
+                if (!filter_var(filter_var($str, FILTER_SANITIZE_URL), FILTER_VALIDATE_URL) === false) {
+                    return filter_var($str, FILTER_SANITIZE_URL);
+                }
+                return false;
+                break;
+            default:
+                return filter_var($str,FILTER_SANITIZE_STRING);
+                break;
+        }
+    }
 }
