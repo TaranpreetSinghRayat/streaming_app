@@ -4,7 +4,7 @@
  * Date: 22-06-2021
  * Time: 12:53
  */
-
+session_start();
 define('APP_ROOT',dirname(__DIR__) . '/');
 //Load helpers
 $helper_dir = APP_ROOT . "helper/";

@@ -27,8 +27,13 @@ class MSG
         'ACC_RCV' => 'Account recovery instrctions has been sent to your registered email address. Please follow the instructions.',
         'ERR_ACC_RCV' => 'Something went wrong while sending account recovery instructions.',
         'ACC_ACTV' => 'Account marked activated.',
-        'ERR_ACC_ACTV' => 'Something went wrong while activating account. <br> Invalid key',
-        'INV_KEY' => 'Invalid key unable to process request.'
+        'ERR_ACC_ACTV' => "Something went wrong while activating account. <br> Invalid key",
+        'INV_KEY' => 'Invalid key unable to process request.',
+        'INV_LOG' => 'Invalid request. Unable to process.',
+        'SUCC_LOG' => 'Login Success. You will be redirected!',
+        'USR_LOG_NF' => 'Invalid user.',
+        'USR_LOG_INV_PASS' => 'Invalid Password',
+        'USR_LOG_DEC' => 'Account still left for verification. Please check verification mail.'
     ];
 
     const MAIL = [

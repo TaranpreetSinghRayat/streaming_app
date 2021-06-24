@@ -61,6 +61,43 @@ class Users
         return false;
     }
 
+    public function login(string $user,string $pass)
+    {
+        $user_data = $this->find($user);
+        if(!empty($user_data)){
+            if($user_data['password'] == Security::encrypt($pass)){
+                if($user_data['status'] != 0){
+                    Session::insert('UID', $user_data['id']);
+                    Session::insert('isLoggedIn',true);
+                    if($user_data['is_subscribed'] == 0){
+                        Session::insert('isSubscribed', false);
+                    }else{
+                        Session::insert('isSubscribed', true);
+                    }
+                    Session::insert('role', (($user_data['role'] == 0)) ? 'Subscriber' : 'Administrator' );
+                    return true;
+                }else{
+                    Session::insert('USR_ERR',MSG::AUTH['USR_LOG_DEC']);
+                }
+            }else{
+                Session::insert('USR_ERR',MSG::AUTH['USR_LOG_INV_PASS']);
+            }
+        }else{
+            Session::insert('USR_ERR',MSG::AUTH['USR_LOG_NF']);
+        }
+        return false;
+    }
+
+    public function logout()
+    {
+        Session::del('isLoggedIn');
+        $this->update(Session::get('UID'), ['ip' => get_ip()]);
+        Session::del('UID');
+        Session::del('role');
+        Session::del('isSubscribed');
+        return true;
+    }
+
     /**
      * CRUD OPERATIONS
      */

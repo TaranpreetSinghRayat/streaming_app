@@ -145,6 +145,28 @@ if(isset($_POST) && isset($_POST['action'])){
                 echo json_encode(['status' => 0, 'msg' => \App\MSG::AUTH['ERR_ACC_RCV']]);
             }
             break;
+        case 'process_login':
+            $validator = new \App\Validator();
+            $valData = $validator->validate($_POST,[
+                'username' => [
+                    'required' => true
+                ],
+                'password' => [
+                    'required' => true
+                ]
+            ]);
+            if($valData->passed()){
+                $user = new \App\Users();
+                if($user->login($_POST['username'],$_POST['password'])){
+                    \App\Session::del('USR_ERR');
+                    echo json_encode(['status' => 1, 'msg' => \App\MSG::AUTH['SUCC_LOG']]);
+                }else{
+                    echo json_encode(['status' => 0, 'msg' => \App\Session::get('USR_ERR')]);
+                }
+            }else{
+                echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
+            }
+            break;
         default:
             echo(json_encode(['status' => 0, 'msg' => 'Invalid parameters supplied.']));
             break;
