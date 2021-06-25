@@ -3,7 +3,9 @@
     <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i> </a>
 </div>
 <!-- Back-to-Top end -->
-
+<script>
+    var BASE_URL_ASSETS = '<?= BASE_URL_ASSETS ?>'
+</script>
 <!-- js-min -->
 <script src="<?= BASE_URL_ASSETS ?>js/jquery-3.6.0.min.js"></script>
 <script src="<?= BASE_URL_ASSETS ?>js/asyncloader.min.js"></script>

@@ -14,6 +14,10 @@ class Config
 
     const TBL_NAMES = [
         'SETTINGS' => 'settings',
-        'USERS' => 'users'
+        'USERS' => 'users',
+        'CASTS' => 'casts',
+        'ENTITIES' => 'entities',
+        'GENRE' => 'genre',
+        'TAGS' => 'tags'
     ];
 }
