@@ -40,7 +40,12 @@ echo $TPL->render('include/nav',[
 
 <!-- Body Section -->
 <?php
-echo $TPL->render('home/index',[]);
+$ENTITIES = new \App\Entities();
+$data['most_view'] = $ENTITIES->get_most_viewed();
+$data['high_raiting'] = $ENTITIES->get_high_raited();
+echo $TPL->render('home/index',[
+        'data' => $data
+]);
 ?>
 <!-- //Body Section -->
 

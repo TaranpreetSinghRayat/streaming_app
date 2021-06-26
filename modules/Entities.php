@@ -28,6 +28,14 @@ class Entities
         return null;
     }
 
+    public function get_high_raited()
+    {
+        $high_raited = $this->db->getValue(Config::TBL_NAMES['ENTITIES'],'MAX(IMDB)');
+        if($result = $this->db->where('IMDB', $high_raited)->getOne(Config::TBL_NAMES['ENTITIES'])){
+            return $result;
+        }
+    }
+
     /**
      * CRUD OPERATIONS
      */

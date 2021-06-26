@@ -20,6 +20,9 @@ class Casts
 
     public function get_by_id(int $castID)
     {
-
+        if($cast_data = $this->db->where('id', $castID)->getOne(Config::TBL_NAMES['CASTS'])){
+            return $cast_data;
+        }
+        return null;
     }
 }
