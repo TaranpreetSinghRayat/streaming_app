@@ -25,4 +25,12 @@ class Genre
         }
         return null;
     }
+
+    public function get_all_ids()
+    {
+        if($ids = $this->db->rawQuery('select id from '. Config::TBL_NAMES['GENRE'])){
+            return $ids;
+        }
+        return null;
+    }
 }

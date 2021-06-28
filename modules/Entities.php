@@ -22,7 +22,7 @@ class Entities
     public function get_most_viewed()
     {
         $most_viewed = $this->db->getValue(Config::TBL_NAMES['ENTITIES'], "MAX(views)");
-        if($result = $this->db->where('views', $most_viewed)->getOne(Config::TBL_NAMES['ENTITIES'])){
+        if ($result = $this->db->where('views', $most_viewed)->getOne(Config::TBL_NAMES['ENTITIES'])) {
             return $result;
         }
         return null;
@@ -30,10 +30,19 @@ class Entities
 
     public function get_high_raited()
     {
-        $high_raited = $this->db->getValue(Config::TBL_NAMES['ENTITIES'],'MAX(IMDB)');
-        if($result = $this->db->where('IMDB', $high_raited)->getOne(Config::TBL_NAMES['ENTITIES'])){
+        $high_raited = $this->db->getValue(Config::TBL_NAMES['ENTITIES'], 'MAX(IMDB)');
+        if ($result = $this->db->where('IMDB', $high_raited)->getOne(Config::TBL_NAMES['ENTITIES'])) {
             return $result;
         }
+        return null;
+    }
+
+    public function get_featured()
+    {
+        if($featured = $this->db->where('featured', 1)->get(Config::TBL_NAMES['ENTITIES'])){
+            return $featured;
+        }
+        return null;
     }
 
     /**

@@ -41,10 +41,12 @@ echo $TPL->render('include/nav',[
 <!-- Body Section -->
 <?php
 $ENTITIES = new \App\Entities();
-$data['most_view'] = $ENTITIES->get_most_viewed();
-$data['high_raiting'] = $ENTITIES->get_high_raited();
+$GENRE = new \App\Genre();
+$CASTS = new \App\Casts();
 echo $TPL->render('home/index',[
-        'data' => $data
+        'ENTITIES' => $ENTITIES,
+        'GENRE' => $GENRE,
+        'CASTS' => $CASTS
 ]);
 ?>
 <!-- //Body Section -->
