@@ -10,12 +10,47 @@ is a subscription-based streaming service that allows our members to watch TV sh
 - Maria DB
 - JS
 - SASS
+- Bootstrap
 
 # How to Install
 
+# Requirements
+- PHP >= 7.x
+- PDO Extention
+- php_fileinfo
+- MYSQL/Maria DB
+
 # How to contribute to the project
 
-# Version 1.0
+# Version 1.0 Features
+- Admin Panel
+- Content Management
+- Analytics
+- Dynamic Home Page
+- SaaS Mode
+- High Performance
+- Videos
+- Adaptive Sreams
+- Lists
+- Search
+- Filter
+- Paymeny Gateways
+- Browse Page
+- SEO Editor
+- Authentication
+- Settings
+
+# Version 2.0 Features(Coming Soon)
+- All Version 1.0 Features
+- Watchlist
+- More Payment Gateways
+- User Rating and reviews
+- Full informaton
+- Appearance Editor
+- Better and advanced video player
+- Adaptive Streams
+
+
 
 # Developed
 - TweekersNut Network Development Team
