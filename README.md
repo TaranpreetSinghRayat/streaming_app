@@ -52,5 +52,5 @@ is a subscription-based streaming service that allows our members to watch TV sh
 
 
 
-# Developed
-- TweekersNut Network Development Team
+# Developed By
+<a href="https://tweekersnut.com">TweekersNut Network</a>
