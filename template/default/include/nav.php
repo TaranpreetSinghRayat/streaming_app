@@ -21,10 +21,10 @@
                                         <a href="<?= BASE_URL ?>home.php" aria-current="page">Home</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="<?= BASE_URL ?>entities.php?view=movies">Movies</a>
+                                        <a href="<?= BASE_URL ?>entitie.php?view=movies">Movies</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="<?= BASE_URL ?>entities.php?view=shows">Tv Shows</a>
+                                        <a href="<?= BASE_URL ?>entitie.php?view=shows">Tv Shows</a>
                                     </li>
                                 </ul>
                             </div>

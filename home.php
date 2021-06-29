@@ -45,10 +45,13 @@ echo $TPL->render('include/nav',[
 $ENTITIES = new \App\Entities();
 $GENRE = new \App\Genre();
 $CASTS = new \App\Casts();
+$TAGS = new \App\Tags();
+
 echo $TPL->render('home/index',[
         'ENTITIES' => $ENTITIES,
         'GENRE' => $GENRE,
-        'CASTS' => $CASTS
+        'CASTS' => $CASTS,
+        'TAGS' => $TAGS
 ]);
 ?>
 <!-- //Body Section -->

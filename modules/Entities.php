@@ -59,6 +59,14 @@ class Entities
         return $result;
     }
 
+    public function get_movies()
+    {
+        if($result = $this->db->where('isMovie',1)->get(Config::TBL_NAMES['ENTITIES'])){
+            return $result;
+        }
+        return null;
+    }
+
     /**
      * CRUD OPERATIONS
      */
