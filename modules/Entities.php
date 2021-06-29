@@ -67,6 +67,14 @@ class Entities
         return null;
     }
 
+    public function get_shows()
+    {
+        if($result = $this->db->where('isMovie', 0)->get(Config::TBL_NAMES['ENTITIES'])){
+            return $result;
+        }
+        return null;
+    }
+
     /**
      * CRUD OPERATIONS
      */

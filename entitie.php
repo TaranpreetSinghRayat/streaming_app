@@ -45,13 +45,13 @@ echo $TPL->render('include/nav',[
 
 <!-- Body Section -->
 <?php
+$ENTITIES = new \App\Entities();
+$GENRE = new \App\Genre();
+$CASTS = new \App\Casts();
+$TAGS = new \App\Tags();
+
 if(isset($_GET['view'])){
     if($_GET['view'] == 'movies'){
-
-        $ENTITIES = new \App\Entities();
-        $GENRE = new \App\Genre();
-        $CASTS = new \App\Casts();
-        $TAGS = new \App\Tags();
         $movies = $ENTITIES->get_movies();
 
         echo $TPL->render('entities/movies',[
@@ -63,8 +63,15 @@ if(isset($_GET['view'])){
             'movies' => $movies
         ]);
     }elseif ($_GET['view'] == 'shows'){
+        $shows = $ENTITIES->get_shows();
+
         echo $TPL->render('entities/shows',[
-            'title' => 'Shows'
+            'title' => 'Shows',
+            'ENTITIES' => $ENTITIES,
+            'GENRE' => $GENRE,
+            'CASTS' => $CASTS,
+            'TAGS' => $TAGS,
+            'shows' => $shows
         ]);
     }else{
         //render error.
