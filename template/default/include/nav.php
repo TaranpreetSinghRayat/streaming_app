@@ -12,19 +12,19 @@
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <a class="navbar-brand" href="#">
-                            <img class="img-fluid logo" src="<?= BASE_URL_ASSETS ?>images/logo-1.png" alt="streamlab-image">
+                            <img class="img-fluid logo" src="<?= $app_logo ?>" alt="streamlab-image">
                         </a>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <div id="gen-menu-contain" class="gen-menu-contain">
                                 <ul id="gen-main-menu" class="navbar-nav ml-auto">
                                     <li class="menu-item">
-                                        <a href="#" aria-current="page">Home</a>
+                                        <a href="<?= BASE_URL ?>home.php" aria-current="page">Home</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#">Movies</a>
+                                        <a href="<?= BASE_URL ?>entities.php?view=movies">Movies</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="#">Tv Shows</a>
+                                        <a href="<?= BASE_URL ?>entities.php?view=shows">Tv Shows</a>
                                     </li>
                                 </ul>
                             </div>

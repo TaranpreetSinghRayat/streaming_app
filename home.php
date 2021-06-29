@@ -25,7 +25,8 @@ $TPL = new \App\Template(TEMPLATE.'/'. \App\Settings::get_value('app.theme'));
 echo $TPL->render('include/header',[
     'page_description' => 'Please login to watch all your favorite shows and movies.',
     'app_auth' => $_ENV['DEV'],
-    'page_title' => 'Home | '. APP_NAME
+    'page_title' => 'Home | '. APP_NAME,
+    'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo')
 ]);
 
 ?>
@@ -33,7 +34,8 @@ echo $TPL->render('include/header',[
 <!-- Navigation Section -->
 <?php
 echo $TPL->render('include/nav',[
-        'app_name' => \App\Settings::get_value('app.name')
+        'app_name' => \App\Settings::get_value('app.name'),
+        'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo'),
 ]);
 ?>
 <!-- //Navigation Section -->
@@ -53,7 +55,10 @@ echo $TPL->render('home/index',[
 
 <!-- Footer Section -->
 <?php
-echo $TPL->render('include/footer',[]);
+echo $TPL->render('include/footer',[
+        'app_description' => \App\Settings::get_value('app.description'),
+        'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo')
+]);
 ?>
 <!-- //Footer Section -->
 <!-- Custom Script -->

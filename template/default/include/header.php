@@ -25,7 +25,7 @@
 <!--=========== Loader =============-->
 <div id="gen-loading">
     <div id="gen-loading-center">
-        <img src="<?= BASE_URL_ASSETS ?>images/logo-1.png" alt="loading">
+        <img src="<?= $app_logo ?>" alt="loading">
     </div>
 </div>
 <!--=========== Loader =============-->

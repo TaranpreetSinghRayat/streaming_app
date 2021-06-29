@@ -45,6 +45,20 @@ class Entities
         return null;
     }
 
+    public function get_by_genre(int $genID)
+    {
+        $all_titles = $this->db->get(Config::TBL_NAMES['ENTITIES']);
+        $result = [];
+        foreach ($all_titles as $title)
+        {
+            $genre_arr = json_decode($title['genre'], true);
+            if(in_array($genID, $genre_arr)){
+                $result[] = $title;
+            }
+        }
+        return $result;
+    }
+
     /**
      * CRUD OPERATIONS
      */

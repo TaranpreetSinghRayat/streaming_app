@@ -248,202 +248,100 @@
 
 <?php if(!empty($GENRE->get_all_ids())): ?>
     <?php foreach ($GENRE->get_all_ids() as $g_entity): ?>
-        <!-- Slick Slider start -->
-        <section class="gen-section-padding-2 pt-0 pb-0">
+        <!-- owl-carousel Videos Section-3 Start -->
+        <section class="gen-section-padding-2">
             <div class="container">
-                <div class="home-singal-silder">
-                    <div class="gen-nav-movies gen-banner-movies">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h4><?= $GENRE->get_name_by_id($g_entity['id']) ?></h4>
-                                <div class="slider slider-for">
-                                    <!-- Slider Items -->
-                                    <div class="slider-item" style="background: url('images/background/asset-4.jpg')">
-                                        <div class="gen-slick-slider h-100">
-                                            <div class="gen-movie-contain h-100">
-                                                <div class="container h-100">
-                                                    <div class="row align-items-center h-100">
-                                                        <div class="col-lg-6">
-                                                            <div class="gen-movie-info">
-                                                                <h3>thieve the bank</h3>
-                                                                <p>Streamlab is a long established fact that a reader will be distracted by
-                                                                    the readable content of a page when Streamlab at its layout Streamlab.
-                                                                </p>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <h4 class="gen-heading-title"><?= $GENRE->get_name_by_id($g_entity['id']) ?></h4>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 d-none d-md-inline-block">
+                        <div class="gen-movie-action">
+                            <div class="gen-btn-container text-right">
+                                <a href="" class="gen-button gen-button-flat">
+                                    <span class="text">More Videos</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="gen-style-2">
+                            <div class="owl-carousel owl-loaded owl-drag" data-dots="false" data-nav="true" data-desk_num="4"
+                                 data-lap_num="3" data-tab_num="2" data-mob_num="1" data-mob_sm="1" data-autoplay="false"
+                                 data-loop="false" data-margin="30">
 
+                                <?php foreach ($ENTITIES->get_by_genre($g_entity['id']) as $item): ?>
+                                    <div class="item">
+                                        <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                                            <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                                                <div class="gen-movie-contain">
+                                                    <div class="gen-movie-img">
+                                                        <img src="<?= BASE_URL_ASSETS ?>images/background/asset-1.jpg" alt="owl-carousel-video-images">
+                                                        <div class="gen-movie-add">
+                                                            <div class="wpulike wpulike-heart">
+                                                                <div class="wp_ulike_general_class wp_ulike_is_not_liked"><button
+                                                                            type="button" class="wp_ulike_btn wp_ulike_put_image"></button></div>
                                                             </div>
-                                                            <div class="gen-movie-action">
-                                                                <div class="gen-btn-container button-1">
-                                                                    <a class="gen-button" href="#" tabindex="0">
-                                                                        <i aria-hidden="true" class="ion ion-play"></i>
-                                                                        <span class="text">Play Now</span>
-                                                                    </a>
+                                                            <ul class="menu bottomRight">
+                                                                <li class="share top">
+                                                                    <i class="fa fa-share-alt"></i>
+                                                                    <ul class="submenu">
+                                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                                                                        </li>
+                                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                                                                        </li>
+                                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="movie-actions--link_add-to-playlist dropdown">
+                                                                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                                                            class="fa fa-plus"></i></a>
+                                                                <div class="dropdown-menu mCustomScrollbar">
+                                                                    <div class="mCustomScrollBox">
+                                                                        <div class="mCSB_container">
+                                                                            <a class="login-link" href="register.html">Sign in to add this movie
+                                                                                to a
+                                                                                playlist.</a>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                        </div>
+                                                        <div class="gen-movie-action">
+                                                            <a href="single-movie.html" class="gen-button">
+                                                                <i class="fa fa-play"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="gen-info-contain">
+                                                        <div class="gen-movie-info">
+                                                            <h3><a href="single-movie.html">King of Skull</a></h3>
+                                                        </div>
+                                                        <div class="gen-movie-meta-holder">
+                                                            <ul>
+                                                                <li> <i class="fab fa-imdb fa-2x"></i> <b><?= $item['IMDB'] ?></b> </li>
+                                                                <li>
+                                                                    <a href="action.html"><span><?= $GENRE->get_name_by_id($g_entity['id']) ?></span></a>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- #post-## -->
                                     </div>
-                                    <div class="slider-item" style="background: url('images/background/asset-23.jpg')">
-                                        <div class="gen-slick-slider h-100">
-                                            <div class="gen-movie-contain h-100">
-                                                <div class="container h-100">
-                                                    <div class="row align-items-center h-100">
-                                                        <div class="col-lg-6">
-                                                            <div class="gen-movie-info">
-                                                                <h3>Love your life</h3>
-                                                                <p>Streamlab is a long established fact that a reader will be distracted by
-                                                                    the readable content of a page when Streamlab at its layout Streamlab.
-                                                                </p>
+                                <?php endforeach; ?>
 
-                                                            </div>
-                                                            <div class="gen-movie-action">
-                                                                <div class="gen-btn-container button-1">
-                                                                    <a class="gen-button" href="#" tabindex="0">
-                                                                        <i aria-hidden="true" class="ion ion-play"></i>
-                                                                        <span class="text">Play Now</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider-item" style="background: url('images/background/asset-24.jpg')">
-                                        <div class="gen-slick-slider h-100">
-                                            <div class="gen-movie-contain h-100">
-                                                <div class="container h-100">
-                                                    <div class="row align-items-center h-100">
-                                                        <div class="col-lg-6">
-                                                            <div class="gen-movie-info">
-                                                                <h3>The Last Witness</h3>
-                                                                <p>Streamlab is a long established fact that a reader will be distracted by
-                                                                    the readable content of a page when Streamlab at its layout Streamlab.
-                                                                </p>
-
-                                                            </div>
-                                                            <div class="gen-movie-action">
-                                                                <div class="gen-btn-container button-1">
-                                                                    <a class="gen-button" href="#" tabindex="0">
-                                                                        <i aria-hidden="true" class="ion ion-play"></i>
-                                                                        <span class="text">Play Now</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider-item" style="background: url('images/background/asset-25.jpg')">
-                                        <div class="gen-slick-slider h-100">
-                                            <div class="gen-movie-contain h-100">
-                                                <div class="container h-100">
-                                                    <div class="row align-items-center h-100">
-                                                        <div class="col-lg-6">
-                                                            <div class="gen-movie-info">
-                                                                <h3>Fight For Life</h3>
-                                                                <p>Streamlab is a long established fact that a reader will be distracted by
-                                                                    the readable content of a page when Streamlab at its layout Streamlab.
-                                                                </p>
-
-                                                            </div>
-                                                            <div class="gen-movie-action">
-                                                                <div class="gen-btn-container button-1">
-                                                                    <a class="gen-button" href="#" tabindex="0">
-                                                                        <i aria-hidden="true" class="ion ion-play"></i>
-                                                                        <span class="text">Play Now</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Slider Items -->
-                                </div>
-                                <div class="slider slider-nav">
-                                    <div class="slider-nav-contain">
-                                        <div class="gen-nav-img">
-                                            <img src="images/background/asset-4.jpg" alt="steamlab-image">
-                                        </div>
-                                        <div class="movie-info">
-                                            <h3>thieve the bank</h3>
-                                            <div class="gen-movie-meta-holder">
-                                                <ul>
-                                                    <li>30mins</li>
-                                                    <li>
-                                                        <a href="action.html">
-                                                            Action </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider-nav-contain">
-                                        <div class="gen-nav-img">
-                                            <img src="images/background/asset-23.jpg" alt="streamlab-image">
-                                        </div>
-                                        <div class="movie-info">
-                                            <h3>Love your life</h3>
-                                            <div class="gen-movie-meta-holder">
-                                                <ul>
-                                                    <li>1hr 46mins</li>
-                                                    <li>
-                                                        <a href="action.html">
-                                                            Action </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider-nav-contain">
-                                        <div class="gen-nav-img">
-                                            <img src="images/background/asset-24.jpg" alt="streamlab-image">
-                                        </div>
-                                        <div class="movie-info">
-                                            <h3>The Last Witness</h3>
-                                            <div class="gen-movie-meta-holder">
-                                                <ul>
-                                                    <li>1hr 37 mins</li>
-                                                    <li>
-                                                        <a href="action.html">
-                                                            Action </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider-nav-contain">
-                                        <div class="gen-nav-img">
-                                            <img src="<?= BASE_URL_ASSETS ?>images/background/asset-25.jpg" alt="streamlab-image">
-                                        </div>
-                                        <div class="movie-info">
-                                            <h3>Fight For Life</h3>
-                                            <div class="gen-movie-meta-holder">
-                                                <ul>
-                                                    <li>2hr 25 mins</li>
-                                                    <li>
-                                                        <a href="action.html">
-                                                            Action </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Slick Slider End -->
+        <!-- owl-carousel Videos Section-3 End -->
     <?php endforeach; ?>
 <?php endif; ?>
