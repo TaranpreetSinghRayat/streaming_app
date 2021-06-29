@@ -53,5 +53,6 @@ is a subscription-based streaming service that allows our members to watch TV sh
 
 
 # Developed By
-<a target="_blank" href="https://tweekersnut.com">TweekersNut Network</a>
-<a target="_blank" href="github.com/tweekersnut/">TweekersNut Network GitHub</a>
+<b><a target="_blank" href="https://tweekersnut.com">TweekersNut Network</a></b>
+
+<b><a target="_blank" href="github.com/tweekersnut/">TweekersNut Network GitHub</a></b>
