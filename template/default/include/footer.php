@@ -138,6 +138,25 @@
 
 <script src="<?= BASE_URL_ASSETS ?>js/script.js"></script>
 
+<!-- Video Player -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
+<script src="<?= BASE_URL_ASSETS ?>video_player/jump-forward/jump-forward.js"></script>
+<script src="<?= BASE_URL_ASSETS ?>video_player/skip-back/skip-back.js"></script>
+<script src="<?= BASE_URL_ASSETS ?>video_player/speed/speed.js"></script>
+<script>
+    var mediaElements = document.querySelectorAll('video, audio');
+
+    for (var i = 0, total = mediaElements.length; i < total; i++) {
+
+        var features = ['playpause', 'current', 'progress', 'duration', 'volume', 'skipback', 'jumpforward', 'speed', 'fullscreen'];
+
+        new MediaElementPlayer(mediaElements[i], {
+            autoRewind: false,
+            features: features,
+        });
+    }
+</script>
+<!-- //Video Player -->
 
 </body>
 </html>

@@ -16,10 +16,10 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="gen-video-holder">
-                                <iframe width="100%" height="550px" src="https://www.youtube.com/embed/LXb3EKWsInQ"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+
+                                <video id="player1" width="100%" height="550px" controls preload="none" poster="<?= BASE_URL . $title_data['thumbnail'] ?>">
+                                    <source src="<?= $title_data['filePath'] ?>" <?php if(strpos($title_data['filePath'],'youtu') !== false): ?> <?php else: ?> type="<?= mime_content_type(APP_ROOT . $title_data['filePath']) ?>" <?php endif; ?>>
+                                </video>
                             </div>
                             <div class="gen-single-movie-info">
                                 <h2 class="gen-title"><?= $title_data['name'] ?></h2>
@@ -72,6 +72,8 @@
                                                         ?>
                                                     </span>
                                             </li>
+                                            <?php if(strpos($title_data['filePath'],'youtu') !== false): ?>
+                                            <?php else: ?>
                                             <li><span>Run Time :</span>
                                                 <span><?= \App\File::get_duration(APP_ROOT. $title_data['filePath']); ?></span>
                                             </li>
@@ -87,6 +89,7 @@
                                                 <span>Framerate :</span>
                                                 <span><?= \App\File::get_video_framerate(APP_ROOT . $title_data['filePath']) ?></span>
                                             </li>
+                                            <?php endif; ?>
                                             <li>
                                                 <span>Release Date :</span>
                                                 <span><?= date("F jS, Y", strtotime($title_data['releaseDate'])); ?></span>

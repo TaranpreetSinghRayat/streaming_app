@@ -18,6 +18,14 @@
     <link rel="stylesheet" href="<?= BASE_URL_ASSETS ?>css/responsive.css" />
     <!-- Boostrap Toaster -->
     <link rel="stylesheet" href="<?= BASE_URL_ASSETS ?>css/bootstrap-toaster.min.css" />
+
+    <!-- Video Player Stuff -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+    <link rel="stylesheet" href="<?= BASE_URL_ASSETS ?>video_player/jump-forward/jump-forward.css">
+    <link rel="stylesheet" href="<?= BASE_URL_ASSETS ?>video_player/skip-back/skip-back.css">
+    <link rel="stylesheet" href="<?= BASE_URL_ASSETS ?>video_player/speed/speed.css">
+    <!-- //Video Player Stuff -->
 </head>
 
 <body>
