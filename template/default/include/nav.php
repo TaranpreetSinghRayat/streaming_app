@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="<?= BASE_URL ?>home.php">
                             <img class="img-fluid logo" src="<?= $app_logo ?>" alt="streamlab-image">
                         </a>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">

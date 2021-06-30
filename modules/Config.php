@@ -18,6 +18,7 @@ class Config
         'CASTS' => 'casts',
         'ENTITIES' => 'entities',
         'GENRE' => 'genre',
-        'TAGS' => 'tags'
+        'TAGS' => 'tags',
+        'VIDEOS' => 'videos'
     ];
 }

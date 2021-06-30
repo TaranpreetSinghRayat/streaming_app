@@ -122,7 +122,7 @@
                                                     </div>
                                                     <div class="gen-movie-action">
                                                         <div class="gen-btn-container">
-                                                            <a href="single-movie.html" class="gen-button .gen-button-dark">
+                                                            <a href="<?= BASE_URL ?>entitie.php?title=<?= $f_entity['id'] ?>" class="gen-button .gen-button-dark">
                                                                 <i aria-hidden="true" class="fas fa-play"></i> <span class="text">Play
                                                 Now</span>
                                                             </a>
@@ -202,43 +202,55 @@
                                                             <li>
                                                                 <strong>Genre :</strong>
                                                                 <span>
-                                                   <a href="action.html">
-                                                      Action, </a>
-                                                </span>
-                                                                <span>
-                                                   <a href="animation.html">
-                                                      Annimation, </a>
-                                                </span>
-                                                                <span>
-                                                   <a href="#">
-                                                      Family </a>
-                                                </span>
+                                                                         <?php
+                                                                         $genres = json_decode($mv_entity['genre'],true);
+                                                                         $max_limit = count($genres);
+                                                                         $counter = 1;
+                                                                         foreach ($genres as $genre){
+                                                                             $gen = $GENRE->get_name_by_id($genre);
+                                                                             ?>
+                                                                             <a href="<?= BASE_URL ?>entitie.php?genre=<?= $genre ?>">
+                                                                                <span><?= $gen; ?></span>
+                                                                            </a>
+
+                                                                             <?php
+                                                                             if($counter < $max_limit){
+                                                                                 echo ', ';
+                                                                             }
+                                                                             $counter++;
+                                                                         }
+                                                                         ?>
+                                                                    </span>
                                                             </li>
                                                             <li>
                                                                 <strong>Tag :</strong>
                                                                 <span>
-                                                   <a href="#">
-                                                      4K Ultra, </a>
-                                                </span>
-                                                                <span>
-                                                   <a href="#">
-                                                      Brother, </a>
-                                                </span>
-                                                                <span>
-                                                   <a href="#">
-                                                      Dubbing, </a>
-                                                </span>
-                                                                <span>
-                                                   <a href="#">
-                                                      Premieres </a>
-                                                </span>
+                                                                        <?php
+                                                                        $tags = json_decode($mv_entity['tags'],true);
+                                                                        $max_limit = count($tags);
+                                                                        $counter = 1;
+                                                                        foreach ($tags as $tag){
+                                                                            $tag = $TAGS->get_name_by_id($tag);
+                                                                            ?>
+                                                                            <a href="#">
+                                                                                <span><?= $tag; ?></span>
+                                                                            </a>
+
+                                                                            <?php
+                                                                            if($counter < $max_limit){
+                                                                                echo ', ';
+                                                                            }
+                                                                            $counter++;
+                                                                        }
+                                                                        ?>
+                                                                    </span>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="gen-movie-action">
                                                     <div class="gen-btn-container">
-                                                        <a href="single-movie.html" class="gen-button .gen-button-dark">
+                                                        <a href="<?= BASE_URL ?>entitie.php?title=<?= $mv_entity['id'] ?>" class="gen-button .gen-button-dark">
                                                             <i aria-hidden="true" class="fas fa-play"></i> <span class="text">Play
                                                 Now</span>
                                                         </a>
@@ -323,14 +335,14 @@
                                                             </div>
                                                         </div>
                                                         <div class="gen-movie-action">
-                                                            <a href="single-movie.html" class="gen-button">
+                                                            <a href="<?= BASE_URL ?>entitie.php?title=<?= $item['id'] ?>" class="gen-button">
                                                                 <i class="fa fa-play"></i>
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="gen-info-contain">
                                                         <div class="gen-movie-info">
-                                                            <h3><a href="single-movie.html">King of Skull</a></h3>
+                                                            <h3><a href="<?= BASE_URL ?>entitie.php?title=<?= $item['id'] ?>">King of Skull</a></h3>
                                                         </div>
                                                         <div class="gen-movie-meta-holder">
                                                             <ul>

@@ -75,6 +75,36 @@ class Entities
         return null;
     }
 
+    public function get(int $titleID)
+    {
+        if($result = $this->db
+                            ->where(Config::TBL_NAMES['ENTITIES']  . '.id', $titleID)
+                            ->join(Config::TBL_NAMES['VIDEOS'],Config::TBL_NAMES['VIDEOS'] . '.entityId = '. Config::TBL_NAMES['ENTITIES'] .'.id', 'left')
+                            ->getOne(Config::TBL_NAMES['ENTITIES'])){
+            return $result;
+        }
+        return null;
+    }
+
+    public function update_views(int $titleID)
+    {
+        if(Session::exists('view_title')){
+            if(!in_array($titleID, Session::get('view_title'))){
+                $old_titles = Session::get('view_title');
+                array_push($old_titles, $titleID);
+                Session::insert('view_title', $old_titles);
+                $old_views = $this->db->where('entityId', $titleID)->getOne(Config::TBL_NAMES['VIDEOS']);
+                $new_view = $old_views['views'] + 1;
+                if($this->db->where('entityId', $titleID)->update(Config::TBL_NAMES['VIDEOS'],['views' => $new_view])){
+                    return true;
+                }
+            }
+        }else{
+            Session::insert('view_title',[]);
+        }
+        return false;
+    }
+
     /**
      * CRUD OPERATIONS
      */
