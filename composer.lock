@@ -4,8 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce4cec329766cd6e9352cb00174a4849",
+    "content-hash": "05bb825246534744d99a98782aa3d90c",
     "packages": [
+        {
+            "name": "nass600/get-id3",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nass600/getID3.git",
+                "reference": "365c3802b4ad159572a195f3cbcb9e6c476d7e31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nass600/getID3/zipball/365c3802b4ad159572a195f3cbcb9e6c476d7e31",
+                "reference": "365c3802b4ad159572a195f3cbcb9e6c476d7e31",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "php-library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "getid3/getid3.php",
+                    "getid3/write.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU"
+            ],
+            "authors": [
+                {
+                    "name": "James Heinrich"
+                }
+            ],
+            "description": "PHP library for handling audio/video files metadata",
+            "homepage": "https://github.com/nass600/getID3",
+            "keywords": [
+                "id3",
+                "metadata",
+                "mp3"
+            ],
+            "time": "2018-01-24T19:14:26+00:00"
+        },
         {
             "name": "phpmailer/phpmailer",
             "version": "dev-master",
@@ -312,7 +359,8 @@
     "stability-flags": {
         "tommyknocker/pdo-database-class": 20,
         "vlucas/phpdotenv": 20,
-        "phpmailer/phpmailer": 20
+        "phpmailer/phpmailer": 20,
+        "nass600/get-id3": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

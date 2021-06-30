@@ -6,10 +6,7 @@
  */
 
 ?>
-<?php
 
-print_r($_SESSION);
-?>
 <!-- Single movie Start -->
 <section class="gen-section-padding-3 gen-single-movie">
     <div class="container">
@@ -76,7 +73,19 @@ print_r($_SESSION);
                                                     </span>
                                             </li>
                                             <li><span>Run Time :</span>
-                                                <span><?= $title_data['duration'] ?></span>
+                                                <span><?= \App\File::get_duration(APP_ROOT. $title_data['filePath']); ?></span>
+                                            </li>
+                                            <li>
+                                                <span>Audio Channels :</span>
+                                                <span><?= \App\File::get_audio_channels(APP_ROOT . $title_data['filePath']) ?></span>
+                                            </li>
+                                            <li>
+                                                <span>Resolution :</span>
+                                                <span><?= \App\File::get_video_resolution(APP_ROOT . $title_data['filePath']) ?></span>
+                                            </li>
+                                            <li>
+                                                <span>Framerate :</span>
+                                                <span><?= \App\File::get_video_framerate(APP_ROOT . $title_data['filePath']) ?></span>
                                             </li>
                                             <li>
                                                 <span>Release Date :</span>

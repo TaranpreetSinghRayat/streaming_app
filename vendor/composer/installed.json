@@ -307,5 +307,54 @@
             }
         ],
         "description": "PHPMailer is a full-featured email creation and transfer class for PHP"
+    },
+    {
+        "name": "nass600/get-id3",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nass600/getID3.git",
+            "reference": "365c3802b4ad159572a195f3cbcb9e6c476d7e31"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nass600/getID3/zipball/365c3802b4ad159572a195f3cbcb9e6c476d7e31",
+            "reference": "365c3802b4ad159572a195f3cbcb9e6c476d7e31",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "time": "2018-01-24T19:14:26+00:00",
+        "type": "php-library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "getid3/getid3.php",
+                "getid3/write.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GNU"
+        ],
+        "authors": [
+            {
+                "name": "James Heinrich"
+            }
+        ],
+        "description": "PHP library for handling audio/video files metadata",
+        "homepage": "https://github.com/nass600/getID3",
+        "keywords": [
+            "id3",
+            "metadata",
+            "mp3"
+        ]
     }
 ]

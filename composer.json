@@ -18,6 +18,7 @@
     "require": {
         "tommyknocker/pdo-database-class": "dev-master",
         "vlucas/phpdotenv": "4.2.x-dev",
-        "phpmailer/phpmailer": "dev-master"
+        "phpmailer/phpmailer": "dev-master",
+        "nass600/get-id3": "^1.0@dev"
     }
 }

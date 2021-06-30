@@ -37,6 +37,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
+                    <?php if(!empty($shows)): ?>
                     <?php foreach ($shows as $show): ?>
                         <div class="col-xl-3 col-lg-4 col-md-6">
                             <div class="gen-carousel-movies-style-1 movie-grid style-1">
@@ -103,6 +104,9 @@
                             </div>
                         </div>
                     <?php endforeach; ?>
+                    <?php else: ?>
+                    <h4>No shows available.</h4>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

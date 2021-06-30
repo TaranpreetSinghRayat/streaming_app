@@ -9,6 +9,8 @@ class ComposerStaticInitc95fce7e1f5a77c38a92e0c30d4ef977
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '4e0dc17ffaf28ec98f12a50d6e181361' => __DIR__ . '/..' . '/tommyknocker/pdo-database-class/PDODb.php',
+        '2ce9fb4f015ef9d1272e86425d4d7181' => __DIR__ . '/..' . '/nass600/get-id3/getid3/getid3.php',
+        '2a1d435e4c89b89127643829cbea18d9' => __DIR__ . '/..' . '/nass600/get-id3/getid3/write.php',
     );
 
     public static $prefixLengthsPsr4 = array (
