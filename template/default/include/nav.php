@@ -49,7 +49,7 @@
                                     <ul class="gen-account-menu">
                                         <!-- Pms Menu -->
                                         <li>
-                                            <a href="register.html"><i class="fa fa-user"></i>
+                                            <a href="<?= BASE_URL ?>account.php"><i class="fa fa-user"></i>
                                                 Account </a>
                                         </li>
                                         <!-- Library Menu -->

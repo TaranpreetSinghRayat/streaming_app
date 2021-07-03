@@ -100,6 +100,15 @@ if(isset($_GET['view']) || isset($_GET['genre']) || isset($_GET['title'])){
                 'TAGS' => $TAGS,
                 'title_data' => $title_data
             ]);
+        }elseif (isset($_GET['title']) && isset($_GET['s']) && is_numeric($_GET['s']) && isset($_GET['e']) && is_numeric($_GET['e'])){
+            $title_data = $ENTITIES->get_show($_GET['title'],$_GET['s'],$_GET['e']);
+            echo $TPL->render('entities/single_show',[
+                'ENTITIES' => $ENTITIES,
+                'GENRE' => $GENRE,
+                'CASTS' => $CASTS,
+                'TAGS' => $TAGS,
+                'title_data' => $title_data
+            ]);
         }else{
             echo $TPL->render('entities/title_show',[
                 'ENTITIES' => $ENTITIES,
@@ -109,7 +118,7 @@ if(isset($_GET['view']) || isset($_GET['genre']) || isset($_GET['title'])){
                 'title_data' => $title_data
             ]);
         }
-    }else{
+    } else{
         //render error.
         echo $TPL->render('errors/404',[]);
     }
@@ -121,7 +130,8 @@ if(isset($_GET['view']) || isset($_GET['genre']) || isset($_GET['title'])){
 <?php
 echo $TPL->render('include/footer',[
     'app_description' => \App\Settings::get_value('app.description'),
-    'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo')
+    'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo'),
+    'gen_list' => $GENRE->list()
 ]);
 ?>
 <!-- //Footer Section -->

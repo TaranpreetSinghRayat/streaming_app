@@ -1,8 +1,8 @@
 <?php
 /**
  * User: Taranpreet Singh Ray
- * Date: 24-06-2021
- * Time: 19:34
+ * Date: 03-07-2021
+ * Time: 15:15
  */
 
 include "./config/config.php";
@@ -34,12 +34,11 @@ echo $TPL->render('include/header',[
 <!-- Navigation Section -->
 <?php
 echo $TPL->render('include/nav',[
-        'app_name' => \App\Settings::get_value('app.name'),
-        'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo'),
+    'app_name' => \App\Settings::get_value('app.name'),
+    'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo'),
 ]);
 ?>
 <!-- //Navigation Section -->
-
 <!-- Body Section -->
 <?php
 $ENTITIES = new \App\Entities();
@@ -47,11 +46,11 @@ $GENRE = new \App\Genre();
 $CASTS = new \App\Casts();
 $TAGS = new \App\Tags();
 
-echo $TPL->render('home/index',[
-        'ENTITIES' => $ENTITIES,
-        'GENRE' => $GENRE,
-        'CASTS' => $CASTS,
-        'TAGS' => $TAGS
+echo $TPL->render('auth/account',[
+    'ENTITIES' => $ENTITIES,
+    'GENRE' => $GENRE,
+    'CASTS' => $CASTS,
+    'TAGS' => $TAGS
 ]);
 ?>
 <!-- //Body Section -->
@@ -59,9 +58,9 @@ echo $TPL->render('home/index',[
 <!-- Footer Section -->
 <?php
 echo $TPL->render('include/footer',[
-        'app_description' => \App\Settings::get_value('app.description'),
-        'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo'),
-        'gen_list' => $GENRE->list()
+    'app_description' => \App\Settings::get_value('app.description'),
+    'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo'),
+    'gen_list' => $GENRE->list()
 ]);
 ?>
 <!-- //Footer Section -->

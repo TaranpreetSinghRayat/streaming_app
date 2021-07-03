@@ -26,16 +26,12 @@
                             <h4 class="footer-title">Explore</h4>
                             <div class="menu-explore-container">
                                 <ul class="menu">
-                                    <li class="menu-item">
-                                        <a href="index.html" aria-current="page">Home</a>
-                                    </li>
-                                    <li class="menu-item"><a href="movies-pagination.html">Movies</a></li>
-                                    <li class="menu-item"><a href="tv-shows-pagination.html">Tv Shows</a></li>
-                                    <li class="menu-item"><a href="video-pagination.html">Videos</a></li>
-                                    <li class="menu-item"><a href="#">Actors</a></li>
-                                    <li class="menu-item"><a href="#">Basketball</a></li>
-                                    <li class="menu-item"><a href="#">Celebrity</a></li>
-                                    <li class="menu-item"><a href="#">Cross</a></li>
+                                    <?php if(!empty($gen_list)): ?>
+                                        <?php foreach ($gen_list as $item): ?>
+                                            <li class="menu-item"><a href="<?= BASE_URL ?>entitie.php?genre=<?= $item['id'] ?>"><?= $item['name'] ?></a>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
                                 </ul>
                             </div>
                         </div>
@@ -55,8 +51,7 @@
                                             Center</a></li>
                                     <li class="menu-item"><a href="contact-us.html">contact us</a></li>
                                     <li class="menu-item"><a href="pricing-style-1.html">Subscribe</a></li>
-                                    <li class="menu-item"><a href="#">Our Team</a></li>
-                                    <li class="menu-item"><a href="contact-us.html">Faq</a></li>
+
                                 </ul>
                             </div>
                         </div>

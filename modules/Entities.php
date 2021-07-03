@@ -153,6 +153,19 @@ class Entities
         return null;
     }
 
+    public function get_show(int $titleID,int $ses,int $ep)
+    {
+        if($result = $this->db
+            ->where(Config::TBL_NAMES['ENTITIES']  . '.id', $titleID)
+            ->where(Config::TBL_NAMES['VIDEOS'] . '.season', $ses)
+            ->where(Config::TBL_NAMES['VIDEOS'] . '.episode', $ep)
+            ->join(Config::TBL_NAMES['VIDEOS'],Config::TBL_NAMES['VIDEOS'] . '.entityId = '. Config::TBL_NAMES['ENTITIES'] .'.id', 'left')
+            ->getOne(Config::TBL_NAMES['ENTITIES'])){
+            return $result;
+        }
+        return null;
+    }
+
     /**
      * CRUD OPERATIONS
      */
