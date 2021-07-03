@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
+    <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="bug fixing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/entitie.php" afterPath="$PROJECT_DIR$/entitie.php" />
       <change beforePath="$PROJECT_DIR$/modules/Users.php" afterPath="$PROJECT_DIR$/modules/Users.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/entities/movies.php" afterPath="$PROJECT_DIR$/template/default/entities/movies.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +22,8 @@
       <file leaf-file-name="entitie.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entitie.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+            <state relative-caret-position="384">
+              <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -106,11 +105,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Entities.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Entities.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/Entities.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="643">
               <caret line="102" column="39" lean-forward="false" selection-start-line="102" selection-start-column="29" selection-end-line="102" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/Users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="74" column="40" lean-forward="true" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -416,7 +425,7 @@
       <workItem from="1624601592503" duration="1777000" />
       <workItem from="1624620031277" duration="32226000" />
       <workItem from="1625052503015" duration="3828000" />
-      <workItem from="1625294574245" duration="927000" />
+      <workItem from="1625294574245" duration="1186000" />
     </task>
     <task id="LOCAL-00001" summary="register page js done&#10;new modules added">
       <created>1624370065659</created>
@@ -607,11 +616,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625058037421</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="bug fixing">
+      <created>1625296106416</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1625296106416</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95450000" />
+    <option name="totallyTimeSpent" value="95709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -662,7 +678,8 @@
     <MESSAGE value="Updated readme" />
     <MESSAGE value="File class added with file details&#10;bug fix" />
     <MESSAGE value="Video player added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Video player added" />
+    <MESSAGE value="bug fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1012,16 +1029,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/entitie.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="97" column="26" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+        <state relative-caret-position="384">
+          <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1030,6 +1039,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="643">
           <caret line="102" column="39" lean-forward="false" selection-start-line="102" selection-start-column="29" selection-end-line="102" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="74" column="40" lean-forward="true" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
           <folding />
         </state>
       </provider>

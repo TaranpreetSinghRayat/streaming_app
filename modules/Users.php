@@ -75,6 +75,7 @@ class Users
                         Session::insert('isSubscribed', true);
                     }
                     Session::insert('role', (($user_data['role'] == 0)) ? 'Subscriber' : 'Administrator' );
+                    Session::insert('view_title', []);
                     return true;
                 }else{
                     Session::insert('USR_ERR',MSG::AUTH['USR_LOG_DEC']);
