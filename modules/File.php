@@ -33,7 +33,7 @@ class File
         $getID3 = new \getID3();
         $info = $getID3->analyze($file);
         $getID3 = null;
-        return $info['audio']['channels'];
+        return $info['audio']['channels'] ?? 'N/A';
     }
 
     public static function get_video_resolution(string $file)

@@ -105,6 +105,54 @@ class Entities
         return false;
     }
 
+    public function get_total_seasons(int $titleID)
+    {
+        if($result = $this->db->rawQueryOne("SELECT count(DISTINCT(". Config::TBL_NAMES['VIDEOS'] .".season)) as seasson_count FROM ". Config::TBL_NAMES['ENTITIES'] ." INNER JOIN ". Config::TBL_NAMES['VIDEOS'] ." ON ". Config::TBL_NAMES['VIDEOS'] .".entityId = ". Config::TBL_NAMES['ENTITIES'] .".id WHERE ". Config::TBL_NAMES['ENTITIES'] .".id = ?",[$titleID])
+        ){
+            return $result['seasson_count'];
+        }
+        return null;
+    }
+
+    public function get_total_episodes(int $titleID)
+    {
+        if($result = $this->db->rawQueryOne("SELECT count(". Config::TBL_NAMES['VIDEOS'] .".episode) as epi_count FROM ". Config::TBL_NAMES['ENTITIES'] ." INNER JOIN ". Config::TBL_NAMES['VIDEOS'] ." ON ". Config::TBL_NAMES['VIDEOS'] .".entityId = ". Config::TBL_NAMES['ENTITIES'] .".id WHERE ". Config::TBL_NAMES['ENTITIES'] .".id = ?",[$titleID])){
+            return $result['epi_count'];
+        }
+        return null;
+    }
+
+    public function get_total_views(int $titleID)
+    {
+        if($result = $this->db->rawQueryOne("SELECT SUM(". Config::TBL_NAMES['VIDEOS'] .".views) as total_views FROM ". Config::TBL_NAMES['ENTITIES'] ." INNER JOIN ". Config::TBL_NAMES['VIDEOS'] ." ON ". Config::TBL_NAMES['VIDEOS'] .".entityId = ". Config::TBL_NAMES['ENTITIES'] .".id WHERE ". Config::TBL_NAMES['ENTITIES'] .".id = ?",[$titleID])){
+            return $result['total_views'];
+        }
+        return null;
+    }
+
+    public function get_show_seasons(int $titleID)
+    {
+        if($result = $this->db->rawQuery("SELECT DISTINCT(". Config::TBL_NAMES['VIDEOS'] .".season) as total_session
+                                                FROM ". Config::TBL_NAMES['ENTITIES'] ."
+                                                INNER JOIN ". Config::TBL_NAMES['VIDEOS'] ." ON ". Config::TBL_NAMES['VIDEOS'] .".entityId = ". Config::TBL_NAMES['ENTITIES'] .".id WHERE ". Config::TBL_NAMES['ENTITIES'] .".id = ?
+                                                GROUP BY ". Config::TBL_NAMES['VIDEOS'] .".season",[$titleID])){
+            return $result;
+        }
+        return null;
+    }
+
+    public function get_show_episodes_by_season(int $seasonID)
+    {
+        if($result = $this->db
+                        ->where(Config::TBL_NAMES['VIDEOS']  . '.season', $seasonID)
+                        ->join(Config::TBL_NAMES['VIDEOS'],Config::TBL_NAMES['VIDEOS'] . '.entityId = '. Config::TBL_NAMES['ENTITIES'] .'.id', 'left')
+                        ->get(Config::TBL_NAMES['ENTITIES'])
+        ){
+            return $result;
+        }
+        return null;
+    }
+
     /**
      * CRUD OPERATIONS
      */

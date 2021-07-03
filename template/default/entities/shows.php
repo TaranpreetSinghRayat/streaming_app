@@ -71,14 +71,14 @@
                                             </div>
                                         </div>
                                         <div class="gen-movie-action">
-                                            <a href="" class="gen-button">
+                                            <a href="<?= BASE_URL ?>entitie.php?title=<?= $show['id'] ?>" class="gen-button">
                                                 <i class="fa fa-play"></i>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="gen-info-contain">
                                         <div class="gen-movie-info">
-                                            <h3><a href=""><?= $show['name'] ?></a></h3>
+                                            <h3><a href="<?= BASE_URL ?>entitie.php?title=<?= $show['id'] ?>"><?= $show['name'] ?></a></h3>
                                         </div>
                                         <div class="gen-movie-meta-holder">
                                             <ul>
