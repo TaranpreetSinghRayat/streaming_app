@@ -95,6 +95,7 @@ class Users
         Session::del('UID');
         Session::del('role');
         Session::del('isSubscribed');
+        session_destroy();
         return true;
     }
 

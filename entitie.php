@@ -30,6 +30,7 @@ if(isset($_GET['view']) || isset($_GET['genre']) || isset($_GET['title'])){
             $type = 'Shows';
         }elseif (isset($_GET['title']) && is_numeric($_GET['title'])){
                 $update_views = $ENTITIES->update_views($_GET['title']);
+                var_dump($update_views);
                 $title_data = $ENTITIES->get($_GET['title']);
                 $page_description = $title_data['summary'];
                 $type = $title_data['name'];
