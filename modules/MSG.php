@@ -33,7 +33,9 @@ class MSG
         'SUCC_LOG' => 'Login Success. You will be redirected!',
         'USR_LOG_NF' => 'Invalid user.',
         'USR_LOG_INV_PASS' => 'Invalid Password',
-        'USR_LOG_DEC' => 'Account still left for verification. Please check verification mail.'
+        'USR_LOG_DEC' => 'Account still left for verification. Please check verification mail.',
+        'ERR_PASS_RST' => 'Something went wrong while resetting the password. Please try again later.',
+        'PASS_RST_SUCC' => 'Password token updated.'
     ];
 
     const MAIL = [
