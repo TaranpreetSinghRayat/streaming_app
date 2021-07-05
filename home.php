@@ -8,6 +8,7 @@
 include "./config/config.php";
 
 ?>
+
 <!-- Header Section -->
 <?php
 if(!\App\Session::exists('isLoggedIn')){

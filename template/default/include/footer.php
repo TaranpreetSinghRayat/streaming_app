@@ -41,15 +41,11 @@
                             <h4 class="footer-title">Company</h4>
                             <div class="menu-about-container">
                                 <ul class="menu">
-                                    <li class="menu-item"><a href="contact-us.html">Company</a>
-                                    </li>
                                     <li class="menu-item"><a href="contact-us.html">Privacy
                                             Policy</a></li>
                                     <li class="menu-item"><a href="contact-us.html">Terms Of
                                             Use</a></li>
-                                    <li class="menu-item"><a href="contact-us.html">Help
-                                            Center</a></li>
-                                    <li class="menu-item"><a href="contact-us.html">contact us</a></li>
+                                    <li class="menu-item"><a href="<?= BASE_URL ?>contact.php">contact us</a></li>
                                     <li class="menu-item"><a href="pricing-style-1.html">Subscribe</a></li>
 
                                 </ul>

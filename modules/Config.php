@@ -19,6 +19,7 @@ class Config
         'ENTITIES' => 'entities',
         'GENRE' => 'genre',
         'TAGS' => 'tags',
-        'VIDEOS' => 'videos'
+        'VIDEOS' => 'videos',
+        'CONTACT' => 'contact'
     ];
 }

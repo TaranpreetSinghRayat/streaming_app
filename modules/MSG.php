@@ -39,4 +39,9 @@ class MSG
     const MAIL = [
         'ACC_ACTIVE_WLC' => 'Let"s get this started. Please click the button below to activate your account and start streaming.'
     ];
+
+    const CONTACT = [
+        'ERR_QRY' => 'Something went wrong while creating query.',
+        'QRY_SUCC' => 'Query created success. Our staff will contact back you soon.'
+    ];
 }
