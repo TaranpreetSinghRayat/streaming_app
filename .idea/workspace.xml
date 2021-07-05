@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ajax/ajax-contact.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/contact.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/modules/Contactus.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/default/contact/index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/default/emails/contactus.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Config.php" afterPath="$PROJECT_DIR$/modules/Config.php" />
-      <change beforePath="$PROJECT_DIR$/modules/MSG.php" afterPath="$PROJECT_DIR$/modules/MSG.php" />
-      <change beforePath="$PROJECT_DIR$/sql dump/netflix_clone.sql" afterPath="$PROJECT_DIR$/sql dump/netflix_clone.sql" />
-      <change beforePath="$PROJECT_DIR$/template/default/include/footer.php" afterPath="$PROJECT_DIR$/template/default/include/footer.php" />
+      <change beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
+      <change beforePath="$PROJECT_DIR$/template/default/auth/key.php" afterPath="$PROJECT_DIR$/template/default/auth/key.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +20,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="title_movie.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/default/entities/title_movie.php">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2006">
-              <caret line="122" column="25" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="122" selection-end-column="25" />
+            <state relative-caret-position="289">
+              <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="72" lean-forward="false" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+              <folding>
+                <marker date="1625478555642" expanded="true" signature="3141:3153" ph="..." />
+                <marker date="1625478555642" expanded="true" signature="3365:3375" ph="..." />
+                <marker date="1625478555642" expanded="true" signature="4278:4290" ph="..." />
+                <marker date="1625478555642" expanded="true" signature="4489:4499" ph="..." />
+                <marker date="1625478555642" expanded="true" signature="5383:5395" ph="..." />
+                <marker date="1625478555642" expanded="true" signature="5594:5604" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="key.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/default/auth/key.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -52,14 +72,14 @@
       <file leaf-file-name="contact.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
+            <state relative-caret-position="1000">
               <caret line="86" column="44" lean-forward="false" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax-contact.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ajax-contact.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajax/ajax-contact.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="731">
@@ -187,14 +207,12 @@
         <option value="$PROJECT_DIR$/modules/Mailer.php" />
         <option value="$PROJECT_DIR$/helper/auth.php" />
         <option value="$PROJECT_DIR$/template/default/emails/account_active.php" />
-        <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/template/default/auth/register.php" />
         <option value="$PROJECT_DIR$/template/default/auth/recover.php" />
         <option value="$PROJECT_DIR$/modules/Security.php" />
         <option value="$PROJECT_DIR$/template/default/emails/recover_password.php" />
         <option value="$PROJECT_DIR$/recover-password.php" />
         <option value="$PROJECT_DIR$/template/default/errors/auth/key.php" />
-        <option value="$PROJECT_DIR$/template/default/auth/key.php" />
         <option value="$PROJECT_DIR$/modules/Cookies.php" />
         <option value="$PROJECT_DIR$/assets/default/js/script.js" />
         <option value="$PROJECT_DIR$/ajax/ajax-auth.php" />
@@ -202,7 +220,6 @@
         <option value="$PROJECT_DIR$/assets/default/js/streamlab-core.js" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/modules/Casts.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/template/default/errors/404.php" />
         <option value="$PROJECT_DIR$/entities.php" />
         <option value="$PROJECT_DIR$/modules/Tags.php" />
@@ -234,6 +251,9 @@
         <option value="$PROJECT_DIR$/template/default/emails/contactus.php" />
         <option value="$PROJECT_DIR$/contact.php" />
         <option value="$PROJECT_DIR$/ajax/ajax-contact.php" />
+        <option value="$PROJECT_DIR$/template/default/auth/key.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/register.php" />
       </list>
     </option>
   </component>
@@ -422,7 +442,7 @@
       <workItem from="1625294574245" duration="1199000" />
       <workItem from="1625297087750" duration="5535000" />
       <workItem from="1625303879507" duration="1943000" />
-      <workItem from="1625470227543" duration="3032000" />
+      <workItem from="1625470227543" duration="3846000" />
     </task>
     <task id="LOCAL-00001" summary="register page js done&#10;new modules added">
       <created>1624370065659</created>
@@ -641,11 +661,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625305965158</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="bug fix&#10;contact page created&#10;sql dump updated">
+      <created>1625473816954</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1625473816954</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106232000" />
+    <option name="totallyTimeSpent" value="107046000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -701,7 +728,8 @@
     <MESSAGE value="views bug fixing" />
     <MESSAGE value="bug fix&#10;TV show page added" />
     <MESSAGE value="bug fix&#10;show pages and player updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix&#10;show pages and player updated" />
+    <MESSAGE value="bug fix&#10;contact page created&#10;sql dump updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix&#10;contact page created&#10;sql dump updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -742,13 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/default/auth/key.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="95" lean-forward="false" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
         </state>
       </provider>
     </entry>
@@ -959,14 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="57" column="23" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="57" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entitie.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -979,14 +992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2006">
           <caret line="122" column="25" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="122" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="115" column="6" lean-forward="true" selection-start-line="70" selection-start-column="4" selection-end-line="115" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1076,33 +1081,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1139">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <marker date="1624449739275" expanded="true" signature="3067:3079" ph="..." />
-            <marker date="1624449739275" expanded="true" signature="3291:3301" ph="..." />
-            <marker date="1624449739275" expanded="true" signature="4204:4216" ph="..." />
-            <marker date="1624449739275" expanded="true" signature="4415:4425" ph="..." />
-            <marker date="1624449739275" expanded="true" signature="5309:5321" ph="..." />
-            <marker date="1624449739275" expanded="true" signature="5520:5530" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/default/emails/contactus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="86" column="44" lean-forward="false" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1120,6 +1102,53 @@
         <state relative-caret-position="731">
           <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/default/auth/key.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="72" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="86" column="44" lean-forward="false" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="72" lean-forward="false" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+          <folding>
+            <marker date="1625478555642" expanded="true" signature="3141:3153" ph="..." />
+            <marker date="1625478555642" expanded="true" signature="3365:3375" ph="..." />
+            <marker date="1625478555642" expanded="true" signature="4278:4290" ph="..." />
+            <marker date="1625478555642" expanded="true" signature="4489:4499" ph="..." />
+            <marker date="1625478555642" expanded="true" signature="5383:5395" ph="..." />
+            <marker date="1625478555642" expanded="true" signature="5594:5604" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

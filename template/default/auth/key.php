@@ -13,7 +13,7 @@
             <div class="col-lg-12">
                 <div class="text-center">
 
-                        <h4>Account Activation</h4>
+                        <h4><?= $title ?></h4>
                         <p><?= $msg ?></p>
                         <a class="btn btn-danger" href="<?= BASE_URL ?>login.php"><?= $btn_text ?></a>
                 </div>

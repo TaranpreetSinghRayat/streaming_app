@@ -18,7 +18,8 @@ $TPL = new \App\Template(TEMPLATE.'/'. \App\Settings::get_value('app.theme'));
 echo $TPL->render('include/header',[
         'page_description' => 'Please login to watch all your favorite shows and movies.',
         'app_auth' => $_ENV['DEV'],
-        'page_title' => 'Login | '. APP_NAME
+        'page_title' => 'Login | '. APP_NAME,
+        'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo')
 ]);
 
 ?>
@@ -46,11 +47,21 @@ if(isset($_GET['p'])){
                 }else{
                     echo $TPL->render('auth/key',[
                             'msg' => \App\MSG::AUTH['INV_KEY'],
+                            'title' => 'Account Activation',
                             'btn_text' => 'Go Back'
                     ]);
                 }
         }elseif ($_GET['p'] == 'recover'){
             //forgot password stuff
+            if(isset($_GET['k'])){
+
+            }else{
+                echo $TPL->render('auth/key',[
+                    'msg' => \App\MSG::AUTH['INV_KEY'],
+                    'title' => 'Password Recovery',
+                    'btn_text' => 'Go Back'
+                ]);
+            }
         }
 }else{
     echo $TPL->render('auth/login',[
