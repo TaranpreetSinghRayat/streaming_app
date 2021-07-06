@@ -14,7 +14,8 @@ $TPL = new \App\Template(TEMPLATE.'/'. \App\Settings::get_value('app.theme'));
 echo $TPL->render('include/header',[
     'page_description' => 'Please login to watch all your favorite shows and movies.',
     'app_auth' => $_ENV['DEV'],
-    'page_title' => 'Recover Password | '. APP_NAME
+    'page_title' => 'Recover Password | '. APP_NAME,
+    'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo')
 ]);
 
 ?>
