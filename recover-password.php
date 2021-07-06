@@ -74,7 +74,7 @@ echo $TPL->render('include/footer',[]);
             data: {action:'check_username_email_exists',user},
             dataType: "html",
             beforeSend: function () {
-                $("#user_email_txt").html('<p style="color: #1f80e0">Looking up in records</p>');
+                //$("#user_email_txt").html('<p style="color: #1f80e0">Looking up in records</p>');
                 $("#pms_recover_password_form input[name=submit]").prop('disabled',true);
             },
             success: function (resp) {
@@ -82,7 +82,7 @@ echo $TPL->render('include/footer',[]);
                 var parsed_data = JSON.parse(resp);
                 if(parsed_data.status == 1){
                     $("#pms_recover_password_form input[name=submit]").prop('disabled',false);
-                    $("#user_email_txt").html('<p style="color: green">User found</p>');
+                    //$("#user_email_txt").html('<p style="color: green">User found</p>');
                 }
             },
             error: function (err) {

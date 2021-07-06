@@ -24,7 +24,7 @@ $PAGE_DATA = $PAGES->get_page_by_slug($_GET['view']);
     endif;
     $TPL = new \App\Template(TEMPLATE.'/'. \App\Settings::get_value('app.theme'));
     echo $TPL->render('include/header',[
-        'page_description' => 'Please login to watch all your favorite shows and movies.',
+        'page_description' => $PAGE_DATA['content'],
         'app_auth' => $_ENV['DEV'],
         'page_title' => $PAGE_DATA['title'] . ' | '. APP_NAME,
         'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo')
