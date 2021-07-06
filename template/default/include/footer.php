@@ -41,12 +41,13 @@
                             <h4 class="footer-title">Company</h4>
                             <div class="menu-about-container">
                                 <ul class="menu">
-                                    <li class="menu-item"><a href="contact-us.html">Privacy
-                                            Policy</a></li>
-                                    <li class="menu-item"><a href="contact-us.html">Terms Of
-                                            Use</a></li>
-                                    <li class="menu-item"><a href="<?= BASE_URL ?>contact.php">contact us</a></li>
-                                    <li class="menu-item"><a href="pricing-style-1.html">Subscribe</a></li>
+                                    <?php if(!empty($company_pages)): ?>
+                                        <?php foreach ($company_pages as $page): ?>
+                                            <li class="menu-item"><a href="<?= BASE_URL ?>page.php?view=<?= $page['slug'] ?>"><?= $page['title'] ?></a></li>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                    <li class="menu-item"><a href="<?= BASE_URL ?>contact.php">Contact us</a></li>
+                                    <li class="menu-item"><a href="">Subscribe</a></li>
 
                                 </ul>
                             </div>

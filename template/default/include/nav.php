@@ -26,6 +26,15 @@
                                     <li class="menu-item">
                                         <a href="<?= BASE_URL ?>entitie.php?view=shows">Tv Shows</a>
                                     </li>
+                                    <?php if(!empty($nav_links)): ?>
+                                        <?php foreach ($nav_links as $nav): ?>
+                                            <?php if($nav['isLoggedIn'] == 1): ?>
+                                                <li class="menu-item">
+                                                    <a href="<?= BASE_URL ?>page.php?view=<?= $nav['slug'] ?>" aria-current="page"><?= $nav['title'] ?></a>
+                                                </li>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
                                 </ul>
                             </div>
                         </div>
@@ -39,7 +48,7 @@
                                             <input type="search" class="search-field" placeholder="Search …" value="" name="s">
                                         </label>
                                         <button type="submit" class="search-submit"><span
-                                                class="screen-reader-text"></span></button>
+                                                    class="screen-reader-text"></span></button>
                                     </form>
                                 </div>
                             </div>

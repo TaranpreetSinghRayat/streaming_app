@@ -20,6 +20,8 @@ class Config
         'GENRE' => 'genre',
         'TAGS' => 'tags',
         'VIDEOS' => 'videos',
-        'CONTACT' => 'contact'
+        'CONTACT' => 'contact',
+        'PAGES' => 'pages',
+        'PAGE_HEADERS' => 'page_headers'
     ];
 }

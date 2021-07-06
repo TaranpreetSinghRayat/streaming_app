@@ -35,13 +35,15 @@ if(isset($_GET['p'])){
                         if($user->activate($_GET['k'])){
                             echo $TPL->render('auth/key',[
                                     'msg' => \App\MSG::AUTH['ACC_ACTV'],
-                                    'btn_text' => 'Login'
+                                    'btn_text' => 'Login',
+                                    'title' => 'Account Activation'
                             ]);
                         }
                     }else{
                         echo $TPL->render('auth/key',[
                                 'msg' => \App\MSG::AUTH['ERR_ACC_ACTV'],
-                                'btn_text' => 'Go Back'
+                                'btn_text' => 'Go Back',
+                                'title' => 'Account Activation'
                         ]);
                     }
                 }else{

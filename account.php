@@ -28,7 +28,7 @@ echo $TPL->render('include/header',[
     'page_title' => 'Home | '. APP_NAME,
     'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo')
 ]);
-
+$PAGES = new \App\Pages();
 ?>
 <!-- // Header Section -->
 <!-- Navigation Section -->
@@ -36,6 +36,7 @@ echo $TPL->render('include/header',[
 echo $TPL->render('include/nav',[
     'app_name' => \App\Settings::get_value('app.name'),
     'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo'),
+    'nav_links' => $PAGES->get_pages(($PAGES->get_page_header('navi'))['id'])
 ]);
 ?>
 <!-- //Navigation Section -->
@@ -57,10 +58,12 @@ echo $TPL->render('auth/account',[
 
 <!-- Footer Section -->
 <?php
+
 echo $TPL->render('include/footer',[
     'app_description' => \App\Settings::get_value('app.description'),
     'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo'),
-    'gen_list' => $GENRE->list()
+    'gen_list' => $GENRE->list(),
+    'company_pages' => $PAGES->get_pages(($PAGES->get_page_header('company'))['id'])
 ]);
 ?>
 <!-- //Footer Section -->
