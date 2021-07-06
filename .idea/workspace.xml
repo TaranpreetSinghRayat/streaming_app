@@ -2,138 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/netflix.local.iml___jb_tmp___" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/a11y/a11y-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/a11y/a11y.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/a11y/a11y.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/a11y/a11y.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/a11y/a11y.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/a11y/audio-description-icon.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/a11y/video-description-icon.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/ads-vast-vpaid/ads-vast-vpaid.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/ads-vast-vpaid/ads-vast-vpaid.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/ads/ads-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/ads/ads.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/ads/ads.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/ads/ads.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/ads/ads.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/airplay/airplay.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/airplay/airplay.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/airplay/airplay.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/airplay/airplay.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/airplay/airplay.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/airplay/airplay.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/chromecast/chromecast-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/chromecast/chromecast.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/chromecast/chromecast.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/chromecast/chromecast.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/chromecast/chromecast.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/chromecast/chromecast.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/chromecast/chromecast.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/context-menu/context-menu-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/context-menu/context-menu.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/context-menu/context-menu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/context-menu/context-menu.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/context-menu/context-menu.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/facebook-pixel/facebook-pixel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/facebook-pixel/facebook-pixel.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/frameNavigator/frameNavigator-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/frameNavigator/frameNavigator.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/frameNavigator/frameNavigator.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/frameNavigator/frameNavigator.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/google-analytics/google-analytics.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/google-analytics/google-analytics.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/jump-forward/jump-forward-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/jump-forward/jump-forward.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/jump-forward/jump-forward.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/jump-forward/jump-forward.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/jump-forward/jump-forward.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/jump-forward/jumpforward.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/jump-forward/jumpforward.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/loop/loop-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/loop/loop.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/loop/loop.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/loop/loop.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/loop/loop.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/loop/loop.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/loop/loop.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/markers/markers.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/markers/markers.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/markersrolls/markersrolls.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/markersrolls/markersrolls.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/picture-in-picture/picture-in-picture-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/picture-in-picture/picture-in-picture.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/playlist/playlist-controls.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/playlist/playlist-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/playlist/playlist.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/playlist/playlist.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/playlist/playlist.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/playlist/playlist.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/postroll/postroll-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/postroll/postroll.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/postroll/postroll.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/postroll/postroll.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/postroll/postroll.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/preview/preview.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/preview/preview.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/quality/quality-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/quality/quality.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/quality/quality.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/quality/quality.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/quality/quality.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/skip-back/skip-back-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/skip-back/skip-back.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/skip-back/skip-back.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/skip-back/skip-back.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/skip-back/skip-back.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/skip-back/skipback.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/skip-back/skipback.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/snapshot/snapshot-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/snapshot/snapshot.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/source-chooser/settings.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/source-chooser/settings.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/source-chooser/source-chooser-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/source-chooser/source-chooser.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/source-chooser/source-chooser.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/source-chooser/source-chooser.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/source-chooser/source-chooser.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/speed/speed-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/speed/speed.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/speed/speed.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/speed/speed.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/speed/speed.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/stop/stop-i18n.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/stop/stop.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/stop/stop.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/stop/stop.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/stop/stop.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/stop/stop.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/vrview/cardboard.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/vrview/cardboard.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/vrview/vrview.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/vrview/vrview.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/vrview/vrview.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/default/video_player/vrview/vrview.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/entities/1/back/asset-1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/entities/1/thumb/asset-1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/entities/6/back/asset-2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/entities/6/thumb/asset-2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/videos/1/1.mp4" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/videos/2/2.mp4" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/modules/Pages.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/page.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/default/include/nav2.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/default/page/index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/nass600/get-id3" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/account.php" afterPath="$PROJECT_DIR$/account.php" />
-      <change beforePath="$PROJECT_DIR$/contact.php" afterPath="$PROJECT_DIR$/contact.php" />
-      <change beforePath="$PROJECT_DIR$/entitie.php" afterPath="$PROJECT_DIR$/entitie.php" />
-      <change beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Config.php" afterPath="$PROJECT_DIR$/modules/Config.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/include/footer.php" afterPath="$PROJECT_DIR$/template/default/include/footer.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/include/nav.php" afterPath="$PROJECT_DIR$/template/default/include/nav.php" />
+      <change beforePath="$PROJECT_DIR$/sql dump/netflix_clone.sql" afterPath="$PROJECT_DIR$/sql dump/netflix_clone.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -570,7 +440,7 @@
       <workItem from="1625297087750" duration="5535000" />
       <workItem from="1625303879507" duration="1943000" />
       <workItem from="1625470227543" duration="7495000" />
-      <workItem from="1625556571277" duration="2539000" />
+      <workItem from="1625556571277" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="register page js done&#10;new modules added">
       <created>1624370065659</created>
@@ -810,11 +680,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625483924281</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="bug fix&#10;dynamic pages added">
+      <created>1625559173724</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1625559173724</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113234000" />
+    <option name="totallyTimeSpent" value="113786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -873,7 +750,8 @@
     <MESSAGE value="bug fix&#10;contact page created&#10;sql dump updated" />
     <MESSAGE value="bug fix in login and register" />
     <MESSAGE value="bug fix&#10;password recovery process completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix&#10;password recovery process completed" />
+    <MESSAGE value="bug fix&#10;dynamic pages added" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix&#10;dynamic pages added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
