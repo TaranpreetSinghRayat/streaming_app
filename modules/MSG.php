@@ -35,7 +35,9 @@ class MSG
         'USR_LOG_INV_PASS' => 'Invalid Password',
         'USR_LOG_DEC' => 'Account still left for verification. Please check verification mail.',
         'ERR_PASS_RST' => 'Something went wrong while resetting the password. Please try again later.',
-        'PASS_RST_SUCC' => 'Password token updated.'
+        'PASS_RST_SUCC' => 'Password token updated.',
+        'PRF_UPDT_SUCC' => 'Profile information updated success.',
+        'PRF_UPDT_FAIL' => 'Something went wrong while updating profile. Please try again later'
     ];
 
     const MAIL = [

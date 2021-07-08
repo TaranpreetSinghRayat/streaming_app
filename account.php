@@ -78,8 +78,30 @@ echo $TPL->render('include/footer',[
 
         var data = {
             action: 'update_account',
-            email: $().val(),
+            email: $("input[name=email]").val(),
+            f_name: $("input[name=f_name]").val(),
+            l_name: $("input[name=l_name]").val(),
+            user: $("input[name=user]").val()
         }
+
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-auth.php",
+            data: data,
+            dataType: "html",
+            success: function (resp) {
+                var parsed_data = JSON.parse(resp);
+                if(parsed_data.status == 1){
+                    Toast.create("Success", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+                }else{
+                    Toast.create("Success", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+                }
+            },
+            error: function (err) {
+                console.log(err)
+            },
+        });
+
     });
 </script>
 <!-- //Custom Script -->

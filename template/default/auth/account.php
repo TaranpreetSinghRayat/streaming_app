@@ -50,6 +50,7 @@
                             <input type="text" name="f_name" required value="<?= $user_data['first_name'] ?>">
                             <label>Last Name*</label>
                             <input type="text" name="l_name" required value="<?= $user_data['last_name'] ?>">
+                            <input type="hidden" name="user" value="<?= $user_data['id'] ?>">
                             <div class="form-button">
                                 <button type="submit" name="update" value="Update">Update</button>
                             </div>

@@ -191,6 +191,34 @@ if(isset($_POST) && isset($_POST['action'])){
                 echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
             }
             break;
+        case 'update_account':
+                $validator = new \App\Validator();
+                $valData = $validator->validate($_POST,[
+                    'email' => [
+                        'required' => true
+                    ],
+                    'f_name' => [
+                        'required' => true
+                    ],
+                    'l_name' => [
+                        'required' => true
+                    ]
+                ]);
+                if($valData->passed()){
+                    $user = new \App\Users();
+                    if($user->update($_POST['user'],[
+                        'email' => \App\Security::clean($_POST['email']),
+                        'first_name' => \App\Security::clean($_POST['f_name']),
+                        'last_name' => \App\Security::clean($_POST['l_name'])
+                    ])){
+                        echo json_encode(['status' => 1, 'msg' => \App\MSG::AUTH['PRF_UPDT_SUCC']]);
+                    }else{
+                        echo json_encode(['status' => 1, 'msg' => \App\MSG::AUTH['PRF_UPDT_FAIL']]);
+                    }
+                }else{
+                    echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
+                }
+            break;
         default:
             echo(json_encode(['status' => 0, 'msg' => 'Invalid parameters supplied.']));
             break;
