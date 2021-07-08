@@ -16,11 +16,31 @@
                         <div class="col-lg-12">
                             <div class="gen-video-holder">
 
-                                <video id="player1" width="100%" height="550px" controls preload="none" poster="<?= BASE_URL . $title_data['thumbnail'] ?>">
-                                    <source src="<?= $title_data['filePath'] ?>" <?php if(strpos($title_data['filePath'],'youtu') !== false): ?> <?php else: ?> type="<?= mime_content_type(APP_ROOT . $title_data['filePath']) ?>" <?php endif; ?>>
-                                </video>
+                                <?php if($title_data['subscribed'] == 1): ?>
+                                    <?php if(\App\Session::get('isSubscribed') == true): ?>
+                                        <video id="player1" width="100%" height="550px" controls preload="none" poster="<?= BASE_URL . $title_data['thumbnail'] ?>">
+                                            <source src="<?= $title_data['filePath'] ?>" <?php if(strpos($title_data['filePath'],'youtu') !== false): ?> <?php else: ?> type="<?= mime_content_type(APP_ROOT . $title_data['filePath']) ?>" <?php endif; ?>>
+                                        </video>
+                                    <?php else: ?>
+                                        <video id="player1" width="100%" height="550px" controls preload="none" poster="<?= BASE_URL . $title_data['thumbnail'] ?>">
+                                            <source src="<?= $title_data['trailer'] ?>" <?php if(strpos($title_data['trailer'],'youtu') !== false): ?> <?php else: ?> type="<?= mime_content_type(APP_ROOT . $title_data['trailer']) ?>" <?php endif; ?>>
+                                        </video>
+                                    <?php endif; ?>
+                                <?php elseif($title_data['subscribed'] == 0): ?>
+                                    <video id="player1" width="100%" height="550px" controls preload="none" poster="<?= BASE_URL . $title_data['thumbnail'] ?>">
+                                        <source src="<?= $title_data['filePath'] ?>" <?php if(strpos($title_data['filePath'],'youtu') !== false): ?> <?php else: ?> type="<?= mime_content_type(APP_ROOT . $title_data['filePath']) ?>" <?php endif; ?>>
+                                    </video>
+                                <?php endif; ?>
                             </div>
                             <div class="gen-single-movie-info">
+                                <?php if($title_data['subscribed'] == 1): ?>
+                                    <?php if(\App\Session::get('isSubscribed') == false): ?>
+                                        <br />
+                                        <div class="alert  alert-danger alert-dismissible">
+                                            <strong>Please <a href="#">Subscribe</a> to watch <?= $title_data['name'] ?> & many more titles in premium quality.</strong>
+                                        </div>
+                                    <?php endif; ?>
+                                <?php endif; ?>
                                 <h2 class="gen-title"><?= $title_data['name'] ?> - <?= $title_data['title'] ?> - S<?= $title_data['season'] ?>E<?= $title_data['episode'] ?></h2>
                                 <div class="gen-single-meta-holder">
                                     <ul>

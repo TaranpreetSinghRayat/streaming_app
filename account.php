@@ -46,12 +46,16 @@ $ENTITIES = new \App\Entities();
 $GENRE = new \App\Genre();
 $CASTS = new \App\Casts();
 $TAGS = new \App\Tags();
+$USERS = new \App\Users();
 
 echo $TPL->render('auth/account',[
     'ENTITIES' => $ENTITIES,
     'GENRE' => $GENRE,
     'CASTS' => $CASTS,
-    'TAGS' => $TAGS
+    'TAGS' => $TAGS,
+    'title' => $USERS->find(\App\Session::get('UID'))['username'] . ' Account',
+    'user_data' => $USERS->find(\App\Session::get('UID'))
+
 ]);
 ?>
 <!-- //Body Section -->
@@ -68,5 +72,14 @@ echo $TPL->render('include/footer',[
 ?>
 <!-- //Footer Section -->
 <!-- Custom Script -->
+<script>
+    $("#update_account").submit((e) => {
+        e.preventDefault();
 
+        var data = {
+            action: 'update_account',
+            email: $().val(),
+        }
+    });
+</script>
 <!-- //Custom Script -->
