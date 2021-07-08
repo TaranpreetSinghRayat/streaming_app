@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/account.php" afterPath="$PROJECT_DIR$/account.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/auth/account.php" afterPath="$PROJECT_DIR$/template/default/auth/account.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/entities/single_show.php" afterPath="$PROJECT_DIR$/template/default/entities/single_show.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/entities/title_movie.php" afterPath="$PROJECT_DIR$/template/default/entities/title_movie.php" />
+      <change beforePath="$PROJECT_DIR$/sql dump/netflix_clone.sql" afterPath="$PROJECT_DIR$/sql dump/netflix_clone.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -360,7 +357,7 @@
       <workItem from="1625556571277" duration="5200000" />
       <workItem from="1625581653391" duration="176000" />
       <workItem from="1625728739145" duration="3526000" />
-      <workItem from="1625739547568" duration="135000" />
+      <workItem from="1625739547568" duration="186000" />
     </task>
     <task id="LOCAL-00001" summary="register page js done&#10;new modules added">
       <created>1624370065659</created>
@@ -628,15 +625,21 @@
       <option name="project" value="LOCAL" />
       <updated>1625563291331</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="bug fix&#10;added subscribed and non subscibed playback">
+      <created>1625739684751</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1625739684751</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119732000" />
+    <option name="totallyTimeSpent" value="119783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

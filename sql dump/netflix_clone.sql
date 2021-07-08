@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2021 at 10:20 AM
+-- Generation Time: Jul 08, 2021 at 12:21 PM
 -- Server version: 5.7.18-log
 -- PHP Version: 7.1.1
 
@@ -85,20 +85,21 @@ CREATE TABLE `entities` (
   `tags` json NOT NULL,
   `views` bigint(20) NOT NULL DEFAULT '0',
   `featured` char(1) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
-  `isMovie` char(1) COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
+  `isMovie` char(1) COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
+  `subscribed` char(1) COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `entities`
 --
 
-INSERT INTO `entities` (`id`, `name`, `thumbnail`, `background`, `trailer`, `genre`, `IMDB`, `guidelines`, `summary`, `cast`, `tags`, `views`, `featured`, `isMovie`) VALUES
-(1, 'The Express', 'assets/entities/1/thumb/asset-1.jpg', 'assets/entities/1/back/asset-1.jpg', 'https://www.youtube.com/watch?v=LXb3EKWsInQ', '[\"1\", \"2\"]', 4.8, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '0', '1'),
-(2, 'The Express 2', 'assets/entities/1/thumb/asset-1.jpg', 'assets/entities/1/back/asset-1.jpg', 'https://www.youtube.com/watch?v=LXb3EKWsInQ', '[\"1\", \"2\"]', 5.6, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '0', '1'),
-(3, 'The Express 3', 'assets/entities/1/thumb/asset-1.jpg', 'assets/entities/1/back/asset-1.jpg', 'https://www.youtube.com/watch?v=LXb3EKWsInQ', '[\"1\", \"2\"]', 8, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '1', '1'),
-(4, 'The Express 4', 'assets/entities/1/thumb/asset-1.jpg', 'assets/entities/1/back/asset-1.jpg', 'https://www.youtube.com/watch?v=LXb3EKWsInQ', '[\"3\", \"2\"]', 8.1, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '1', '1'),
-(5, 'The Express 5\r\n', 'assets/entities/1/thumb/asset-1.jpg', 'assets/entities/1/back/asset-1.jpg', 'https://www.youtube.com/watch?v=LXb3EKWsInQ', '[\"3\", \"4\"]', 8.2, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '1', '1'),
-(6, 'The Show 1\r\n', 'assets/entities/6/thumb/asset-2.jpg', 'assets/entities/6/back/asset-2.jpg', 'https://www.youtube.com/watch?v=LXb3EKWsInQ', '[\"3\", \"4\"]', 8.2, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '1', '0');
+INSERT INTO `entities` (`id`, `name`, `thumbnail`, `background`, `trailer`, `genre`, `IMDB`, `guidelines`, `summary`, `cast`, `tags`, `views`, `featured`, `isMovie`, `subscribed`) VALUES
+(1, 'The Express', 'assets/entities/1/thumb/asset-1.jpg', 'assets/entities/1/back/asset-1.jpg', 'https://www.youtube.com/watch?v=LXb3EKWsInQ', '[\"1\", \"2\"]', 4.8, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '0', '1', '0'),
+(2, 'The Express 2', 'assets/entities/1/thumb/asset-1.jpg', 'assets/entities/1/back/asset-1.jpg', 'https://www.youtube.com/watch?v=LXb3EKWsInQ', '[\"1\", \"2\"]', 5.6, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '0', '1', '1'),
+(3, 'The Express 3', 'assets/entities/1/thumb/asset-1.jpg', 'assets/entities/1/back/asset-1.jpg', 'https://www.youtube.com/watch?v=n2u81Ujc93g', '[\"1\", \"2\"]', 8, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '1', '1', '1'),
+(4, 'The Express 4', 'assets/entities/1/thumb/asset-1.jpg', 'assets/entities/1/back/asset-1.jpg', 'https://www.youtube.com/watch?v=LXb3EKWsInQ', '[\"3\", \"2\"]', 8.1, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '1', '1', '1'),
+(5, 'The Express 5\r\n', 'assets/entities/1/thumb/asset-1.jpg', 'assets/entities/1/back/asset-1.jpg', 'https://www.youtube.com/watch?v=LXb3EKWsInQ', '[\"3\", \"4\"]', 8.2, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '1', '1', '1'),
+(6, 'The Show 1\r\n', 'assets/entities/6/thumb/asset-2.jpg', 'assets/entities/6/back/asset-2.jpg', 'https://www.youtube.com/watch?v=LXb3EKWsInQ', '[\"3\", \"4\"]', 8.2, 'PG-14', 'thi is long stuff about the movie or a tv show or who know what else and stuiff', '[\"1\", \"2\"]', '[\"1\", \"2\"]', 0, '1', '0', '1');
 
 -- --------------------------------------------------------
 
@@ -278,17 +279,17 @@ CREATE TABLE `videos` (
 --
 
 INSERT INTO `videos` (`id`, `title`, `filePath`, `uploadDate`, `releaseDate`, `views`, `season`, `episode`, `language`, `audio_languages`, `entityId`) VALUES
-(1, 'The Express', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 3, 0, 0, 'English', 'English', 1),
-(2, 'The Express 2', '/assets/videos/2/2.mp4', '2021-06-30 12:21:46', '2021-06-09', 3, 0, 0, 'English', 'English', 2),
-(3, 'The Express 3', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 1, 0, 0, 'English', 'English', 3),
+(1, 'The Express', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 5, 0, 0, 'English', 'English', 1),
+(2, 'The Express 2', '/assets/videos/2/2.mp4', '2021-06-30 12:21:46', '2021-06-09', 7, 0, 0, 'English', 'English', 2),
+(3, 'The Express 3', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 4, 0, 0, 'English', 'English', 3),
 (4, 'The Express 4', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 1, 0, 0, 'English', 'English', 4),
 (5, 'The Express 5', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 1, 0, 0, 'English', 'English', 5),
-(6, 'pika', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 4, 1, 1, 'English', 'English', 6),
-(7, 'chu', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 4, 1, 2, 'English', 'English', 6),
-(8, 'ash', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 4, 2, 1, 'English', 'English', 6),
-(9, 'dina', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 4, 2, 2, 'English', 'English', 6),
-(10, 'saur', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 4, 2, 3, 'English', 'English', 6),
-(11, 'omg', '/assets/videos/2/2.mp4', '2021-06-30 12:21:46', '2021-06-09', 4, 3, 1, 'English', 'English', 6);
+(6, 'pika', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 9, 1, 1, 'English', 'English', 6),
+(7, 'chu', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 9, 1, 2, 'English', 'English', 6),
+(8, 'ash', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 9, 2, 1, 'English', 'English', 6),
+(9, 'dina', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 9, 2, 2, 'English', 'English', 6),
+(10, 'saur', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 9, 2, 3, 'English', 'English', 6),
+(11, 'omg', '/assets/videos/2/2.mp4', '2021-06-30 12:21:46', '2021-06-09', 9, 3, 1, 'English', 'English', 6);
 
 --
 -- Indexes for dumped tables
