@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2021 at 12:21 PM
+-- Generation Time: Jul 08, 2021 at 03:48 PM
 -- Server version: 5.7.18-log
 -- PHP Version: 7.1.1
 
@@ -19,6 +19,16 @@ SET time_zone = "+00:00";
 --
 -- Database: `netflix_clone`
 --
+
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`fear`@`%` PROCEDURE `update_user_token` (`userID` BIGINT(100), `token` VARCHAR(50))  BEGIN
+	UPDATE users SET account_key = token where id = userID;
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -252,7 +262,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`, `password`, `created_at`, `avatar`, `last_login`, `account_key`, `is_subscribed`, `role`, `ip`, `status`) VALUES
-(3, 'fear126', 'fear126@live.com', 'Faer', 'Fear', 'c2RBbDgwSjNFbmkrUlI2UG1JMGh6dz09', '2021-06-23 11:43:11', 'http://netflix.local//assets/default/images/avatars/default.png', '2021-07-05 13:17:58', '60e2ea66f0045', '0', '0', '127.0.0.1', '1');
+(3, 'fear126', 'fear126@live.com', 'Fear', 'Fear', 'c2RBbDgwSjNFbmkrUlI2UG1JMGh6dz09', '2021-06-23 11:43:11', 'http://netflix.local//assets/default/images/avatars/default.png', '2021-07-05 13:17:58', '60e70203de4e6', '0', '0', '127.0.0.1', '1');
 
 -- --------------------------------------------------------
 

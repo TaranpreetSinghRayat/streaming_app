@@ -135,11 +135,12 @@ if(isset($_POST) && isset($_POST['action'])){
                     'welcome_text' => \App\MSG::AUTH['ACC_PSS_RCV'],
                     'acc_activation_link' => BASE_URL . '/login.php?p=recover&k='. $usr_data['account_key'],
                     'btn_text' => 'Reset Password',
-                    'emergency_note' => '',
+                    'emergency_note' => 'link is valid upto 5 min. only.',
                     'admin_mail' => \App\Settings::get_value('admin.email')
                 ])
             );
             if($MAILER->getStatus()){
+                $user->change_token_event($usr_data['id'], 5);
                 echo json_encode(['status' => 1, 'msg' => \App\MSG::AUTH['ACC_RCV']]);
             }else{
                 echo json_encode(['status' => 0, 'msg' => \App\MSG::AUTH['ERR_ACC_RCV']]);

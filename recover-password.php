@@ -10,6 +10,8 @@ include "./config/config.php";
 ?>
 <!-- Header Section -->
 <?php
+
+
 $TPL = new \App\Template(TEMPLATE.'/'. \App\Settings::get_value('app.theme'));
 echo $TPL->render('include/header',[
     'page_description' => 'Please login to watch all your favorite shows and movies.',
@@ -79,7 +81,6 @@ echo $TPL->render('include/footer',[]);
                 $("#pms_recover_password_form input[name=submit]").prop('disabled',true);
             },
             success: function (resp) {
-                console.log(resp);
                 var parsed_data = JSON.parse(resp);
                 if(parsed_data.status == 1){
                     $("#pms_recover_password_form input[name=submit]").prop('disabled',false);

@@ -32,3 +32,49 @@ function ip_lookup($ip = null){
     }
     return false;
 }
+
+function run_process($cmd,$outputFile = '/dev/null', $append = false){
+    $pid=0;
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {//'This is a server using Windows!';
+        $cmd = 'wmic process call create "'.$cmd.'" | find "ProcessId"';
+        $handle = popen("start /B ". $cmd, "r");
+        $read = fread($handle, 200); //Read the output
+        $pid=substr($read,strpos($read,'=')+1);
+        $pid=substr($pid,0,strpos($pid,';') );
+        $pid = (int)$pid;
+        pclose($handle); //Close
+    }else{
+        $pid = (int)shell_exec(sprintf('%s %s %s 2>&1 & echo $!', $cmd, ($append) ? '>>' : '>', $outputFile));
+    }
+    return $pid;
+}
+
+function is_process_running($pid){
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {//'This is a server using Windows!';
+        //tasklist /FI "PID eq 6480"
+        $result = shell_exec('tasklist /FI "PID eq '.$pid.'"' );
+        if (count(preg_split("/\n/", $result)) > 0 && !preg_match('/No tasks/', $result)) {
+            return true;
+        }
+    }else{
+        $result = shell_exec(sprintf('ps %d 2>&1', $pid));
+        if (count(preg_split("/\n/", $result)) > 2 && !preg_match('/ERROR: Process ID out of range/', $result)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function stop_process($pid){
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {//'This is a server using Windows!';
+        $result = shell_exec('taskkill /PID '.$pid );
+        if (count(preg_split("/\n/", $result)) > 0 && !preg_match('/No tasks/', $result)) {
+            return true;
+        }
+    }else{
+        $result = shell_exec(sprintf('kill %d 2>&1', $pid));
+        if (!preg_match('/No such process/', $result)) {
+            return true;
+        }
+    }
+}

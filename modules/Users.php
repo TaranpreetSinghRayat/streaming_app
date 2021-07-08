@@ -100,6 +100,23 @@ class Users
         return true;
     }
 
+    public function change_token_event(int $id, int $min)
+    {
+        $acc_key = generate_account_key();
+        /*
+         * $this->db->rawQueryOne("CREATE EVENT IF NOT EXISTS update_user_token
+            ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL ".$min." MINUTE
+            ON COMPLETION PRESERVE
+            DO
+                call netflix_clone.update_user_token(". $id .", '".$acc_key."')
+                select 1;");
+        */
+        $GLOBALS['pdo']->exec("CREATE EVENT IF NOT EXISTS update_user_token_". $id ." 
+            ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL ".$min." MINUTE
+            DO
+                call netflix_clone.update_user_token(". $id .", '".$acc_key."');");
+        return true;
+    }
     /**
      * CRUD OPERATIONS
      */
