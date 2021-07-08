@@ -101,7 +101,63 @@ echo $TPL->render('include/footer',[
                 console.log(err)
             },
         });
+    });
 
+    $('#update_password input[name=new_pass]').keyup(function () {
+        var password = $(this).val();
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-auth.php",
+            data: {action:'check_password_strength', password},
+            dataType: "html",
+            beforesend: function () {
+                $('#update_password input[name=update]').prop('disabled',true);
+            },
+            success: function (resp) {
+                var parsed_data = JSON.parse(resp);
+                if(parsed_data.status == 1){
+                    $('#user_pass_txt').html("<p style='color: green'>"+ parsed_data.msg +"</p>");
+                    $('#update_password input[name=update]').prop('disabled',false);
+                }else{
+                    $('#user_pass_txt').html("<p style='color: red'>"+ parsed_data.msg +"</p>");
+                    $('#update_password input[name=update]').prop('disabled',true);
+                }
+            },
+            error: function (err) {
+                console.log(err)
+            },
+        });
+    })
+
+    $("#update_password").submit((e) => {
+        e.preventDefault();
+
+        var data = {
+            action: 'update_password',
+            old: $("input[name=old_pass]").val(),
+            password: $("input[name=new_pass]").val(),
+            confirm_password: $("input[name=confirm_pass]").val(),
+            user: $("input[name=user]").val()
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-auth.php",
+            data: data,
+            dataType: "html",
+            success: function (resp) {
+                var parsed_data = JSON.parse(resp);
+                if(parsed_data.status == 1){
+                    Toast.create("Success", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+                    document.getElementById("update_password").reset();
+                }else{
+                    Toast.create("Success", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+                }
+            },
+            error: function (err) {
+                console.log(err)
+            },
+        });
     });
 </script>
 <!-- //Custom Script -->

@@ -76,9 +76,10 @@
                         <input type="password" name="old_pass" required value="">
                         <label>New Password </label>
                         <input type="password" name="new_pass" required value="">
+                        <small id="user_pass_txt" class="form-text text-muted"></small>
                         <label>Confirm Password </label>
                         <input type="password" name="confirm_pass" required value="">
-
+                        <input type="hidden" name="user" value="<?= $user_data['id'] ?>">
                         <div class="form-button">
                             <button type="submit" name="update" value="Update">Update Password</button>
                         </div>

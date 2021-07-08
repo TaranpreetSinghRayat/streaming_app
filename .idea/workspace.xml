@@ -24,8 +24,8 @@
       <file leaf-file-name="account.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/default/auth/account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="52" column="86" lean-forward="false" selection-start-line="52" selection-start-column="86" selection-end-line="52" selection-end-column="86" />
+            <state relative-caret-position="601">
+              <caret line="78" column="87" lean-forward="false" selection-start-line="78" selection-start-column="87" selection-end-line="78" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -34,9 +34,12 @@
       <file leaf-file-name="account.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="83" column="45" lean-forward="false" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="405">
+              <caret line="113" column="77" lean-forward="false" selection-start-line="113" selection-start-column="77" selection-end-line="113" selection-end-column="77" />
+              <folding>
+                <marker date="1625745814562" expanded="true" signature="3519:3531" ph="..." />
+                <marker date="1625745814562" expanded="true" signature="3726:3736" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,8 +47,8 @@
       <file leaf-file-name="ajax-auth.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajax/ajax-auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="213" column="95" lean-forward="false" selection-start-line="213" selection-start-column="82" selection-end-line="213" selection-end-column="95" />
+            <state relative-caret-position="439">
+              <caret line="234" column="47" lean-forward="false" selection-start-line="234" selection-start-column="47" selection-end-line="234" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -54,8 +57,8 @@
       <file leaf-file-name="MSG.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/MSG.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="39" column="95" lean-forward="false" selection-start-line="39" selection-start-column="95" selection-end-line="39" selection-end-column="95" />
+            <state relative-caret-position="595">
+              <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -87,6 +90,8 @@
       <find>date</find>
       <find>require</find>
       <find>password</find>
+      <find>match</find>
+      <find>user_pass_txt</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -177,9 +182,9 @@
         <option value="$PROJECT_DIR$/recover-password.php" />
         <option value="$PROJECT_DIR$/template/default/entities/single_show.php" />
         <option value="$PROJECT_DIR$/template/default/entities/title_movie.php" />
-        <option value="$PROJECT_DIR$/template/default/auth/account.php" />
-        <option value="$PROJECT_DIR$/ajax/ajax-auth.php" />
         <option value="$PROJECT_DIR$/modules/MSG.php" />
+        <option value="$PROJECT_DIR$/ajax/ajax-auth.php" />
+        <option value="$PROJECT_DIR$/template/default/auth/account.php" />
         <option value="$PROJECT_DIR$/account.php" />
       </list>
     </option>
@@ -380,7 +385,7 @@
       <workItem from="1625556571277" duration="5200000" />
       <workItem from="1625581653391" duration="176000" />
       <workItem from="1625728739145" duration="3526000" />
-      <workItem from="1625739547568" duration="1411000" />
+      <workItem from="1625739547568" duration="3194000" />
     </task>
     <task id="LOCAL-00001" summary="register page js done&#10;new modules added">
       <created>1624370065659</created>
@@ -662,11 +667,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625739748724</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="account details update function working">
+      <created>1625740991513</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1625740991513</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121008000" />
+    <option name="totallyTimeSpent" value="122791000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -701,7 +713,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updates" />
     <MESSAGE value="Bug fix&#10;registration &amp; forgot password process complete&#10;activation page added" />
     <MESSAGE value="Bug fix&#10;login process completed&#10;cookies system added" />
     <MESSAGE value="sql dump update" />
@@ -726,7 +737,8 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value="bug fix&#10;added subscribed and non subscibed playback" />
     <MESSAGE value="sql schema update" />
-    <option name="LAST_COMMIT_MESSAGE" value="sql schema update" />
+    <MESSAGE value="account details update function working" />
+    <option name="LAST_COMMIT_MESSAGE" value="account details update function working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -909,13 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/default/auth/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="60" column="17" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="60" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/default/auth/new_password.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -987,13 +992,6 @@
             <marker date="1625563264217" expanded="true" signature="2490:2504" ph="..." />
             <marker date="1625563264217" expanded="true" signature="2965:2977" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -1126,35 +1124,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/default/auth/account.php">
+    <entry file="file://$PROJECT_DIR$/modules/MSG.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="52" column="86" lean-forward="false" selection-start-line="52" selection-start-column="86" selection-end-line="52" selection-end-column="86" />
+        <state relative-caret-position="595">
+          <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="163" column="6" lean-forward="true" selection-start-line="142" selection-start-column="4" selection-end-line="163" selection-end-column="6" />
+          <folding>
+            <marker date="1625478555642" expanded="true" signature="3141:3153" ph="..." />
+            <marker date="1625478555642" expanded="true" signature="3365:3375" ph="..." />
+            <marker date="1625478555642" expanded="true" signature="4278:4290" ph="..." />
+            <marker date="1625478555642" expanded="true" signature="4489:4499" ph="..." />
+            <marker date="1625478555642" expanded="true" signature="5383:5395" ph="..." />
+            <marker date="1625478555642" expanded="true" signature="5594:5604" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/default/auth/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="42" column="95" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="95" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax/ajax-auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="213" column="95" lean-forward="false" selection-start-line="213" selection-start-column="82" selection-end-line="213" selection-end-column="95" />
+        <state relative-caret-position="439">
+          <caret line="234" column="47" lean-forward="false" selection-start-line="234" selection-start-column="47" selection-end-line="234" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/MSG.php">
+    <entry file="file://$PROJECT_DIR$/template/default/auth/account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="39" column="95" lean-forward="false" selection-start-line="39" selection-start-column="95" selection-end-line="39" selection-end-column="95" />
+        <state relative-caret-position="601">
+          <caret line="78" column="87" lean-forward="false" selection-start-line="78" selection-start-column="87" selection-end-line="78" selection-end-column="87" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="83" column="45" lean-forward="false" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="405">
+          <caret line="113" column="77" lean-forward="false" selection-start-line="113" selection-start-column="77" selection-end-line="113" selection-end-column="77" />
+          <folding>
+            <marker date="1625745814562" expanded="true" signature="3519:3531" ph="..." />
+            <marker date="1625745814562" expanded="true" signature="3726:3736" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

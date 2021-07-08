@@ -37,7 +37,8 @@ class MSG
         'ERR_PASS_RST' => 'Something went wrong while resetting the password. Please try again later.',
         'PASS_RST_SUCC' => 'Password token updated.',
         'PRF_UPDT_SUCC' => 'Profile information updated success.',
-        'PRF_UPDT_FAIL' => 'Something went wrong while updating profile. Please try again later'
+        'PRF_UPDT_FAIL' => 'Something went wrong while updating profile. Please try again later',
+        'INV_PASS' => 'Provided password is invalid. Please try again'
     ];
 
     const MAIL = [

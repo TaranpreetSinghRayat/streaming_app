@@ -219,6 +219,34 @@ if(isset($_POST) && isset($_POST['action'])){
                     echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
                 }
             break;
+        case 'update_password':
+                $validator = new \App\Validator();
+                $valData = $validator->validate($_POST,[
+                    'old' => [
+                        'required' => true
+                    ],
+                    'password' => [
+                        'matches' => 'confirm_password'
+                    ]
+                ]);
+                if($valData->passed()){
+                    //check if old password is valid or not.
+                    $user = new \App\Users();
+                    if($user->find($_POST['user'])['password'] == \App\Security::encrypt($_POST['old'])){
+                        if($user->update($_POST['user'],[
+                                'password' => \App\Security::encrypt($_POST['password'])
+                        ])){
+                            echo json_encode(['status' => 1, 'msg' => \App\MSG::AUTH['PASS_RST_SUCC']]);
+                        }else{
+                            echo json_encode(['status' => 0, 'msg' => \App\MSG::AUTH['ERR_PASS_RST']]);
+                        }
+                    }else{
+                        echo json_encode(['status' => 0, 'msg' => \App\MSG::AUTH['INV_PASS']]);
+                    }
+                }else{
+                    echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
+                }
+            break;
         default:
             echo(json_encode(['status' => 0, 'msg' => 'Invalid parameters supplied.']));
             break;
