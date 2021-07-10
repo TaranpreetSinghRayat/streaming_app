@@ -1,1 +1,3 @@
-Admin stuff
+<?php
+include 'config.php';
+?>

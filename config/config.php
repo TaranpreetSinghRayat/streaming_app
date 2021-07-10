@@ -41,3 +41,5 @@ define('APP_NAME',\App\Settings::get_value('app.name'));
 define('ENC_KEY',$_ENV['ENC_INV']); //Random Encryption key
 define('BASE_URL',$_ENV['BASE_URL']);
 define('BASE_URL_ASSETS',$_ENV['BASE_URL'] . '/assets/'.\App\Settings::get_value('app.theme').'/');
+$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+define('CURRENT_LINK',$actual_link);

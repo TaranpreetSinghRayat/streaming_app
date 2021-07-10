@@ -166,6 +166,30 @@ class Entities
         return null;
     }
 
+    public function search(string $title)
+    {
+        if($result = $this->db->rawQuery("select * from ". Config::TBL_NAMES['ENTITIES'] ." where name like '%". $title ."%'")){
+            return $result;
+        }
+        return null;
+    }
+
+    public function search_movies(string $title)
+    {
+        if($result = $this->db->rawQuery("select * from ". Config::TBL_NAMES['ENTITIES'] ." where name like '%". $title ."%' and isMovie = 1")){
+            return $result;
+        }
+        return null;
+    }
+
+    public function search_shows(string $title)
+    {
+        if($result = $this->db->rawQuery("select * from ". Config::TBL_NAMES['ENTITIES'] ." where name like '%". $title ."%' and isMovie = 0")){
+            return $result;
+        }
+        return null;
+    }
+
     /**
      * CRUD OPERATIONS
      */

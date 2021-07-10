@@ -60,27 +60,51 @@ echo $TPL->render('include/nav',[
 <?php
 if(isset($_GET['view']) || isset($_GET['genre']) || isset($_GET['title'])){
     if(isset($_GET['view']) && $_GET['view'] == 'movies'){
-        $movies = $ENTITIES->get_movies();
+        if(isset($_GET['s'])){
+            $search = \App\Security::clean($_GET['s']);
+            echo $TPL->render('search/index',[
+                'titles' => $ENTITIES->search_movies($search),
+                'title' => $search,
+                'ENTITIES' => $ENTITIES,
+                'GENRE' => $GENRE,
+                'CASTS' => $CASTS,
+                'TAGS' => $TAGS
+            ]);
+        }else{
+            $movies = $ENTITIES->get_movies();
 
-        echo $TPL->render('entities/movies',[
-            'title' => 'Movies',
-            'ENTITIES' => $ENTITIES,
-            'GENRE' => $GENRE,
-            'CASTS' => $CASTS,
-            'TAGS' => $TAGS,
-            'movies' => $movies
-        ]);
+            echo $TPL->render('entities/movies',[
+                'title' => 'Movies',
+                'ENTITIES' => $ENTITIES,
+                'GENRE' => $GENRE,
+                'CASTS' => $CASTS,
+                'TAGS' => $TAGS,
+                'movies' => $movies
+            ]);
+        }
     }elseif (isset($_GET['view']) && $_GET['view'] == 'shows'){
-        $shows = $ENTITIES->get_shows();
+        if(isset($_GET['s'])){
+            $search = \App\Security::clean($_GET['s']);
+            echo $TPL->render('search/index',[
+                'titles' => $ENTITIES->search_shows($search),
+                'title' => $search,
+                'ENTITIES' => $ENTITIES,
+                'GENRE' => $GENRE,
+                'CASTS' => $CASTS,
+                'TAGS' => $TAGS
+            ]);
+        }else{
+            $shows = $ENTITIES->get_shows();
 
-        echo $TPL->render('entities/shows',[
-            'title' => 'Shows',
-            'ENTITIES' => $ENTITIES,
-            'GENRE' => $GENRE,
-            'CASTS' => $CASTS,
-            'TAGS' => $TAGS,
-            'shows' => $shows
-        ]);
+            echo $TPL->render('entities/shows',[
+                'title' => 'Shows',
+                'ENTITIES' => $ENTITIES,
+                'GENRE' => $GENRE,
+                'CASTS' => $CASTS,
+                'TAGS' => $TAGS,
+                'shows' => $shows
+            ]);
+        }
     }elseif (isset($_GET['genre']) && is_numeric($_GET['genre'])){
         $gen_entities = $ENTITIES->get_by_genre($_GET['genre']);
         echo $TPL->render('entities/genre',[

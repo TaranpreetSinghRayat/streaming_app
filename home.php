@@ -49,12 +49,25 @@ $GENRE = new \App\Genre();
 $CASTS = new \App\Casts();
 $TAGS = new \App\Tags();
 
-echo $TPL->render('home/index',[
+//check for search request
+if(isset($_GET['s'])){
+    $search = \App\Security::clean($_GET['s']);
+    echo $TPL->render('search/index',[
+        'titles' => $ENTITIES->search($search),
+        'title' => $search,
         'ENTITIES' => $ENTITIES,
         'GENRE' => $GENRE,
         'CASTS' => $CASTS,
         'TAGS' => $TAGS
-]);
+    ]);
+}else{
+    echo $TPL->render('home/index',[
+        'ENTITIES' => $ENTITIES,
+        'GENRE' => $GENRE,
+        'CASTS' => $CASTS,
+        'TAGS' => $TAGS
+    ]);
+}
 ?>
 <!-- //Body Section -->
 

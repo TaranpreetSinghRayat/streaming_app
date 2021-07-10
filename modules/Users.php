@@ -70,9 +70,9 @@ class Users
                     Session::insert('UID', $user_data['id']);
                     Session::insert('isLoggedIn',true);
                     if($user_data['is_subscribed'] == 0){
-                        Session::insert('isSubscribed', false);
+                        Session::insert('isSubscribed', 0);
                     }else{
-                        Session::insert('isSubscribed', true);
+                        Session::insert('isSubscribed', 1);
                     }
                     Session::insert('role', (($user_data['role'] == 0)) ? 'Subscriber' : 'Administrator' );
                     Session::insert('view_title', []);

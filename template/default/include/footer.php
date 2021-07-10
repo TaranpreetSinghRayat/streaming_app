@@ -54,20 +54,17 @@
                         </div>
                     </div>
                     <div class="col-xl-3  col-md-6">
-                        <!--div class="widget">
-                            <h4 class="footer-title">Downlaod App</h4>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    <a href="#">
-                                        <img src="images/asset-35.png" class="gen-playstore-logo" alt="playstore">
-                                    </a>
-                                    <a href="#">
-                                        <img src="images/asset-36.png" class="gen-appstore-logo" alt="appstore">
-                                    </a>
-                                </div>
+                        <?php if(\App\Session::get('role') == 'Administrator'): ?>
+                        <div class="widget">
+                            <h4 class="footer-title">Adminstration Options</h4>
+                            <div class="menu-about-container">
+                                <ul class="menu">
+                                    <li class="menu-item"><a target="_blank" href="<?= BASE_URL ?>admin/">Admin. Panel</a></li>
+
+                                </ul>
                             </div>
-                        </div-->
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
