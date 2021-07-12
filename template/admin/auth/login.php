@@ -88,7 +88,7 @@
                                     <div class="field-placeholder">Password</div>
                                 </div>
                                 <div class="actions">
-                                    <a href="#">Forgot password?</a>
+                                    <a href="<?= BASE_URL ?>recover-password.php">Forgot password?</a>
                                     <button type="submit" class="btn btn-primary">Login</button>
                                 </div>
                             </div>

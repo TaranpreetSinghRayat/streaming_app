@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin/login.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin/settings.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/admin/auth/login.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/admin/include/footer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/admin/include/header.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/admin/include/nav.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/admin/settings/index.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/admin/images/logo-1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/admin/img/logo-1.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/config.php" afterPath="$PROJECT_DIR$/admin/config.php" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/img/fav.png" afterPath="$PROJECT_DIR$/assets/admin/img/fav.png" />
-      <change beforePath="$PROJECT_DIR$/config/.env" afterPath="$PROJECT_DIR$/config/.env" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Users.php" afterPath="$PROJECT_DIR$/modules/Users.php" />
-      <change beforePath="$PROJECT_DIR$/template/default/search/index.php" afterPath="$PROJECT_DIR$/template/default/search/index.php" />
+      <change beforePath="$PROJECT_DIR$/template/admin/auth/login.php" afterPath="$PROJECT_DIR$/template/admin/auth/login.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,27 +30,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="-289">
               <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/template/admin/auth/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="80" column="53" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="53" />
+            <state relative-caret-position="493">
+              <caret line="90" column="60" lean-forward="false" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
               <folding>
-                <marker date="1626088350794" expanded="true" signature="570:654" ph="..." />
-                <marker date="1626088350794" expanded="true" signature="879:963" ph="..." />
-                <marker date="1626088350794" expanded="true" signature="1160:1242" ph="..." />
-                <marker date="1626088350794" expanded="true" signature="3904:3984" ph="..." />
-                <marker date="1626088350794" expanded="true" signature="3993:4079" ph="..." />
+                <marker date="1626093821566" expanded="true" signature="570:654" ph="..." />
+                <marker date="1626093821566" expanded="true" signature="879:963" ph="..." />
+                <marker date="1626093821566" expanded="true" signature="1160:1242" ph="..." />
+                <marker date="1626093821566" expanded="true" signature="3938:4018" ph="..." />
+                <marker date="1626093821566" expanded="true" signature="4027:4113" ph="..." />
               </folding>
             </state>
           </provider>
@@ -203,8 +192,8 @@
         <option value="$PROJECT_DIR$/admin/settings.php" />
         <option value="$PROJECT_DIR$/template/admin/settings/index.php" />
         <option value="$PROJECT_DIR$/admin/config.php" />
-        <option value="$PROJECT_DIR$/template/admin/auth/login.php" />
         <option value="$PROJECT_DIR$/admin/login.php" />
+        <option value="$PROJECT_DIR$/template/admin/auth/login.php" />
       </list>
     </option>
   </component>
@@ -390,7 +379,7 @@
       <workItem from="1625728739145" duration="3526000" />
       <workItem from="1625739547568" duration="9636000" />
       <workItem from="1625897410381" duration="4977000" />
-      <workItem from="1626074814233" duration="11604000" />
+      <workItem from="1626074814233" duration="12287000" />
     </task>
     <task id="LOCAL-00001" summary="register page js done&#10;new modules added">
       <created>1624370065659</created>
@@ -707,11 +696,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625902713557</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="bug fix&#10;admin panel upates along with admin login page">
+      <created>1626088568485</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1626088568485</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145814000" />
+    <option name="totallyTimeSpent" value="146497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -746,7 +742,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new schemas added&#10;bug fix&#10;entities, tags, genre, casts module added&#10;home page layout updated&#10;logout function added" />
     <MESSAGE value="Home page updated" />
     <MESSAGE value="home page updated" />
     <MESSAGE value="home page updated&#10;new entities page with filter options in process" />
@@ -771,7 +766,8 @@
     <MESSAGE value="bug fix&#10;password token expire after 5min of recovert requested for security reasons." />
     <MESSAGE value="bug fix&#10;search titles working" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="bug fix&#10;admin panel upates along with admin login page" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix&#10;admin panel upates along with admin login page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1258,20 +1254,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/admin/auth/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="80" column="53" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="53" />
-          <folding>
-            <marker date="1626088350794" expanded="true" signature="570:654" ph="..." />
-            <marker date="1626088350794" expanded="true" signature="879:963" ph="..." />
-            <marker date="1626088350794" expanded="true" signature="1160:1242" ph="..." />
-            <marker date="1626088350794" expanded="true" signature="3904:3984" ph="..." />
-            <marker date="1626088350794" expanded="true" signature="3993:4079" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1282,9 +1264,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="-289">
           <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/admin/auth/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="90" column="60" lean-forward="false" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
+          <folding>
+            <marker date="1626093821566" expanded="true" signature="570:654" ph="..." />
+            <marker date="1626093821566" expanded="true" signature="879:963" ph="..." />
+            <marker date="1626093821566" expanded="true" signature="1160:1242" ph="..." />
+            <marker date="1626093821566" expanded="true" signature="3938:4018" ph="..." />
+            <marker date="1626093821566" expanded="true" signature="4027:4113" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
