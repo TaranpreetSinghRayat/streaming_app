@@ -102,6 +102,8 @@
                         </div>
                     </div>
                         <?php endforeach; ?>
+                    <?php else: ?>
+                        <h3>No title(s) found.</h3>
                     <?php endif; ?>
                 </div>
 

@@ -117,6 +117,15 @@ class Users
                 call netflix_clone.update_user_token(". $id .", '".$acc_key."');");
         return true;
     }
+
+    public function get_new_signups()
+    {
+        if($result = $this->db->rawQueryOne("SELECT COUNT(*) as count FROM `users` WHERE DATE(`created_at`) = CURDATE()")){
+            return $result['count'];
+        }
+        return 0;
+    }
+
     /**
      * CRUD OPERATIONS
      */

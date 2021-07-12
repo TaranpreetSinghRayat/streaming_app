@@ -1,4 +1,10 @@
 <?php
+/**
+ * User: Taranpreet Singh Ray
+ * Date: 12-07-2021
+ * Time: 14:27
+ */
+
 include 'config.php';
 ?>
 
@@ -23,16 +29,31 @@ echo $TPL->render('include/header',[
 echo $TPL->render('include/nav',[
     'app_name' => \App\Settings::get_value('app.name'),
     'app_logo' => ADMIN_BASE_URL_ASSETS. \App\Settings::get_value('app.logo'),
+    'ENTITIES' => $ENTITIES,
+    'GENRE' => $GENRE,
+    'CASTS' => $CASTS,
+    'TAGS' => $TAGS,
     'USER' => $USER,
+    'USR' => $USR_DATA
+]);
+?>
+<!-- //Navigation Section -->
+
+<!-- Body Section -->
+<?php
+
+echo $TPL->render('settings/index',[
+    'app_name' => \App\Settings::get_value('app.name'),
+    'app_logo' => ADMIN_BASE_URL_ASSETS. \App\Settings::get_value('app.logo'),
     'ENTITIES' => $ENTITIES,
     'GENRE' => $GENRE,
     'CASTS' => $CASTS,
     'TAGS' => $TAGS,
     'USR' => $USR_DATA
 ]);
-?>
-<!-- //Navigation Section -->
 
+?>
+<!-- //Body Section -->
 
 <!-- Footer Section -->
 <?php
@@ -47,3 +68,4 @@ echo $TPL->render('include/footer',[
 
 </script>
 <!-- //Custom Script -->
+
