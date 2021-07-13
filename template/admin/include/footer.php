@@ -27,6 +27,14 @@
 <!-- *************
     ************ Vendor Js Files *************
 ************* -->
+<!-- Bootstrap Toaster -->
+<script src="<?= BASE_URL_ASSETS ?>js/bootstrap-toaster.min.js"></script>
+<!-- Toaster Defaults -->
+<script>
+    Toast.setTheme(TOAST_THEME.DARK);
+    Toast.enableTimers(false);
+    Toast.setMaxCount(5);
+</script>
 
 <!-- Megamenu JS -->
 <script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/megamenu/js/megamenu.js"></script>

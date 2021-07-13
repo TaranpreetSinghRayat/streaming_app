@@ -33,7 +33,8 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="<?= ADMIN_BASE_URL_ASSETS ?>css/main.css">
-
+    <!-- Boostrap Toaster -->
+    <link rel="stylesheet" href="<?= BASE_URL_ASSETS ?>css/bootstrap-toaster.min.css" />
 
     <!-- *************
         ************ Vendor Css Files *************

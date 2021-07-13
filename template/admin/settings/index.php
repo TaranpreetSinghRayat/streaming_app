@@ -26,114 +26,71 @@
 
                         <div class="row gutters">
                             <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-                                <div class="row gutters">
-                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                                        <img src="img/user1.png" class="img-fluid change-img-avatar" alt="Image">
-                                    </div>
-                                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
-                                        <div id="dropzone-sm" class="mb-4">
-                                            <form action="http://bootstrap.gallery/upload" class="dropzone needsclick dz-clickable" id="demo-upload">
 
-                                                <div class="dz-message needsclick">
-                                                    <button type="button" class="dz-button">Change Image.</button>
-                                                </div>
+                                <div class="accordion" id="faqAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="app_settings">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#app_settings_collapse" aria-expanded="true" aria-controls="app_settings_collapse">
+                                                Application Settings
+                                            </button>
+                                        </h2>
+                                        <div id="app_settings_collapse" class="accordion-collapse collapse show" aria-labelledby="app_settings" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                    <?php if(!empty(\App\Settings::get_by_type('app.'))): ?>
+                                                        <?php foreach (\App\Settings::get_by_type('app.') as $item): ?>
+                                                            <?php
+                                                            //item name processing
+                                                            $item_name = explode('.',$item['name']);
+                                                            if(count($item_name) == 3){
+                                                                $name = ucfirst($item_name[1] . ' '. $item_name[2]);
+                                                            }else{
+                                                                $name = ucfirst($item_name[1]);
+                                                            }
+                                                            ?>
+                                                            <div class="field-wrapper">
+                                                                <?php switch ($item['type']){
+                                                                    case 0:
+                                                                        ?>
+                                                                        <input disabled="true" type="text" value="<?= $item['value'] ?>"  name="<?= $item['name'] ?>" />
+                                                                        <?php
+                                                                        break;
+                                                                    case 2:
+                                                                        ?>
+                                                                        <input type="file" name="<?= $item['name'] ?>" id="_key_<?= $item['id'] ?>">
+                                                                        <img src="<?= BASE_URL_ASSETS . $item['value'] ?>" class="" width="auto" height="90px">
+                                                                    <?php
+                                                                        break;
+                                                                    case 3:
+                                                                        ?>
+                                                                        <textarea id="_key_<?= $item['id'] ?>" name="<?= $item['name'] ?>"><?= $item['value'] ?></textarea>
+                                                                    <?php
+                                                                        break;
+                                                                    default:
+                                                                        ?>
+                                                                        <input type="text" id="_key_<?= $item['id'] ?>" name="<?= $item['name'] ?>"  value="<?= $item['value'] ?>" />
+                                                                        <?php
+                                                                        break;
+                                                                } ?>
+                                                                <div class="field-placeholder"><?= $name ?></div>
+                                                                <div class="form-text"><?= $item['description'] ?></div>
+                                                            </div>
+                                                            <?php if($item['type'] != 0): ?>
+                                                                <div class="field-wrapper m-0">
+                                                                    <button type="button" onclick="update_setting(<?= $item['id'] ?>)" class="btn btn-primary stripes-btn float-right">Save</button>
+                                                                </div>
+                                                            <?php endif; ?>
 
-                                            </form>
+                                                            </br>
+                                                        <?php endforeach; ?>
+                                                    <?php endif; ?>
+
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                        <!-- Field wrapper start -->
-                                        <div class="field-wrapper">
-                                            <input type="text" class="form-control" placeholder="Abigail">
-                                            <div class="field-placeholder">First  Name</div>
-                                        </div>
-                                        <!-- Field wrapper end -->
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                        <!-- Field wrapper start -->
-                                        <div class="field-wrapper">
-                                            <input type="text" class="form-control" placeholder="Winter">
-                                            <div class="field-placeholder">Last  Name</div>
-                                        </div>
-                                        <!-- Field wrapper end -->
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                        <!-- Field wrapper start -->
-                                        <div class="field-wrapper">
-                                            <input type="text" class="form-control" placeholder="abigail.winter786@wmail.com">
-                                            <div class="field-placeholder">Email</div>
-                                        </div>
-                                        <!-- Field wrapper end -->
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                        <!-- Field wrapper start -->
-                                        <div class="field-wrapper">
-                                            <input type="text" class="form-control" placeholder="123-456-7890">
-                                            <div class="field-placeholder">Phone</div>
-                                        </div>
-                                        <!-- Field wrapper end -->
-                                    </div>
-                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                        <!-- Field wrapper start -->
-                                        <div class="field-wrapper">
-                                            <input type="text" class="form-control" placeholder="1980 Walnut Street">
-                                            <div class="field-placeholder">Address</div>
-                                        </div>
-                                        <!-- Field wrapper end -->
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                        <!-- Field wrapper start -->
-                                        <div class="field-wrapper">
-                                            <input type="text" class="form-control" placeholder="Mcallen">
-                                            <div class="field-placeholder">City</div>
-                                        </div>
-                                        <!-- Field wrapper end -->
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                        <!-- Field wrapper start -->
-                                        <div class="field-wrapper">
-                                            <input type="text" class="form-control" placeholder="New York">
-                                            <div class="field-placeholder">State</div>
-                                        </div>
-                                        <!-- Field wrapper end -->
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                        <!-- Field wrapper start -->
-                                        <div class="field-wrapper">
-                                            <input type="text" class="form-control" placeholder="11789">
-                                            <div class="field-placeholder">Zip Code</div>
-                                        </div>
-                                        <!-- Field wrapper end -->
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                        <!-- Field wrapper start -->
-                                        <div class="field-wrapper">
-                                            <select class="select-single js-states" title="Select Product Category" data-live-search="true">
-                                                <option>United States</option>
-                                                <option>Australia</option>
-                                                <option>Canada</option>
-                                                <option>Gremany</option>
-                                                <option>India</option>
-                                                <option>Japan</option>
-                                                <option>England</option>
-                                                <option>Brazil</option>
-                                            </select>
-                                            <div class="field-placeholder">Country</div>
-                                        </div>
-                                        <!-- Field wrapper end -->
-                                    </div>
-                                    <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6 col-12">
-                                        <!-- Field wrapper start -->
-                                        <div class="field-wrapper">
-                                            <input type="password" class="form-control" placeholder="Enter Password">
-                                            <div class="field-placeholder">Password</div>
-                                        </div>
-                                        <!-- Field wrapper end -->
-                                    </div>
-                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                        <button class="btn btn-primary mb-3">Save Settings</button>
-                                    </div>
+
+
                                 </div>
+
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                 <div class="account-settings-block">
@@ -157,11 +114,11 @@
                                             </tr>
                                             <tr>
                                                 <td>Hostname</td>
-                                                <td><?= gethostbyname($_SERVER['REMOTE_ADDR']) ?></td>
+                                                <td><?= gethostbyname($_SERVER['REMOTE_ADDR']) ?? 'N/A' ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Server Admin</td>
-                                                <td><?= $_SERVER['SERVER_ADMIN'] ?></td>
+                                                <td><?= $_SERVER['SERVER_ADMIN'] ?? 'N/A'; ?></td>
 
                                             </tr>
                                             </tbody>
@@ -183,7 +140,7 @@
     <!-- Content wrapper end -->
 
     <!-- App Footer start -->
-    <div class="app-footer">$copy; <?= APP_NAME ?> v<?= APP_VER ?> <?= date('Y') ?></div>
+    <div class="app-footer">&copy; <?= APP_NAME ?> v<?= APP_VER ?> <?= date('Y') ?></div>
     <!-- App footer end -->
 
 </div>

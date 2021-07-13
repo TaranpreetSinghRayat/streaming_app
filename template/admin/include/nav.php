@@ -21,7 +21,7 @@
                 <span class="nav-link-text">Dashboards</span>
             </a>
             <a class="nav-link" id="product-tab" data-bs-toggle="tab" href="#tab-casts" role="tab" aria-controls="tab-product" aria-selected="false">
-                <i class="icon-layers2"></i>
+                <i class="icon-people_outline"></i>
                 <span class="nav-link-text">Casts</span>
             </a>
             <a class="nav-link" id="pages-tab" data-bs-toggle="tab" href="#tab-pages" role="tab" aria-controls="tab-pages" aria-selected="false">
@@ -90,12 +90,12 @@
 
             </div>
 
-            <!-- Pages tab -->
-            <div class="tab-pane fade" id="tab-casts" role="tabpanel" aria-labelledby="product-tab">
+            <!-- Casts tab -->
+            <div class="tab-pane fade" id="tab-casts" role="tabpanel" aria-labelledby="cast-tab">
 
                 <!-- Tab content header start -->
                 <div class="tab-pane-header">
-                    Product
+                    Casts
                 </div>
                 <!-- Tab content header end -->
 

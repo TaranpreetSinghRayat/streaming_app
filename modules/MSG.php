@@ -49,4 +49,9 @@ class MSG
         'ERR_QRY' => 'Something went wrong while creating query.',
         'QRY_SUCC' => 'Query created success. Our staff will contact back you soon.'
     ];
+
+    const SETTINGS = [
+        'ERR_UPDT' => 'Soemthing went wrong while updating setting value.',
+        'UPDT_SUCC' => 'New value saved.'
+    ];
 }
