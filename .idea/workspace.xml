@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/admin/casts.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/template/admin/errors/404.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/settings.php" afterPath="$PROJECT_DIR$/admin/settings.php" />
-      <change beforePath="$PROJECT_DIR$/template/admin/include/footer.php" afterPath="$PROJECT_DIR$/template/admin/include/footer.php" />
       <change beforePath="$PROJECT_DIR$/template/admin/include/nav.php" afterPath="$PROJECT_DIR$/template/admin/include/nav.php" />
-      <change beforePath="$PROJECT_DIR$/template/admin/settings/index.php" afterPath="$PROJECT_DIR$/template/admin/settings/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,14 +23,14 @@
       <file leaf-file-name="settings.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/settings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="67" column="8" lean-forward="true" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/admin/include/footer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="575">
@@ -71,21 +70,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax-contact.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax/ajax-contact.php">
+      <file leaf-file-name="nav.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template/admin/include/nav.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="71" column="1" lean-forward="true" selection-start-line="69" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+            <state relative-caret-position="-1037">
+              <caret line="261" column="105" lean-forward="false" selection-start-line="261" selection-start-column="105" selection-end-line="261" selection-end-column="105" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/admin/include/nav.php">
+      <file leaf-file-name="casts.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/casts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="813">
-              <caret line="323" column="47" lean-forward="true" selection-start-line="323" selection-start-column="47" selection-end-line="323" selection-end-column="47" />
+            <state relative-caret-position="694">
+              <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="404.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/admin/errors/404.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -195,8 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/template/default/entities/title.php" />
-        <option value="$PROJECT_DIR$/template/default/entities/genre.php" />
         <option value="$PROJECT_DIR$/template/default/include/header.php" />
         <option value="$PROJECT_DIR$/template/default/entities/movies.php" />
         <option value="$PROJECT_DIR$/modules/File.php" />
@@ -246,6 +253,8 @@
         <option value="$PROJECT_DIR$/admin/settings.php" />
         <option value="$PROJECT_DIR$/template/admin/include/footer.php" />
         <option value="$PROJECT_DIR$/template/admin/include/nav.php" />
+        <option value="$PROJECT_DIR$/admin/casts.php" />
+        <option value="$PROJECT_DIR$/template/admin/errors/404.php" />
       </list>
     </option>
   </component>
@@ -352,6 +361,13 @@
               <item name="netflix.local" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="errors" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="netflix.local" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netflix.local" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="include" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -360,26 +376,6 @@
               <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="settings" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="netflix.local" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflix.local" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="netflix.local" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflix.local" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="netflix.local" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflix.local" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="include" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -441,7 +437,7 @@
       <workItem from="1626074814233" duration="12318000" />
       <workItem from="1626163778358" duration="2477000" />
       <workItem from="1626171740354" duration="4987000" />
-      <workItem from="1626241396152" duration="2034000" />
+      <workItem from="1626241396152" duration="4238000" />
     </task>
     <task id="LOCAL-00001" summary="register page js done&#10;new modules added">
       <created>1624370065659</created>
@@ -779,11 +775,18 @@
       <option name="project" value="LOCAL" />
       <updated>1626176232120</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="nav bar settings backend implimented.">
+      <created>1626243473883</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1626243473883</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156026000" />
+    <option name="totallyTimeSpent" value="158230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -818,7 +821,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="home page updated" />
     <MESSAGE value="home page updated&#10;new entities page with filter options in process" />
     <MESSAGE value="new updates&#10;new entities page added" />
     <MESSAGE value="shows page updated" />
@@ -843,7 +845,8 @@
     <MESSAGE value="bug fix&#10;admin panel upates along with admin login page" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="Admin settings page updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin settings page updated." />
+    <MESSAGE value="nav bar settings backend implimented." />
+    <option name="LAST_COMMIT_MESSAGE" value="nav bar settings backend implimented." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -852,20 +855,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/Contactus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/default/emails/account_active.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="391" column="54" lean-forward="true" selection-start-line="391" selection-start-column="54" selection-end-line="391" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/default/emails/contactus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1117,6 +1106,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="36" column="88" lean-forward="false" selection-start-line="36" selection-start-column="88" selection-end-line="36" selection-end-column="88" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,6 +1121,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
           <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,6 +1136,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="50" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1152,6 +1144,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-598">
           <caret line="88" column="52" lean-forward="false" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1182,16 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <marker date="1626173985582" expanded="true" signature="766:859" ph="select * fro... ${Config::TBL_NAMES['SETTINGS']}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/default/auth/new_password.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1208,26 +1191,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/admin/include/nav.php">
+    <entry file="file://$PROJECT_DIR$/template/admin/include/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="323" column="47" lean-forward="true" selection-start-line="323" selection-start-column="47" selection-end-line="323" selection-end-column="47" />
+        <state relative-caret-position="575">
+          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <marker date="1626173985582" expanded="true" signature="766:859" ph="select * fro... ${Config::TBL_NAMES['SETTINGS']}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/settings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="67" column="8" lean-forward="true" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/admin/include/footer.php">
+    <entry file="file://$PROJECT_DIR$/admin/casts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state relative-caret-position="694">
+          <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/admin/errors/404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/admin/include/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1037">
+          <caret line="261" column="105" lean-forward="false" selection-start-line="261" selection-start-column="105" selection-end-line="261" selection-end-column="105" />
           <folding />
         </state>
       </provider>

@@ -20,7 +20,7 @@
                 <i class="icon-home2"></i>
                 <span class="nav-link-text">Dashboards</span>
             </a>
-            <a class="nav-link" id="product-tab" data-bs-toggle="tab" href="#tab-casts" role="tab" aria-controls="tab-product" aria-selected="false">
+            <a class="nav-link <?= ($_SERVER['SCRIPT_NAME'] == '/admin/casts.php') ? 'active' : '' ?>" id="product-tab" data-bs-toggle="tab" href="#tab-casts" role="tab" aria-controls="tab-product" aria-selected="false">
                 <i class="icon-people_outline"></i>
                 <span class="nav-link-text">Casts</span>
             </a>
@@ -91,7 +91,7 @@
             </div>
 
             <!-- Casts tab -->
-            <div class="tab-pane fade" id="tab-casts" role="tabpanel" aria-labelledby="cast-tab">
+            <div class="tab-pane fade <?= ($_SERVER['SCRIPT_NAME'] == '/admin/casts.php') ? 'show active' : '' ?>" id="tab-casts" role="tabpanel" aria-labelledby="cast-tab">
 
                 <!-- Tab content header start -->
                 <div class="tab-pane-header">
@@ -102,16 +102,23 @@
                 <!-- Sidebar menu starts -->
                 <div class="sidebarMenuScroll">
                     <div class="sidebar-menu">
-
+                        <ul>
+                            <li>
+                                <a href="<?= BASE_URL_ADMIN ?>casts.php" class="">View</a>
+                            </li>
+                            <li>
+                                <a href="<?= BASE_URL_ADMIN ?>casts.php?p=add" class="">Add new</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <!-- Sidebar menu ends -->
 
                 <!-- Sidebar actions starts -->
                 <div class="sidebar-actions">
-                    <div class="support-tile">
+                    <!--div class="support-tile">
                         <i class="icon-headphones"></i> 24/7 Support
-                    </div>
+                    </div-->
                 </div>
                 <!-- Sidebar actions ends -->
 
