@@ -58,6 +58,67 @@
 <!-- Main Js Required -->
 <script src="<?= ADMIN_BASE_URL_ASSETS ?>js/main.js"></script>
 
+<!-- Common scripts -->
+<script>
+    $(".setting_nav_details").submit((e) => {
+        e.preventDefault();
+
+        var f_name = $('input[name=f_name]').val();
+        var l_name = $('input[name=l_name]').val();
+        var email = $('input[name=email]').val();
+        var user = $('input[name=user]').val();
+
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-auth.php",
+            data: {action: "update_account", f_name, l_name, email, user},
+            dataType: "html",
+            success: function (resp) {
+                console.log(resp);
+                var parsed_data = JSON.parse(resp);
+                if(parsed_data.status == 1){
+                    Toast.create("Settings Updated", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+                }else{
+                    Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+                }
+
+            },
+            error: function (err) {
+                alert("Critical Error Contact Developer");
+            }
+        });
+    });
+
+$(".setting_nav_password").submit((e) => {
+    e.preventDefault();
+
+    var old = $('input[name=old]').val();
+    var password = $('input[name=password]').val();
+    var confirm_password = $('input[name=confirm_password]').val();
+    var user = $('input[name=user]').val();
+
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-auth.php",
+        data: {action: "update_password", old, password, confirm_password, user},
+        dataType: "html",
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                Toast.create("Settings Updated", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+            }else{
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+
+        },
+        error: function (err) {
+            alert("Critical Error Contact Developer");
+        }
+    });
+});
+</script>
+<!-- //Common scripts -->
 </body>
 
 </html>

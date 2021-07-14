@@ -94,6 +94,7 @@ function update_setting(id) {
         }
     });
 }
+
 </script>
 <!-- //Custom Script -->
 

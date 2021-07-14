@@ -272,19 +272,27 @@
                                 </h2>
                                 <div id="genCollapse" class="accordion-collapse collapse show" aria-labelledby="genInfo" data-bs-parent="#settingsAccordion">
                                     <div class="accordion-body">
-                                        <div class="field-wrapper">
-                                            <input type="text" value="<?= $USR['username'] ?>" />
-                                            <div class="field-placeholder">Full Name</div>
-                                        </div>
+                                        <form class="setting_nav_details">
+                                            <div class="field-wrapper">
+                                                <input type="text" name="f_name" value="<?= $USR['first_name'] ?>" />
+                                                <div class="field-placeholder">First Name</div>
+                                            </div>
 
-                                        <div class="field-wrapper">
-                                            <input type="email" value="<?= $USR['email'] ?>" />
-                                            <div class="field-placeholder">Email</div>
-                                        </div>
+                                            <div class="field-wrapper">
+                                                <input type="text" name="l_name" value="<?= $USR['last_name'] ?>" />
+                                                <div class="field-placeholder">Last Name</div>
+                                            </div>
 
-                                        <div class="field-wrapper m-0">
-                                            <button class="btn btn-primary stripes-btn">Save</button>
-                                        </div>
+                                            <div class="field-wrapper">
+                                                <input type="email" name="email" value="<?= $USR['email'] ?>" />
+                                                <div class="field-placeholder">Email</div>
+                                            </div>
+
+                                            <div class="field-wrapper m-0">
+                                                <input type="hidden" name="user" value="<?= \App\Session::get('UID') ?>">
+                                                <button type="submit" class="btn btn-primary stripes-btn">Save</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -296,22 +304,24 @@
                                 </h2>
                                 <div id="chngPwdCollapse" class="accordion-collapse collapse" aria-labelledby="chngPwd" data-bs-parent="#settingsAccordion">
                                     <div class="accordion-body">
-                                        <div class="field-wrapper">
-                                            <input type="text" value="">
-                                            <div class="field-placeholder">Current Password</div>
-                                        </div>
-                                        <div class="field-wrapper">
-                                            <input type="password" value="">
-                                            <div class="field-placeholder">New Password</div>
-                                        </div>
-                                        <div class="field-wrapper">
-                                            <input type="password" value="">
-                                            <div class="field-placeholder">Confirm Password</div>
-                                        </div>
-                                        <div class="field-wrapper m-0">
-                                            <button class="btn btn-primary stripes-btn">Save</button>
-                                        </div>
-
+                                        <form class="setting_nav_password">
+                                            <div class="field-wrapper">
+                                                <input name="old" type="text" value="">
+                                                <div class="field-placeholder">Current Password</div>
+                                            </div>
+                                            <div class="field-wrapper">
+                                                <input name="password" type="password" value="">
+                                                <div class="field-placeholder">New Password</div>
+                                            </div>
+                                            <div class="field-wrapper">
+                                                <input name="confirm_password" type="password" value="">
+                                                <div class="field-placeholder">Confirm Password</div>
+                                            </div>
+                                            <div class="field-wrapper m-0">
+                                                <input type="hidden" name="user" value="<?= \App\Session::get('UID') ?>">
+                                                <button type="button" class="btn btn-primary stripes-btn">Save</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -403,5 +413,3 @@
 
     </div>
     <!-- Page header ends -->
-
-
