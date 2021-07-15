@@ -36,6 +36,11 @@
     <!-- Boostrap Toaster -->
     <link rel="stylesheet" href="<?= BASE_URL_ASSETS ?>css/bootstrap-toaster.min.css" />
 
+    <!-- Data Tables -->
+    <link rel="stylesheet" href="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/dataTables.bs4.css" />
+    <link rel="stylesheet" href="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/dataTables.bs4-custom.css" />
+    <link rel="stylesheet" href="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/buttons.bs.css" />
+
     <!-- *************
         ************ Vendor Css Files *************
     ************ -->

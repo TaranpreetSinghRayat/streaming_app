@@ -25,4 +25,12 @@ class Casts
         }
         return null;
     }
+
+    public function get_all()
+    {
+        if($result = $this->db->get(Config::TBL_NAMES['CASTS'])){
+            return $result;
+        }
+        return null;
+    }
 }

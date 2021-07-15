@@ -54,6 +54,22 @@
 <!-- Circleful Charts -->
 <script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/circliful/circliful.min.js"></script>
 
+<!-- Data Tables -->
+<script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/dataTables.min.js"></script>
+<script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/dataTables.bootstrap.min.js"></script>
+
+<!-- Custom Data tables -->
+<script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/custom/custom-datatables.js"></script>
+<script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/custom/fixedHeader.js"></script>
+
+<!-- Download / CSV / Copy / Print -->
+<script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/buttons.min.js"></script>
+<script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/jszip.min.js"></script>
+<script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/pdfmake.min.js"></script>
+<script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/vfs_fonts.js"></script>
+<script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/html5.min.js"></script>
+<script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/buttons.print.min.js"></script>
+
 
 <!-- Main Js Required -->
 <script src="<?= ADMIN_BASE_URL_ASSETS ?>js/main.js"></script>
