@@ -20,7 +20,7 @@
                 <!-- Card start -->
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Basic Example</div>
+                        <div class="card-title">Casts</div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -41,9 +41,25 @@
                                             <tr>
                                                 <td><?= $cast['id'] ?></td>
                                                 <td><?= $cast['name'] ?></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td>
+                                                    <img src="<?= BASE_URL . $cast['avatar']?>" class="img-64" />
+
+                                                </td>
+                                                <td>
+                                                    <?php if($cast['role'] == 0): ?>
+                                                        Actor
+                                                    <?php elseif ($cast['role'] == 1): ?>
+                                                        Director
+                                                    <?php else: ?>
+                                                        Producer
+                                                    <?php endif; ?>
+                                                </td>
                                                 <td><?= $cast['description'] ?></td>
+                                                <td>
+                                                    <button data-castid="<?= $cast['id'] ?>" class="btn btn-sm btn-dark btn-outline-info">Edit</button>
+                                                    &nbsp;
+                                                    <button data-castid="<?= $cast['id'] ?>" class="btn btn-sm btn-dark btn-outline-danger">Delete</button>
+                                                </td>
                                             </tr>
                                         <?php endforeach; ?>
                                     <?php endif; ?>
@@ -67,3 +83,60 @@
 
 </div>
 <!-- Content wrapper scroll end -->
+
+<!-- Modal start -->
+<div class="modal fade" id="add_new_cast" tabindex="-1" aria-labelledby="AddNewCast" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="AddNewCast">Add New Cast</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="add_new_cast" method="post" enctype="multipart/form-data" action="<?= $_SERVER['PHP_SELF'] ?>">
+                    <div class="field-wrapper">
+                        <input class="form-control" type="text" name="c_name" required>
+                        <div class="field-placeholder">Name <span class="text-danger">*</span></div>
+                        <div class="form-text">
+                            Please enter casts full name.
+                        </div>
+                    </div>
+
+                    <div class="field-wrapper">
+                        <input class="form-control" type="file" name="c_avatar" required>
+                        <div class="field-placeholder">Avatar <span class="text-danger">*</span></div>
+                        <div class="form-text">
+                            Please upload casts avatar.
+                        </div>
+                    </div>
+
+                    <div class="field-wrapper">
+                        <select class="form-select" name="c_role" id="cast_type">
+                            <option value="0">Actor</option>
+                            <option value="1">Director</option>
+                            <option value="2">Producer</option>
+                        </select>
+                        <div class="field-placeholder">Type <span class="text-danger">*</span></div>
+                        <div class="form-text">
+                            Please select cast Type.
+                        </div>
+                    </div>
+
+                    <div class="field-wrapper">
+                        <textarea class="form-control" name="c_description" required></textarea>
+                        <div class="field-placeholder">Type <span class="text-danger">*</span></div>
+                        <div class="form-text">
+                            Little bio about the cast.
+                        </div>
+                    </div>
+                    <button type="submit" name="process_add_cast" class="btn btn-primary">Add</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal end -->

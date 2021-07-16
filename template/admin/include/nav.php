@@ -20,30 +20,18 @@
                 <i class="icon-home2"></i>
                 <span class="nav-link-text">Dashboards</span>
             </a>
-            <a class="nav-link <?= ($_SERVER['SCRIPT_NAME'] == '/admin/casts.php') ? 'active' : '' ?>" id="product-tab" data-bs-toggle="tab" href="#tab-casts" role="tab" aria-controls="tab-product" aria-selected="false">
-                <i class="icon-people_outline"></i>
-                <span class="nav-link-text">Casts</span>
+            <?php
+                $active_arr = ['/admin/casts.php'];
+            ?>
+            <a class="nav-link <?= (in_array($_SERVER['SCRIPT_NAME'],$active_arr)) ? 'active' : '' ?>" id="product-tab" data-bs-toggle="tab" href="#tab-entities" role="tab" aria-controls="tab-product" aria-selected="false">
+                <i class="icon-controller-play"></i>
+                <span class="nav-link-text">Entities</span>
             </a>
             <a class="nav-link" id="pages-tab" data-bs-toggle="tab" href="#tab-pages" role="tab" aria-controls="tab-pages" aria-selected="false">
                 <i class="icon-book-open"></i>
                 <span class="nav-link-text">Pages</span>
             </a>
-            <a class="nav-link" id="forms-tab" data-bs-toggle="tab" href="#tab-forms" role="tab" aria-controls="tab-forms" aria-selected="false">
-                <i class="icon-edit1"></i>
-                <span class="nav-link-text">Forms</span>
-            </a>
-            <a class="nav-link" id="components-tab" data-bs-toggle="tab" href="#tab-components" role="tab" aria-controls="tab-components" aria-selected="false">
-                <i class="icon-box"></i>
-                <span class="nav-link-text">Components</span>
-            </a>
-            <a class="nav-link" id="graphs-tab" data-bs-toggle="tab" href="#tab-graphs" role="tab" aria-controls="tab-graphs" aria-selected="false">
-                <i class="icon-pie-chart1"></i>
-                <span class="nav-link-text">Graphs</span>
-            </a>
-            <a class="nav-link" id="authentication-tab" data-bs-toggle="tab" href="#tab-authentication" role="tab" aria-controls="tab-authentication" aria-selected="false">
-                <i class="icon-unlock"></i>
-                <span class="nav-link-text">Authentication</span>
-            </a>
+
             <a class="nav-link settings <?= ($_SERVER['SCRIPT_NAME'] == '/admin/settings.php') ? 'active' : '' ?>" id="settings-tab" data-bs-toggle="tab" href="#tab-settings" role="tab" aria-controls="tab-authentication" aria-selected="false">
                 <i class="icon-settings1"></i>
                 <span class="nav-link-text">Settings</span>
@@ -68,7 +56,7 @@
                     <div class="sidebar-menu">
                         <ul>
                             <li>
-                                <a href="<?= BASE_URL_ADMIN ?>" class="">Dashboard</a>
+                                <a href="<?= BASE_URL_ADMIN ?>" class="<?= ($_SERVER['SCRIPT_NAME'] == '/admin/index.php') ? 'current-page' : '' ?>">Dashboard</a>
                             </li>
                         </ul>
                     </div>
@@ -91,11 +79,11 @@
             </div>
 
             <!-- Casts tab -->
-            <div class="tab-pane fade <?= ($_SERVER['SCRIPT_NAME'] == '/admin/casts.php') ? 'show active' : '' ?>" id="tab-casts" role="tabpanel" aria-labelledby="cast-tab">
+            <div class="tab-pane fade <?= (in_array($_SERVER['SCRIPT_NAME'],$active_arr)) ? 'show active' : '' ?>" id="tab-entities" role="tabpanel" aria-labelledby="cast-tab">
 
                 <!-- Tab content header start -->
                 <div class="tab-pane-header">
-                    Casts
+                    Entities
                 </div>
                 <!-- Tab content header end -->
 
@@ -104,10 +92,16 @@
                     <div class="sidebar-menu">
                         <ul>
                             <li>
-                                <a href="<?= BASE_URL_ADMIN ?>casts.php" class="">View</a>
+                                <a href="<?= BASE_URL_ADMIN ?>casts.php" class="<?= ($_SERVER['SCRIPT_NAME'] == '/admin/casts.php') ? 'current-page' : '' ?>">Casts</a>
                             </li>
                             <li>
-                                <a href="<?= BASE_URL_ADMIN ?>casts.php?p=add" class="">Add new</a>
+                                <a href="<?= BASE_URL_ADMIN ?>genre.php" class="<?= ($_SERVER['SCRIPT_NAME'] == '/admin/genre.php') ? 'current-page' : '' ?>">Genre</a>
+                            </li>
+                            <li>
+                                <a href="<?= BASE_URL_ADMIN ?>tags.php" class="<?= ($_SERVER['SCRIPT_NAME'] == '/admin/tags.php') ? 'current-page' : '' ?>">Tags</a>
+                            </li>
+                            <li>
+                                <a href="<?= BASE_URL_ADMIN ?>entity.php" class="<?= ($_SERVER['SCRIPT_NAME'] == '/admin/entity.php') ? 'current-page' : '' ?>">Add Entity</a>
                             </li>
                         </ul>
                     </div>
@@ -124,6 +118,7 @@
 
             </div>
 
+
             <!-- Pages tab -->
             <div class="tab-pane fade" id="tab-pages" role="tabpanel" aria-labelledby="pages-tab">
 
@@ -136,7 +131,9 @@
                 <!-- Sidebar menu starts -->
                 <div class="sidebarMenuScroll">
                     <div class="sidebar-menu">
+                        <ul>
 
+                        </ul>
                     </div>
                 </div>
                 <!-- Sidebar menu ends -->
@@ -145,113 +142,6 @@
                 <div class="sidebar-actions">
                     <div class="support-tile green">
                         <i class="icon-pie-chart1"></i> 5GB Free Space
-                    </div>
-                </div>
-                <!-- Sidebar actions ends -->
-
-            </div>
-
-            <!-- Forms tab -->
-            <div class="tab-pane fade" id="tab-forms" role="tabpanel" aria-labelledby="forms-tab">
-
-                <!-- Tab content header start -->
-                <div class="tab-pane-header">
-                    Forms
-                </div>
-                <!-- Tab content header end -->
-
-                <!-- Sidebar menu starts -->
-                <div class="sidebarMenuScroll">
-                    <div class="sidebar-menu">
-
-                    </div>
-                </div>
-                <!-- Sidebar menu ends -->
-
-                <!-- Sidebar actions starts -->
-                <div class="sidebar-actions">
-                    <div class="support-tile red">
-                        <i class="icon-mail"></i> Inbox Full
-                    </div>
-                </div>
-                <!-- Sidebar actions ends -->
-
-            </div>
-
-            <!-- Components tab -->
-            <div class="tab-pane fade" id="tab-components" role="tabpanel" aria-labelledby="components-tab">
-
-                <!-- Tab content header start -->
-                <div class="tab-pane-header">
-                    Components
-                </div>
-                <!-- Tab content header end -->
-
-                <!-- Sidebar menu starts -->
-                <div class="sidebarMenuScroll">
-                    <div class="sidebar-menu">
-
-                    </div>
-                </div>
-                <!-- Sidebar menu ends -->
-
-                <!-- Sidebar actions starts -->
-                <div class="sidebar-actions">
-                    <div class="support-tile yellow">
-                        <i class="icon-arrow-down-circle"></i><a href="#">Download Reports</a>						</div>
-                </div>
-                <!-- Sidebar actions ends -->
-
-            </div>
-
-            <!-- Graphs tab -->
-            <div class="tab-pane fade" id="tab-graphs" role="tabpanel" aria-labelledby="graphs-tab">
-
-                <!-- Tab content header start -->
-                <div class="tab-pane-header">
-                    Graphs &amp; Tables
-                </div>
-                <!-- Tab content header end -->
-
-                <!-- Sidebar menu starts -->
-                <div class="sidebarMenuScroll">
-                    <div class="sidebar-menu">
-
-                    </div>
-                </div>
-                <!-- Sidebar menu ends -->
-
-                <!-- Sidebar actions starts -->
-                <div class="sidebar-actions">
-                    <div class="support-tile pink">
-                        <i class="icon-align-right1"></i> RTL Support
-                    </div>
-                </div>
-                <!-- Sidebar actions ends -->
-
-            </div>
-
-            <!-- Authentication tab -->
-            <div class="tab-pane fade" id="tab-authentication" role="tabpanel" aria-labelledby="authentication-tab">
-
-                <!-- Tab content header start -->
-                <div class="tab-pane-header">
-                    Authentication
-                </div>
-                <!-- Tab content header end -->
-
-                <!-- Sidebar menu starts -->
-                <div class="sidebarMenuScroll">
-                    <div class="sidebar-menu">
-
-                    </div>
-                </div>
-                <!-- Sidebar menu ends -->
-
-                <!-- Sidebar actions starts -->
-                <div class="sidebar-actions">
-                    <div class="support-tile blue">
-                        <a href="pricing.html" class="btn btn-light m-auto">Upgrade Account</a>
                     </div>
                 </div>
                 <!-- Sidebar actions ends -->

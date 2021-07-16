@@ -33,4 +33,45 @@ class Casts
         }
         return null;
     }
+
+    /**
+     * CRUD OPERATIONS
+     */
+
+    /**
+     * @param array $data
+     * @return int|null
+     */
+    public function add(array $data = [])
+    {
+        if($this->db->insert(Config::TBL_NAMES['CASTS'],$data)){
+            return $this->db->getLastInsertId();
+        }
+        return null;
+    }
+
+    /**
+     * @param int $id
+     * @param array $data
+     * @return bool
+     */
+    public function update(int $id,array $data)
+    {
+        if($this->db->where('id', $id)->update(Config::TBL_NAMES['CASTS'],$data)){
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * @param int $id
+     * @return bool
+     */
+    public function delete(int $id)
+    {
+        if($this->db->where('id', $id)->delete(Config::TBL_NAMES['CASTS'])){
+            return true;
+        }
+        return false;
+    }
 }

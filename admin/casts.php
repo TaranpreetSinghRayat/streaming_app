@@ -25,28 +25,6 @@ echo $TPL->render('include/header',[
 ?>
 <!-- // Header Section -->
 
-<?php if(isset($_GET['p'])): ?>
-    <?php if($_GET['p'] == 'add'): ?>
-        <!-- Navigation Section -->
-        <?php
-        echo $TPL->render('include/nav',[
-            'app_name' => \App\Settings::get_value('app.name'),
-            'app_logo' => ADMIN_BASE_URL_ASSETS. \App\Settings::get_value('app.logo'),
-            'ENTITIES' => $ENTITIES,
-            'GENRE' => $GENRE,
-            'CASTS' => $CASTS,
-            'TAGS' => $TAGS,
-            'USER' => $USER,
-            'USR' => $USR_DATA
-        ]);
-        ?>
-        <!-- //Navigation Section -->
-    <?php else: ?>
-        <?php
-            echo $TPL->render('errors/404',[]);
-        ?>
-    <?php endif; ?>
-    <?php else: ?>
     <!-- Navigation Section -->
     <?php
     echo $TPL->render('include/nav',[
@@ -73,8 +51,6 @@ echo $TPL->render('include/header',[
     ?>
     <!-- //Navigation Section -->
 
-<?php endif; ?>
-
 <!-- Footer Section -->
 <?php
 echo $TPL->render('include/footer',[
@@ -86,6 +62,10 @@ echo $TPL->render('include/footer',[
 
 <!-- Custom Script -->
 <script>
+$('#add_new_cast').submit((e) => {
+    e.preventDefault();
 
+    console.log('add new cast');
+});
 </script>
 <!-- //Custom Script -->
