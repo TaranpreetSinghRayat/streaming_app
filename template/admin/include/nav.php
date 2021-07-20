@@ -5,6 +5,9 @@
  * Time: 13:34
  */
 ?>
+<?php
+$active_arr = ['/admin/casts.php'];
+?>
 <!-- Sidebar wrapper start -->
 <nav class="sidebar-wrapper">
 
@@ -20,9 +23,7 @@
                 <i class="icon-home2"></i>
                 <span class="nav-link-text">Dashboards</span>
             </a>
-            <?php
-                $active_arr = ['/admin/casts.php'];
-            ?>
+
             <a class="nav-link <?= (in_array($_SERVER['SCRIPT_NAME'],$active_arr)) ? 'active' : '' ?>" id="product-tab" data-bs-toggle="tab" href="#tab-entities" role="tab" aria-controls="tab-product" aria-selected="false">
                 <i class="icon-controller-play"></i>
                 <span class="nav-link-text">Entities</span>
@@ -30,6 +31,10 @@
             <a class="nav-link" id="pages-tab" data-bs-toggle="tab" href="#tab-pages" role="tab" aria-controls="tab-pages" aria-selected="false">
                 <i class="icon-book-open"></i>
                 <span class="nav-link-text">Pages</span>
+            </a>
+            <a class="nav-link <?= ($_SERVER['SCRIPT_NAME'] == '/admin/updator.php') ? 'active' : '' ?>" id="pages-tab" data-bs-toggle="tab" href="#tab-updator" role="tab" aria-controls="tab-pages" aria-selected="false">
+                <i class="icon-refresh-cw"></i>
+                <span class="nav-link-text">Updator</span>
             </a>
 
             <a class="nav-link settings <?= ($_SERVER['SCRIPT_NAME'] == '/admin/settings.php') ? 'active' : '' ?>" id="settings-tab" data-bs-toggle="tab" href="#tab-settings" role="tab" aria-controls="tab-authentication" aria-selected="false">
@@ -235,6 +240,37 @@
                     </div>
                 </div>
                 <!-- Sidebar actions ends -->
+            </div>
+
+            <!-- Updator tab -->
+            <div class="tab-pane fade <?= ($_SERVER['SCRIPT_NAME'] == '/admin/updator.php') ? 'show active' : '' ?>" id="tab-updator" role="tabpanel" aria-labelledby="cast-tab">
+
+                <!-- Tab content header start -->
+                <div class="tab-pane-header">
+                    Updator
+                </div>
+                <!-- Tab content header end -->
+
+                <!-- Sidebar menu starts -->
+                <div class="sidebarMenuScroll">
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li>
+                                <a href="<?= BASE_URL_ADMIN ?>updator.php" class="<?= ($_SERVER['SCRIPT_NAME'] == '/admin/updator.php') ? 'current-page' : '' ?>">Updator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Sidebar menu ends -->
+
+                <!-- Sidebar actions starts -->
+                <div class="sidebar-actions">
+                    <!--div class="support-tile">
+                        <i class="icon-headphones"></i> 24/7 Support
+                    </div-->
+                </div>
+                <!-- Sidebar actions ends -->
+
             </div>
 
         </div>
