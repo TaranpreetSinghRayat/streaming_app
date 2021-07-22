@@ -12,6 +12,8 @@ namespace App;
 class Updator
 {
 
+
+
     public function check_latest_ver()
     {
         return '1.0';
