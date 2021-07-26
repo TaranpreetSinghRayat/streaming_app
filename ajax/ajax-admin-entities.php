@@ -25,7 +25,20 @@ if(isset($_POST) && isset($_POST['action'])) {
                     echo json_encode(['status' => 0, 'msg' => \App\MSG::CASTS['ADD_ERR']]);
                 }
             break;
-
+        case 'process_delete_cast':
+            //perform check is cast id is under use or not.
+            $ENTITIES = new \App\Entities;
+            if(!$ENTITIES->check_cast_in_use($_POST['id'])){
+                $CAST = new \App\Casts;
+                $cast_data = $CAST->get_by_id($_POST['id']);
+                $CAST->delete($_POST['id']);
+                //delete the avatar folder and file from server.
+                unlink('../' . $cast_data['avatar']);
+                rmdir(CAST_ASSETS . '' . $_POST['id']);
+                echo json_encode(['status' => 1, 'msg' => \App\MSG::CASTS['RMV_SUCC']]);
+            }
+            echo json_encode(['status' => 0, 'msg' => App\MSG::CASTS['IN_USE']]);
+            break;
         default:
             echo json_encode(['status' => 0, 'msg' => \App\MSG::ACTION['INV_RQT']]);
             break;

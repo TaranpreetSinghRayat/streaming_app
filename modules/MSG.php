@@ -63,6 +63,10 @@ class MSG
         'ADD_SUCC' => 'New cast member added.',
         'ADD_ERR' => 'Something went wrong while adding new cast. Please try again later',
         'AVT_UPL' => 'Cast avatar uploaded success.',
-        'AVT_ERR' => 'Something went wrong while upadting avatar.'
+        'AVT_ERR' => 'Something went wrong while upadting avatar.',
+        'CNF_DLT' => 'Are you sure you would like to delete it?',
+        'RMV_SUCC' => 'Cast removed succesfully.',
+        'RMV_ERR' => 'Something went wrong while removing the cast. Please try again later.',
+        'IN_USE' => 'Cast is in use. Please remove the cast from title it linked with.'
     ];
 }

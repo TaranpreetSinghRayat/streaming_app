@@ -161,6 +161,7 @@ class Users
      */
     public function delete(int $id)
     {
+
         if($this->db->where('id', $id)->delete(Config::TBL_NAMES['USERS'])){
             return true;
         }

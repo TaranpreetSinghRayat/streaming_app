@@ -56,9 +56,9 @@
                                                 </td>
                                                 <td><?= $cast['description'] ?></td>
                                                 <td>
-                                                    <button data-castid="<?= $cast['id'] ?>" class="btn btn-sm btn-dark btn-outline-info">Edit</button>
+                                                    <button data-castid="<?= $cast['id'] ?>" class="btn btn-sm btn-dark btn-outline-info edit_cast">Edit</button>
                                                     &nbsp;
-                                                    <button data-castid="<?= $cast['id'] ?>" class="btn btn-sm btn-dark btn-outline-danger">Delete</button>
+                                                    <button data-castid="<?= $cast['id'] ?>" class="btn btn-sm btn-dark btn-outline-danger delete_cast">Delete</button>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>

@@ -57,6 +57,7 @@ echo $TPL->render('include/footer',[
     'app_name' => \App\Settings::get_value('app.name'),
     'USR' => $USR_DATA
 ]);
+
 ?>
 <!-- //Footer Section -->
 
@@ -113,8 +114,46 @@ $('#add_new_cast').submit((e) => {
 
             }
         });
+});
 
+$('.delete_cast').click(function (){
+    var id = $(this).attr('data-castid');
+    var decision = confirm("<?= \App\MSG::CASTS['CNF_DLT'] ?>");
+    if(decision == true){
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-admin-entities.php",
+            data: {
+                action: "process_delete_cast",
+                id : id
+            },
+            dataType: "html",
+            beforeSend: function () {
 
+            },
+            success: function (resp) {
+                console.log(resp);
+                var parsed_data = JSON.parse(resp);
+                if(parsed_data.status == 1){
+
+                    Toast.create("Cast Removed", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+                    setTimeout(function () {
+                        window.location.reload(true);
+                    },2000);
+                }else{
+                    Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+                }
+            },
+            error: function (err) {
+                alert("Critical Error Contact Developer");
+            },
+            complete: function () {
+
+            }
+        });
+    }else{
+     //Process the cancel decision.
+    }
 });
 </script>
 <!-- //Custom Script -->

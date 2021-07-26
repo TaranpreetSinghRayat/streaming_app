@@ -190,6 +190,19 @@ class Entities
         return null;
     }
 
+    public function check_cast_in_use(int $castIDs){
+        if(!empty($castIDs)){
+            $all_titles = $this->db->get(Config::TBL_NAMES['ENTITIES']);
+            foreach ($all_titles as $k => $v){
+                $castID = json_decode($v['cast'],true);
+                if(in_array($castIDs, $castID)){
+                     return true;
+                }
+            }
+        }
+        return false;
+    }
+
     /**
      * CRUD OPERATIONS
      */
