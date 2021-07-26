@@ -99,7 +99,7 @@ $('#add_new_cast').submit((e) => {
                         success: function(php_script_response){
                             console.log(php_script_response);
                             Toast.create("Cast Added", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
-                            window.reload(true);
+                            window.location.reload(true);
                         }
                     });
                     }else{
