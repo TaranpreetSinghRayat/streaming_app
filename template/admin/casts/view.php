@@ -78,7 +78,7 @@
     <!-- Content wrapper end -->
 
     <!-- App Footer start -->
-    <div class="app-footer">© Uni Pro Admin 2021</div>
+    <div class="app-footer">&copy; <?= \App\Settings::get_value('app.name') .' ' . date('Y') ?> </div>
     <!-- App footer end -->
 
 </div>
@@ -103,7 +103,7 @@
                     </div>
 
                     <div class="field-wrapper">
-                        <input class="form-control" type="file" name="c_avatar" required>
+                        <input class="form-control" type="file" id="c_avatar" name="c_avatar" required>
                         <div class="field-placeholder">Avatar <span class="text-danger">*</span></div>
                         <div class="form-text">
                             Please upload casts avatar.
@@ -124,7 +124,7 @@
 
                     <div class="field-wrapper">
                         <textarea class="form-control" name="c_description" required></textarea>
-                        <div class="field-placeholder">Type <span class="text-danger">*</span></div>
+                        <div class="field-placeholder">Description <span class="text-danger">*</span></div>
                         <div class="form-text">
                             Little bio about the cast.
                         </div>

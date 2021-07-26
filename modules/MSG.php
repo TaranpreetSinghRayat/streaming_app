@@ -54,4 +54,15 @@ class MSG
         'ERR_UPDT' => 'Soemthing went wrong while updating setting value.',
         'UPDT_SUCC' => 'New value saved.'
     ];
+
+    const ACTION = [
+        'INV_RQT' => 'Invalid request'
+    ];
+
+    const CASTS = [
+        'ADD_SUCC' => 'New cast member added.',
+        'ADD_ERR' => 'Something went wrong while adding new cast. Please try again later',
+        'AVT_UPL' => 'Cast avatar uploaded success.',
+        'AVT_ERR' => 'Something went wrong while upadting avatar.'
+    ];
 }

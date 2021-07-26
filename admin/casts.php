@@ -65,7 +65,56 @@ echo $TPL->render('include/footer',[
 $('#add_new_cast').submit((e) => {
     e.preventDefault();
 
-    console.log('add new cast');
+    var formData = new FormData();
+    formData.append('c_avatar', $('#c_avatar').prop('files')[0]);
+    var avatar_upload = false;
+
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-admin-entities.php",
+            data: {
+                action: "process_add_cast",
+                c_name:$("input[name=c_name]").val(),
+                c_role:$("select[name=c_role]").val(),
+                c_description:$("textarea[name=c_description]").val()
+            },
+            dataType: "html",
+            beforeSend: function () {
+
+            },
+            success: function (resp) {
+                console.log(resp);
+                var parsed_data = JSON.parse(resp);
+                if(parsed_data.status == 1){
+                    var dir_id = parsed_data.data;
+                    formData.append('dir', dir_id);
+                    $.ajax({
+                        url: "<?= BASE_URL ?>ajax/ajax-admin-entities.php",
+                        dataType: 'text',  // what to expect back from the PHP script, if anything
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        data: formData,
+                        type: 'post',
+                        success: function(php_script_response){
+                            console.log(php_script_response);
+                            Toast.create("Cast Added", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+                            window.reload(true);
+                        }
+                    });
+                    }else{
+                        Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+                    }
+            },
+            error: function (err) {
+                alert("Critical Error Contact Developer");
+            },
+            complete: function () {
+
+            }
+        });
+
+
 });
 </script>
 <!-- //Custom Script -->

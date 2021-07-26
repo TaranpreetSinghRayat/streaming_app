@@ -241,74 +241,6 @@
         ]
     },
     {
-        "name": "phpmailer/phpmailer",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PHPMailer/PHPMailer.git",
-            "reference": "a5b5c43e50b7fba655f793ad27303cd74c57363c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/a5b5c43e50b7fba655f793ad27303cd74c57363c",
-            "reference": "a5b5c43e50b7fba655f793ad27303cd74c57363c",
-            "shasum": ""
-        },
-        "require": {
-            "ext-ctype": "*",
-            "ext-filter": "*",
-            "ext-hash": "*",
-            "php": ">=5.5.0"
-        },
-        "require-dev": {
-            "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-            "doctrine/annotations": "^1.2",
-            "phpcompatibility/php-compatibility": "^9.3.5",
-            "roave/security-advisories": "dev-latest",
-            "squizlabs/php_codesniffer": "^3.5.6",
-            "yoast/phpunit-polyfills": "^0.2.0"
-        },
-        "suggest": {
-            "ext-mbstring": "Needed to send email in multibyte encoding charset or decode encoded addresses",
-            "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
-            "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
-            "psr/log": "For optional PSR-3 debug logging",
-            "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
-            "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
-        },
-        "time": "2021-06-16T14:33:43+00:00",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "PHPMailer\\PHPMailer\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "LGPL-2.1-only"
-        ],
-        "authors": [
-            {
-                "name": "Marcus Bointon",
-                "email": "phpmailer@synchromedia.co.uk"
-            },
-            {
-                "name": "Jim Jagielski",
-                "email": "jimjag@gmail.com"
-            },
-            {
-                "name": "Andy Prevost",
-                "email": "codeworxtech@users.sourceforge.net"
-            },
-            {
-                "name": "Brent R. Matzelle"
-            }
-        ],
-        "description": "PHPMailer is a full-featured email creation and transfer class for PHP"
-    },
-    {
         "name": "nass600/get-id3",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -356,5 +288,118 @@
             "metadata",
             "mp3"
         ]
+    },
+    {
+        "name": "verot/class.upload.php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/verot/class.upload.php.git",
+            "reference": "a2b54b3ccc50f35480b591612765fa7b082346f5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/verot/class.upload.php/zipball/a2b54b3ccc50f35480b591612765fa7b082346f5",
+            "reference": "a2b54b3ccc50f35480b591612765fa7b082346f5",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "time": "2021-03-18T14:49:14+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/class.upload.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-only"
+        ],
+        "authors": [
+            {
+                "name": "Colin Verot",
+                "email": "colin@verot.net"
+            }
+        ],
+        "description": "This PHP class uploads files and manipulates images very easily.",
+        "homepage": "http://www.verot.net/php_class_upload.htm",
+        "keywords": [
+            "gd",
+            "upload"
+        ]
+    },
+    {
+        "name": "phpmailer/phpmailer",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PHPMailer/PHPMailer.git",
+            "reference": "620c2a66c52f4f83746b736a8d1398f50376aa1f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/620c2a66c52f4f83746b736a8d1398f50376aa1f",
+            "reference": "620c2a66c52f4f83746b736a8d1398f50376aa1f",
+            "shasum": ""
+        },
+        "require": {
+            "ext-ctype": "*",
+            "ext-filter": "*",
+            "ext-hash": "*",
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+            "doctrine/annotations": "^1.2",
+            "php-parallel-lint/php-console-highlighter": "^0.5.0",
+            "php-parallel-lint/php-parallel-lint": "^1.3",
+            "phpcompatibility/php-compatibility": "^9.3.5",
+            "roave/security-advisories": "dev-latest",
+            "squizlabs/php_codesniffer": "^3.6.0",
+            "yoast/phpunit-polyfills": "^1.0.0"
+        },
+        "suggest": {
+            "ext-mbstring": "Needed to send email in multibyte encoding charset or decode encoded addresses",
+            "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
+            "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
+            "psr/log": "For optional PSR-3 debug logging",
+            "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
+            "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
+        },
+        "time": "2021-07-16T10:10:14+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "PHPMailer\\PHPMailer\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1-only"
+        ],
+        "authors": [
+            {
+                "name": "Marcus Bointon",
+                "email": "phpmailer@synchromedia.co.uk"
+            },
+            {
+                "name": "Jim Jagielski",
+                "email": "jimjag@gmail.com"
+            },
+            {
+                "name": "Andy Prevost",
+                "email": "codeworxtech@users.sourceforge.net"
+            },
+            {
+                "name": "Brent R. Matzelle"
+            }
+        ],
+        "description": "PHPMailer is a full-featured email creation and transfer class for PHP"
     }
 ]
