@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/cast/1/png-dodge-challenger-srt-hellcat-dodge-demon-concept-car-dodge-charger-srt-hellcat-dodge-white-face-logo-car-clipart.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/cast/2/cookie.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/cast/desktop.ini" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/casts.php" afterPath="$PROJECT_DIR$/admin/casts.php" />
-      <change beforePath="$PROJECT_DIR$/ajax/ajax-admin-entities.php" afterPath="$PROJECT_DIR$/ajax/ajax-admin-entities.php" />
-      <change beforePath="$PROJECT_DIR$/assets/cast/1/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/cast/18/rohan.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/cast/19/harsh.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/cast/2/2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/cast/21/material_eng.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/modules/Entities.php" afterPath="$PROJECT_DIR$/modules/Entities.php" />
-      <change beforePath="$PROJECT_DIR$/modules/MSG.php" afterPath="$PROJECT_DIR$/modules/MSG.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Users.php" afterPath="$PROJECT_DIR$/modules/Users.php" />
-      <change beforePath="$PROJECT_DIR$/template/admin/casts/view.php" afterPath="$PROJECT_DIR$/template/admin/casts/view.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -455,14 +447,7 @@
       <workItem from="1626773501636" duration="1406000" />
       <workItem from="1626862448682" duration="186000" />
       <workItem from="1626935708177" duration="2573000" />
-      <workItem from="1627280853930" duration="10488000" />
-    </task>
-    <task id="LOCAL-00008" summary="Bug fix&#10;login process completed&#10;cookies system added">
-      <created>1624544323131</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1624544323131</updated>
+      <workItem from="1627280853930" duration="10585000" />
     </task>
     <task id="LOCAL-00009" summary="sql dump update">
       <created>1624544424458</created>
@@ -800,11 +785,18 @@
       <option name="project" value="LOCAL" />
       <updated>1627287126291</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Cast delete function added&#10;-check for cast in use before remove.&#10;-remove the avatar file&#10;-remove the dir from folder.">
+      <created>1627302353074</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1627302353074</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185913000" />
+    <option name="totallyTimeSpent" value="186010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -862,7 +854,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="views bug fixing" />
     <MESSAGE value="bug fix&#10;TV show page added" />
     <MESSAGE value="bug fix&#10;show pages and player updated" />
     <MESSAGE value="bug fix&#10;contact page created&#10;sql dump updated" />
@@ -887,7 +878,8 @@
     <MESSAGE value="update settings bug fix" />
     <MESSAGE value="admin cast tab updates" />
     <MESSAGE value="simple cast bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="simple cast bug fix" />
+    <MESSAGE value="Cast delete function added&#10;-check for cast in use before remove.&#10;-remove the avatar file&#10;-remove the dir from folder." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cast delete function added&#10;-check for cast in use before remove.&#10;-remove the avatar file&#10;-remove the dir from folder." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
