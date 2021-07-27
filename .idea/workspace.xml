@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/cast/1/png-dodge-challenger-srt-hellcat-dodge-demon-concept-car-dodge-charger-srt-hellcat-dodge-white-face-logo-car-clipart.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/cast/2/cookie.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/cast/desktop.ini" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/admin/genre.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/cast/5/rohan.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/template/admin/genre/view.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/admin/casts.php" afterPath="$PROJECT_DIR$/admin/casts.php" />
+      <change beforePath="$PROJECT_DIR$/ajax/ajax-admin-entities.php" afterPath="$PROJECT_DIR$/ajax/ajax-admin-entities.php" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js" afterPath="$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js" />
+      <change beforePath="$PROJECT_DIR$/modules/Genre.php" afterPath="$PROJECT_DIR$/modules/Genre.php" />
+      <change beforePath="$PROJECT_DIR$/modules/MSG.php" afterPath="$PROJECT_DIR$/modules/MSG.php" />
+      <change beforePath="$PROJECT_DIR$/template/admin/include/nav.php" afterPath="$PROJECT_DIR$/template/admin/include/nav.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,24 +26,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/admin/casts/view.php">
+      <file leaf-file-name="ajax-admin-entities.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax/ajax-admin-entities.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="60" column="91" lean-forward="false" selection-start-line="60" selection-start-column="91" selection-end-line="60" selection-end-column="91" />
+            <state relative-caret-position="469">
+              <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+              <folding>
+                <element signature="e#6#78#0#PHP" expanded="true" />
+                <element signature="e#337#976#0#PHP" expanded="false" />
+                <element signature="e#985#1724#0#PHP" expanded="false" />
+                <element signature="e#1733#2342#0#PHP" expanded="false" />
+                <element signature="e#2351#2547#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="genre.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/genre.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="762">
+              <caret line="102" column="41" lean-forward="false" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
+              <folding>
+                <element signature="e#1553#2633#0#HTML" expanded="false" />
+                <element signature="e#2682#4029#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Genre.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/Genre.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+              <folding>
+                <marker date="1627382052080" expanded="true" signature="539:554" ph="select id fr... ${Config::TBL_NAMES['GENRE']}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/admin/include/nav.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax-admin-entities.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ajax/ajax-admin-entities.php">
+      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/admin/genre/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="70" lean-forward="false" selection-start-line="39" selection-start-column="70" selection-end-line="39" selection-end-column="76" />
-              <folding>
-                <element signature="e#6#78#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-326">
+              <caret line="43" column="153" lean-forward="false" selection-start-line="43" selection-start-column="141" selection-end-line="43" selection-end-column="153" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom-datatables.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="65" column="37" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -45,7 +100,7 @@
       <file leaf-file-name="Entities.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/Entities.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
+            <state relative-caret-position="3281">
               <caret line="198" column="24" lean-forward="false" selection-start-line="198" selection-start-column="24" selection-end-line="198" selection-end-column="24" />
               <folding>
                 <marker date="1627302136281" expanded="true" signature="6337:6419" ph="select * fro... ${Config::TBL_NAMES['ENTITIES']}" />
@@ -59,8 +114,8 @@
       <file leaf-file-name="Casts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/Casts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+            <state relative-caret-position="779">
+              <caret line="75" column="5" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="75" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -69,21 +124,9 @@
       <file leaf-file-name="MSG.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/MSG.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="813">
-              <caret line="69" column="86" lean-forward="false" selection-start-line="69" selection-start-column="86" selection-end-line="69" selection-end-column="86" />
+            <state relative-caret-position="779">
+              <caret line="78" column="49" lean-forward="false" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="casts.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/casts.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="141" column="28" lean-forward="false" selection-start-line="141" selection-start-column="28" selection-end-line="141" selection-end-column="28" />
-              <folding>
-                <element signature="e#1591#3561#0#HTML" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -92,7 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>jsone</find>
       <find>$movie</find>
       <find>$show</find>
       <find>?</find>
@@ -122,6 +164,7 @@
       <find>collapseTwo</find>
       <find>tab-casts</find>
       <find>cast</find>
+      <find>CNF_DLT</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -168,9 +211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ajax/ajax-contact.php" />
-        <option value="$PROJECT_DIR$/template/default/auth/key.php" />
-        <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/template/default/auth/new_password.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/modules/Config.php" />
@@ -203,8 +243,6 @@
         <option value="$PROJECT_DIR$/template/admin/errors/404.php" />
         <option value="$PROJECT_DIR$/template/admin/include/header.php" />
         <option value="$PROJECT_DIR$/template/admin/include/footer.php" />
-        <option value="$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js" />
-        <option value="$PROJECT_DIR$/template/admin/include/nav.php" />
         <option value="$PROJECT_DIR$/ajax/ajax-admin-updator.php" />
         <option value="$PROJECT_DIR$/template/admin/updator/index.php" />
         <option value="$PROJECT_DIR$/admin/updator.php" />
@@ -212,13 +250,18 @@
         <option value="$PROJECT_DIR$/template/admin/settings/index.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/modules/Uploader.php" />
-        <option value="$PROJECT_DIR$/template/admin/casts/view.php" />
-        <option value="$PROJECT_DIR$/admin/casts.php" />
         <option value="$PROJECT_DIR$/modules/Users.php" />
-        <option value="$PROJECT_DIR$/modules/Casts.php" />
         <option value="$PROJECT_DIR$/modules/Entities.php" />
-        <option value="$PROJECT_DIR$/ajax/ajax-admin-entities.php" />
+        <option value="$PROJECT_DIR$/template/admin/casts/view.php" />
+        <option value="$PROJECT_DIR$/modules/Casts.php" />
+        <option value="$PROJECT_DIR$/template/admin/include/nav.php" />
+        <option value="$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js" />
+        <option value="$PROJECT_DIR$/modules/Genre.php" />
+        <option value="$PROJECT_DIR$/template/admin/genre/view.php" />
+        <option value="$PROJECT_DIR$/admin/casts.php" />
+        <option value="$PROJECT_DIR$/admin/genre.php" />
         <option value="$PROJECT_DIR$/modules/MSG.php" />
+        <option value="$PROJECT_DIR$/ajax/ajax-admin-entities.php" />
       </list>
     </option>
   </component>
@@ -369,6 +412,13 @@
               <item name="netflix.local" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="genre" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="netflix.local" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netflix.local" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="include" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -391,6 +441,9 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/xampp/htdocs/netflix.local/modules/MSG.php" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\netflix.local\template\admin\genre" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\xampp\htdocs\netflix.local\template\default\auth" />
     </key>
@@ -447,21 +500,8 @@
       <workItem from="1626773501636" duration="1406000" />
       <workItem from="1626862448682" duration="186000" />
       <workItem from="1626935708177" duration="2573000" />
-      <workItem from="1627280853930" duration="10585000" />
-    </task>
-    <task id="LOCAL-00009" summary="sql dump update">
-      <created>1624544424458</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1624544424458</updated>
-    </task>
-    <task id="LOCAL-00010" summary="new schemas added&#10;bug fix&#10;entities, tags, genre, casts module added&#10;home page layout updated&#10;logout function added">
-      <created>1624624758513</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1624624758513</updated>
+      <workItem from="1627280853930" duration="10605000" />
+      <workItem from="1627367300162" duration="9295000" />
     </task>
     <task id="LOCAL-00011" summary="Home page updated">
       <created>1624711067216</created>
@@ -792,11 +832,25 @@
       <option name="project" value="LOCAL" />
       <updated>1627302353074</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="files update">
+      <created>1627302417960</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1627302417960</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Casts admin section completed">
+      <created>1627376855188</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1627376855188</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186010000" />
+    <option name="totallyTimeSpent" value="195325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -854,8 +908,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bug fix&#10;TV show page added" />
-    <MESSAGE value="bug fix&#10;show pages and player updated" />
     <MESSAGE value="bug fix&#10;contact page created&#10;sql dump updated" />
     <MESSAGE value="bug fix in login and register" />
     <MESSAGE value="bug fix&#10;password recovery process completed" />
@@ -879,36 +931,17 @@
     <MESSAGE value="admin cast tab updates" />
     <MESSAGE value="simple cast bug fix" />
     <MESSAGE value="Cast delete function added&#10;-check for cast in use before remove.&#10;-remove the avatar file&#10;-remove the dir from folder." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cast delete function added&#10;-check for cast in use before remove.&#10;-remove the avatar file&#10;-remove the dir from folder." />
+    <MESSAGE value="files update" />
+    <MESSAGE value="Casts admin section completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Casts admin section completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="163" column="6" lean-forward="true" selection-start-line="142" selection-start-column="4" selection-end-line="163" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/default/auth/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="42" column="95" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/default/auth/account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="78" column="87" lean-forward="false" selection-start-line="78" selection-start-column="87" selection-end-line="78" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/account.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1099,22 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/admin/include/nav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="86" column="113" lean-forward="false" selection-start-line="86" selection-start-column="113" selection-end-line="86" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1140,7 +1157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,16 +1215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/casts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="141" column="28" lean-forward="false" selection-start-line="141" selection-start-column="28" selection-end-line="141" selection-end-column="28" />
-          <folding>
-            <element signature="e#1591#3561#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/Users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="715">
@@ -1221,15 +1227,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/admin/casts/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="60" column="91" lean-forward="false" selection-start-line="60" selection-start-column="91" selection-end-line="60" selection-end-column="91" />
-          <folding />
+        <state relative-caret-position="592">
+          <caret line="192" column="43" lean-forward="false" selection-start-line="192" selection-start-column="37" selection-end-line="192" selection-end-column="43" />
+          <folding>
+            <element signature="n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/Entities.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
+        <state relative-caret-position="3281">
           <caret line="198" column="24" lean-forward="false" selection-start-line="198" selection-start-column="24" selection-end-line="198" selection-end-column="24" />
           <folding>
             <marker date="1627302136281" expanded="true" signature="6337:6419" ph="select * fro... ${Config::TBL_NAMES['ENTITIES']}" />
@@ -1239,28 +1248,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/template/admin/include/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="65" column="37" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/Casts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+        <state relative-caret-position="779">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="75" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Genre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+          <folding>
+            <marker date="1627382052080" expanded="true" signature="539:554" ph="select id fr... ${Config::TBL_NAMES['GENRE']}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/admin/genre/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326">
+          <caret line="43" column="153" lean-forward="false" selection-start-line="43" selection-start-column="141" selection-end-line="43" selection-end-column="153" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/casts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="138" column="34" lean-forward="true" selection-start-line="138" selection-start-column="34" selection-end-line="138" selection-end-column="34" />
+          <folding>
+            <element signature="e#4875#6392#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/MSG.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="69" column="86" lean-forward="false" selection-start-line="69" selection-start-column="86" selection-end-line="69" selection-end-column="86" />
+        <state relative-caret-position="779">
+          <caret line="78" column="49" lean-forward="false" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax/ajax-admin-entities.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="70" lean-forward="false" selection-start-line="39" selection-start-column="70" selection-end-line="39" selection-end-column="76" />
+        <state relative-caret-position="469">
+          <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
           <folding>
             <element signature="e#6#78#0#PHP" expanded="true" />
+            <element signature="e#337#976#0#PHP" expanded="false" />
+            <element signature="e#985#1724#0#PHP" expanded="false" />
+            <element signature="e#1733#2342#0#PHP" expanded="false" />
+            <element signature="e#2351#2547#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/genre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="102" column="41" lean-forward="false" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
+          <folding>
+            <element signature="e#1553#2633#0#HTML" expanded="false" />
+            <element signature="e#2682#4029#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

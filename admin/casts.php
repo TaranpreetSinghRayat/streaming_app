@@ -37,19 +37,23 @@ echo $TPL->render('include/header',[
         'USER' => $USER,
         'USR' => $USR_DATA
     ]);
-
-    echo $TPL->render('casts/view', [
-        'app_name' => \App\Settings::get_value('app.name'),
-        'app_logo' => ADMIN_BASE_URL_ASSETS. \App\Settings::get_value('app.logo'),
-        'ENTITIES' => $ENTITIES,
-        'GENRE' => $GENRE,
-        'CASTS' => $CASTS,
-        'TAGS' => $TAGS,
-        'USER' => $USER,
-        'USR' => $USR_DATA
-    ]);
     ?>
     <!-- //Navigation Section -->
+<!-- Body Section -->
+<?php
+
+echo $TPL->render('casts/view', [
+    'app_name' => \App\Settings::get_value('app.name'),
+    'app_logo' => ADMIN_BASE_URL_ASSETS. \App\Settings::get_value('app.logo'),
+    'ENTITIES' => $ENTITIES,
+    'GENRE' => $GENRE,
+    'CASTS' => $CASTS,
+    'TAGS' => $TAGS,
+    'USER' => $USER,
+    'USR' => $USR_DATA
+]);
+?>
+<!-- //Body Section -->
 
 <!-- Footer Section -->
 <?php

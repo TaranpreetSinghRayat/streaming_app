@@ -61,7 +61,7 @@ class MSG
 
     const CASTS = [
         'ADD_SUCC' => 'New cast member added.',
-        'ADD_ERR' => 'Something went wrong while adding new cast. Please try again later',
+        'ADD_ERR' => 'Something went wrong while adding new cast. Please try again later.',
         'AVT_UPL' => 'Cast avatar uploaded success.',
         'AVT_ERR' => 'Something went wrong while upadting avatar.',
         'CNF_DLT' => 'Are you sure you would like to delete it?',
@@ -70,5 +70,13 @@ class MSG
         'IN_USE' => 'Cast is in use. Please remove the cast from title it linked with.',
         'UPT_SUCC' => 'Cast data updated.',
         'UPT_ERR' => 'Something went wrong while updating the cast data. Please try again later.'
+    ];
+
+    const GENRE = [
+        'ADD_SUCC' => 'New genre added.',
+        'ADD_ERR' => 'Something went wrong while adding new genre. Please try again later.',
+        'CNF_DLT' => 'Are you sure you would like to delete it?',
+        'DLT_SCC' => 'Genre removed successfully.',
+        'DLT_ERR' => 'Something went wrong while removing genre. Please try again later.'
     ];
 }

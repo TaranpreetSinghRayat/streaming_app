@@ -6,7 +6,7 @@
  */
 ?>
 <?php
-$active_arr = ['/admin/casts.php'];
+$active_arr = ['/admin/casts.php','/admin/genre.php'];
 ?>
 <!-- Sidebar wrapper start -->
 <nav class="sidebar-wrapper">

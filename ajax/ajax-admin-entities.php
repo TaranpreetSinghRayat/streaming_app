@@ -56,6 +56,21 @@ if(isset($_POST) && isset($_POST['action'])) {
             $CAST = new \App\Casts();
             echo json_encode(['status' => 1, 'msg' => 'cast data', 'data' => $CAST->get_by_id($_POST['castID'])]);
             break;
+        case 'process_add_genre':
+            $GENRE = new \App\Genre();
+            if($GENRE->add([
+                'name' => \App\Security::clean($_POST['g_name'])
+            ])){
+                echo json_encode(['status' => 1, 'msg' => \App\MSG::GENRE['ADD_SUCC']]);
+            }else{
+                echo json_encode(['status' => 0, 'msg' => \App\MSG::GENRE['ADD_ERR']]);
+            }
+            break;
+        case 'process_delete_genre':
+            $GENRE = new \App\Genre();
+            $GENRE->delete($_POST['id']);
+            echo json_encode(['status' => 1, 'msg' => \App\MSG::GENRE['DLT_SCC']]);
+            break;
         default:
             echo json_encode(['status' => 0, 'msg' => \App\MSG::ACTION['INV_RQT']]);
             break;
