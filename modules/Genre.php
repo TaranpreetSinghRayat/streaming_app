@@ -42,6 +42,14 @@ class Genre
         return null;
     }
 
+    public function list()
+    {
+        if($result = $this->db->get(Config::TBL_NAMES['GENRE'])){
+            return $result;
+        }
+        return null;
+    }
+
     /**
      * CRUD OPERATIONS
      */
