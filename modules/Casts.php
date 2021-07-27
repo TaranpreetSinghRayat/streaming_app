@@ -57,7 +57,7 @@ class Casts
      */
     public function update(int $id,array $data)
     {
-        if($this->db->where('id', $id)->update(Config::TBL_NAMES['CASTS'],$data)){
+        if($this->db->where('id', $id)->update(\App\Config::TBL_NAMES['CASTS'],$data)){
             return true;
         }
         return false;
@@ -69,7 +69,7 @@ class Casts
      */
     public function delete(int $id)
     {
-        if($this->db->where('id', $id)->delete(Config::TBL_NAMES['CASTS'])){
+        if($this->db->where('id', $id)->delete(\App\Config::TBL_NAMES['CASTS'])){
             return true;
         }
         return false;

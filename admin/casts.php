@@ -141,7 +141,7 @@ $('.delete_cast').click(function (){
                         window.location.reload(true);
                     },2000);
                 }else{
-                    Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+                    Toast.create("Attention!", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
                 }
             },
             error: function (err) {
@@ -154,6 +154,100 @@ $('.delete_cast').click(function (){
     }else{
      //Process the cancel decision.
     }
+});
+
+$('#edit_cast').on('shown.bs.modal', function (event) {
+    var button = $(event.relatedTarget); // Button that triggered the modal
+    var castID = button.data('castid');
+    var modal = $(this);
+    //ajax load single cast data to modal
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-entities.php",
+        data: {
+            action: "process_get_cast",
+            castID : castID
+        },
+        dataType: "html",
+        beforeSend: function () {
+            $('div.spinner-border').css('display','block');
+            $('div.form-data').css('display','none');
+        },
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                modal.find('.modal-title').text('Edit '+ parsed_data.data.name);
+                modal.find('input[name=c_name]').val(parsed_data.data.name);
+                modal.find('select[name=c_role]').val(parsed_data.data.role);
+                modal.find('textarea[name=c_description]').val(parsed_data.data.description);
+                modal.find('input[name=castID]').val(parsed_data.data.id);
+
+            }else{
+                Toast.create("Attention!", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            alert("Critical Error Contact Developer");
+        },
+        complete: function () {
+            $('div.spinner-border').css('display','none');
+            $('div.form-data').css('display','block');
+        }
+    });
+
+})
+
+$('#edit_cast_frm').submit(function (e) {
+       e.preventDefault();
+
+    var formData = new FormData();
+    formData.append('c_avatar', $('form#edit_cast_frm #c_avatar').prop('files')[0]);
+    formData.append('dir', $("form#edit_cast_frm input[name=castID]").val());
+
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-entities.php",
+        data: {
+            action: "process_update_cast",
+            c_name:$("form#edit_cast_frm input[name=c_name]").val(),
+            c_role:$("form#edit_cast_frm select[name=c_role]").val(),
+            c_description:$("form#edit_cast_frm textarea[name=c_description]").val(),
+            c_id: $("form#edit_cast_frm input[name=castID]").val()
+        },
+        dataType: "html",
+        beforeSend: function () {
+
+        },
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                $.ajax({
+                    url: "<?= BASE_URL ?>ajax/ajax-admin-entities.php",
+                    dataType: 'text',  // what to expect back from the PHP script, if anything
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: formData,
+                    type: 'post',
+                    success: function(php_script_response){
+                        console.log(php_script_response);
+                    }
+                });
+               Toast.create("Success", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+            }else{
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            alert("Critical Error Contact Developer");
+        },
+        complete: function () {
+
+        }
+    });
+
 });
 </script>
 <!-- //Custom Script -->

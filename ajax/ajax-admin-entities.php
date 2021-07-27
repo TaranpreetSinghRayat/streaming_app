@@ -36,8 +36,25 @@ if(isset($_POST) && isset($_POST['action'])) {
                 unlink('../' . $cast_data['avatar']);
                 rmdir(CAST_ASSETS . '' . $_POST['id']);
                 echo json_encode(['status' => 1, 'msg' => \App\MSG::CASTS['RMV_SUCC']]);
+            }else{
+                echo json_encode(['status' => 0, 'msg' => App\MSG::CASTS['IN_USE']]);
             }
-            echo json_encode(['status' => 0, 'msg' => App\MSG::CASTS['IN_USE']]);
+            break;
+        case 'process_update_cast':
+                $CAST = new \App\Casts();
+                if($CAST->update($_POST['c_id'],[
+                    'name' => \App\Security::clean($_POST['c_name']),
+                    'role' => \App\Security::clean($_POST['c_role']),
+                    'description' => \App\Security::clean($_POST['c_description']),
+                ])){
+                    echo json_encode(['status' => 1, 'msg' => \App\MSG::CASTS['UPT_SUCC']]);
+                }else{
+                    echo json_encode(['status' => 0, 'msg' => \App\MSG::CASTS['UPT_ERR']]);
+                }
+            break;
+        case 'process_get_cast':
+            $CAST = new \App\Casts();
+            echo json_encode(['status' => 1, 'msg' => 'cast data', 'data' => $CAST->get_by_id($_POST['castID'])]);
             break;
         default:
             echo json_encode(['status' => 0, 'msg' => \App\MSG::ACTION['INV_RQT']]);
@@ -51,6 +68,10 @@ if(isset($_POST) && isset($_POST['action'])) {
     if ($imgResult['type'] == 'success') {
         $CAST = new \App\Casts;
         if($CAST->update($_POST['dir'],['avatar' => substr($imgResult['path'], 3)])){
+            if($remove_old_avatar){
+                $cast_data = $CAST->get_by_id($_POST['dir']);
+                unlink('../' . $cast_data['avatar']);
+            }
             echo json_encode(['status' => 1, 'msg' => \App\MSG::CASTS['AVT_UPL']]);
         }else{
             echo json_encode(['status' => 0, 'msg' => \App\MSG::CASTS['AVT_ERR']]);

@@ -67,6 +67,8 @@ class MSG
         'CNF_DLT' => 'Are you sure you would like to delete it?',
         'RMV_SUCC' => 'Cast removed succesfully.',
         'RMV_ERR' => 'Something went wrong while removing the cast. Please try again later.',
-        'IN_USE' => 'Cast is in use. Please remove the cast from title it linked with.'
+        'IN_USE' => 'Cast is in use. Please remove the cast from title it linked with.',
+        'UPT_SUCC' => 'Cast data updated.',
+        'UPT_ERR' => 'Something went wrong while updating the cast data. Please try again later.'
     ];
 }

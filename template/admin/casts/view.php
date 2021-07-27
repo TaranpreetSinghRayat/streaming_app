@@ -56,7 +56,7 @@
                                                 </td>
                                                 <td><?= $cast['description'] ?></td>
                                                 <td>
-                                                    <button data-castid="<?= $cast['id'] ?>" class="btn btn-sm btn-dark btn-outline-info edit_cast">Edit</button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#edit_cast" data-castid="<?= $cast['id'] ?>" class="btn btn-sm btn-dark btn-outline-info" >Edit</button>
                                                     &nbsp;
                                                     <button data-castid="<?= $cast['id'] ?>" class="btn btn-sm btn-dark btn-outline-danger delete_cast">Delete</button>
                                                 </td>
@@ -139,4 +139,68 @@
         </div>
     </div>
 </div>
+
+<!-- Edit Cast Modal -->
+<div class="modal fade" id="edit_cast" tabindex="-1" aria-labelledby="EditCast" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="AddNewCast">Edit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="spinner-border" style="width: 3rem; height: 3rem; display:none" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="form-data">
+
+                <form id="edit_cast_frm" method="post" enctype="multipart/form-data" action="<?= $_SERVER['PHP_SELF'] ?>">
+                    <div class="field-wrapper">
+                        <input class="form-control" type="text" name="c_name" required>
+                        <div class="field-placeholder">Name <span class="text-danger">*</span></div>
+                        <div class="form-text">
+                            Please enter casts full name.
+                        </div>
+                    </div>
+
+                    <div class="field-wrapper">
+                        <input class="form-control" type="file" id="c_avatar" name="c_avatar" >
+                        <div class="field-placeholder">Avatar <span class="text-danger">*</span></div>
+                        <div class="form-text">
+                            Please upload casts avatar.(Upload new for update otherwise old one will be used.)
+                        </div>
+                    </div>
+
+                    <div class="field-wrapper">
+                        <select class="form-select" name="c_role" id="cast_type">
+                            <option value="0">Actor</option>
+                            <option value="1">Director</option>
+                            <option value="2">Producer</option>
+                        </select>
+                        <div class="field-placeholder">Type <span class="text-danger">*</span></div>
+                        <div class="form-text">
+                            Please select cast Type.
+                        </div>
+                    </div>
+
+                    <div class="field-wrapper">
+                        <textarea class="form-control" name="c_description" required></textarea>
+                        <div class="field-placeholder">Description <span class="text-danger">*</span></div>
+                        <div class="form-text">
+                            Little bio about the cast.
+                        </div>
+                    </div>
+                        <input name="castID" type="hidden" value="">
+                    <button type="submit" name="process_update_cast" class="btn btn-primary">Update</button>
+                </form>
+            </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modal end -->
