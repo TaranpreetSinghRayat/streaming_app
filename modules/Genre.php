@@ -50,6 +50,13 @@ class Genre
         return null;
     }
 
+    public function get_by_id(int $genID){
+        if($gen_data = $this->db->where('id', $genID)->getOne(Config::TBL_NAMES['GENRE'])){
+            return $gen_data;
+        }
+        return null;
+    }
+
     /**
      * CRUD OPERATIONS
      */

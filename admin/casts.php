@@ -79,7 +79,7 @@ $('#add_new_cast').submit((e) => {
             url: "<?= BASE_URL ?>ajax/ajax-admin-entities.php",
             data: {
                 action: "process_add_cast",
-                c_name:$("input[name=c_name]").val(),
+                name:$("input[name=c_name]").val(),
                 c_role:$("select[name=c_role]").val(),
                 c_description:$("textarea[name=c_description]").val()
             },

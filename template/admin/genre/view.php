@@ -110,7 +110,7 @@
                 </div>
                 <div class="form-data">
 
-                    <form id="add_new_genre" method="post" action="<?= $_SERVER['PHP_SELF'] ?>">
+                    <form id="edit_genre_frm" method="post" action="<?= $_SERVER['PHP_SELF'] ?>">
                         <div class="field-wrapper">
                             <input class="form-control" type="text" name="g_name" required>
                             <div class="field-placeholder">Name <span class="text-danger">*</span></div>

@@ -77,6 +77,8 @@ class MSG
         'ADD_ERR' => 'Something went wrong while adding new genre. Please try again later.',
         'CNF_DLT' => 'Are you sure you would like to delete it?',
         'DLT_SCC' => 'Genre removed successfully.',
-        'DLT_ERR' => 'Something went wrong while removing genre. Please try again later.'
+        'DLT_ERR' => 'Something went wrong while removing genre. Please try again later.',
+        'UDT_SCC' => 'Genre name updated.',
+        'UDT_ERR' => 'Soemthing went wrong while updating genre name. Please try again later.'
     ];
 }

@@ -13,9 +13,17 @@ include dirname(__DIR__).'/config/config.php';
 if(isset($_POST) && isset($_POST['action'])) {
     switch ($_POST['action']) {
         case 'process_add_cast':
-            $CAST = new \App\Casts;
+            $validation = new \App\Validator();
+            $valData = $validation->validate($_POST,[
+                'name' => [
+                    'max' => 45,
+                    'unique' => \App\Config::TBL_NAMES['CASTS']
+                ]
+            ]);
+            if($valData->passed()){
+                $CAST = new \App\Casts;
                 if($id = $CAST->add([
-                    'name' => \App\Security::clean($_POST['c_name']),
+                    'name' => \App\Security::clean($_POST['name']),
                     'avatar' => '',
                     'role' => \App\Security::clean($_POST['c_role']),
                     'description' => \App\Security::clean($_POST['c_description']),
@@ -24,6 +32,9 @@ if(isset($_POST) && isset($_POST['action'])) {
                 }else{
                     echo json_encode(['status' => 0, 'msg' => \App\MSG::CASTS['ADD_ERR']]);
                 }
+            }else{
+                echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
+            }
             break;
         case 'process_delete_cast':
             //perform check is cast id is under use or not.
@@ -57,19 +68,57 @@ if(isset($_POST) && isset($_POST['action'])) {
             echo json_encode(['status' => 1, 'msg' => 'cast data', 'data' => $CAST->get_by_id($_POST['castID'])]);
             break;
         case 'process_add_genre':
-            $GENRE = new \App\Genre();
-            if($GENRE->add([
-                'name' => \App\Security::clean($_POST['g_name'])
-            ])){
-                echo json_encode(['status' => 1, 'msg' => \App\MSG::GENRE['ADD_SUCC']]);
+            $validation = new \App\Validator();
+            $valData = $validation->validate($_POST,[
+                'name' => [
+                    'unique' => \App\Config::TBL_NAMES['GENRE']
+                ]
+            ]);
+            if($valData->passed()){
+                $GENRE = new \App\Genre();
+                if($GENRE->add([
+                    'name' => \App\Security::clean($_POST['name'])
+                ])){
+                    echo json_encode(['status' => 1, 'msg' => \App\MSG::GENRE['ADD_SUCC']]);
+                }else{
+                    echo json_encode(['status' => 0, 'msg' => \App\MSG::GENRE['ADD_ERR']]);
+                }
             }else{
-                echo json_encode(['status' => 0, 'msg' => \App\MSG::GENRE['ADD_ERR']]);
+                echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
             }
             break;
         case 'process_delete_genre':
             $GENRE = new \App\Genre();
             $GENRE->delete($_POST['id']);
             echo json_encode(['status' => 1, 'msg' => \App\MSG::GENRE['DLT_SCC']]);
+            break;
+        case 'process_get_genre':
+                $GENRE = new \App\Genre();
+                echo json_encode(['status' => 1, 'msg' => 'genre data', 'data' => $GENRE->get_by_id($_POST['genreID'])]);
+            break;
+        case 'process_update_genre':
+            $validation = new \App\Validator();
+            $valData = $validation->validate($_POST,[
+                'name' => [
+                    'min' => 1,
+                    'max' => 45,
+                    'unique' => \App\Config::TBL_NAMES['GENRE']
+                ]
+            ]);
+
+            if($valData->passed()){
+                $GENRE = new \App\Genre();
+                if($GENRE->update($_POST['id'],[
+                    'name' => \App\Security::clean($_POST['name'])
+                ])){
+                    echo json_encode(['status' => 1, 'msg' => \App\MSG::GENRE['UDT_SCC']]);
+                }else{
+                    echo json_encode(['status' => 0, 'msg' => \App\MSG::GENRE['UDT_ERR']]);
+                }
+            }else{
+                echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
+            }
+
             break;
         default:
             echo json_encode(['status' => 0, 'msg' => \App\MSG::ACTION['INV_RQT']]);

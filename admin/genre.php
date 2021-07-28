@@ -38,6 +38,7 @@ echo $TPL->render('include/nav',[
 ]);
 ?>
 <!-- //Navigation Section -->
+
 <!-- Body Section -->
 <?php
 
@@ -73,7 +74,7 @@ echo $TPL->render('include/footer',[
             url: "<?= BASE_URL ?>ajax/ajax-admin-entities.php",
             data: {
                 action: "process_add_genre",
-                g_name:$("input[name=g_name]").val(),
+                name:$("input[name=g_name]").val(),
             },
             dataType: "html",
             beforeSend: function () {
@@ -138,6 +139,79 @@ echo $TPL->render('include/footer',[
         }else{
             //Process the cancel decision.
         }
+    });
+
+    $('#edit_genre').on('shown.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var genreID = button.data('genreid');
+        var modal = $(this);
+        //ajax load single cast data to modal
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-admin-entities.php",
+            data: {
+                action: "process_get_genre",
+                genreID
+            },
+            dataType: "html",
+            beforeSend: function () {
+                $('div.spinner-border').css('display','block');
+                $('div.form-data').css('display','none');
+            },
+            success: function (resp) {
+                console.log(resp);
+                var parsed_data = JSON.parse(resp);
+                if(parsed_data.status == 1){
+                    modal.find('.modal-title').text('Edit '+ parsed_data.data.name);
+                    modal.find('input[name=g_name]').val(parsed_data.data.name);
+                    modal.find('input[name=genreID]').val(parsed_data.data.id);
+
+                }else{
+                    Toast.create("Attention!", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+                }
+            },
+            error: function (err) {
+                alert("Critical Error Contact Developer");
+            },
+            complete: function () {
+                $('div.spinner-border').css('display','none');
+                $('div.form-data').css('display','block');
+            }
+        });
+
+    });
+
+    $('#edit_genre_frm').submit(function(e){
+        e.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-admin-entities.php",
+            data: {
+                action: "process_update_genre",
+                name:$("form#edit_genre_frm input[name=g_name]").val(),
+                id:$("form#edit_genre_frm input[name=genreID]").val()
+            },
+            dataType: "html",
+            beforeSend: function () {
+
+            },
+            success: function (resp) {
+                console.log(resp);
+                var parsed_data = JSON.parse(resp);
+                if(parsed_data.status == 1){
+                    Toast.create("Success", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+                }else{
+                    Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+                }
+            },
+            error: function (err) {
+                alert("Critical Error Contact Developer");
+            },
+            complete: function () {
+
+            }
+        });
     });
 </script>
 <!-- //Custom Script -->
