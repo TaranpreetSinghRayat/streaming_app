@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin/tags.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/template/admin/tags/view.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/casts.php" afterPath="$PROJECT_DIR$/admin/casts.php" />
-      <change beforePath="$PROJECT_DIR$/admin/genre.php" afterPath="$PROJECT_DIR$/admin/genre.php" />
-      <change beforePath="$PROJECT_DIR$/ajax/ajax-admin-entities.php" afterPath="$PROJECT_DIR$/ajax/ajax-admin-entities.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Genre.php" afterPath="$PROJECT_DIR$/modules/Genre.php" />
-      <change beforePath="$PROJECT_DIR$/modules/MSG.php" afterPath="$PROJECT_DIR$/modules/MSG.php" />
-      <change beforePath="$PROJECT_DIR$/template/admin/genre/view.php" afterPath="$PROJECT_DIR$/template/admin/genre/view.php" />
-      <change beforePath="$PROJECT_DIR$/template/admin/include/nav.php" afterPath="$PROJECT_DIR$/template/admin/include/nav.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -507,14 +498,7 @@
       <workItem from="1626935708177" duration="2573000" />
       <workItem from="1627280853930" duration="10605000" />
       <workItem from="1627367300162" duration="9565000" />
-      <workItem from="1627455169442" duration="4016000" />
-    </task>
-    <task id="LOCAL-00013" summary="home page updated&#10;new entities page with filter options in process">
-      <created>1624954230532</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1624954230532</updated>
+      <workItem from="1627455169442" duration="4654000" />
     </task>
     <task id="LOCAL-00014" summary="new updates&#10;new entities page added">
       <created>1624964834681</created>
@@ -852,11 +836,18 @@
       <option name="project" value="LOCAL" />
       <updated>1627383624467</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="admin genre complete.">
+      <created>1627464498197</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1627464498197</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199611000" />
+    <option name="totallyTimeSpent" value="200249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -914,7 +905,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bug fix&#10;password recovery process completed" />
     <MESSAGE value="bug fix&#10;dynamic pages added" />
     <MESSAGE value="schema update" />
     <MESSAGE value="bug fix&#10;added subscribed and non subscibed playback" />
@@ -939,7 +929,8 @@
     <MESSAGE value="Casts admin section completed" />
     <MESSAGE value="Genre add, delete function working." />
     <MESSAGE value="minor bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor bug fix" />
+    <MESSAGE value="admin genre complete." />
+    <option name="LAST_COMMIT_MESSAGE" value="admin genre complete." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
