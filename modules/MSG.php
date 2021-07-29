@@ -81,4 +81,12 @@ class MSG
         'UDT_SCC' => 'Genre name updated.',
         'UDT_ERR' => 'Soemthing went wrong while updating genre name. Please try again later.'
     ];
+
+    const TAGS = [
+        'ERR_ADD' => 'Something went wrong while adding new tag. Please try again later.',
+        'ADD_SUCC' => 'New tag added successfully.',
+        'DLT_SCC' => 'Tag removed successfully.',
+        'UDT_ERR' => 'Something went wrong while updating tag. Please try again later.',
+        'UDT_SCC' => 'Tag updated!'
+    ];
 }

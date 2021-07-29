@@ -120,6 +120,61 @@ if(isset($_POST) && isset($_POST['action'])) {
             }
 
             break;
+        case 'process_add_tag':
+                $validator = new \App\Validator();
+                $valData = $validator->validate($_POST,[
+                    'name' => [
+                        'max' => 30,
+                        'min' => 1,
+                        'required' => true,
+                        'unique' => \App\Config::TBL_NAMES['TAGS']
+                    ]
+                ]);
+                if($valData->passed()){
+                    $TAGS = new \App\Tags();
+                    if($TAGS->add([
+                        'name' => \App\Security::clean($_POST['name'])
+                    ])){
+                        echo json_encode(['status' => 1, 'msg' => \App\MSG::TAGS['ADD_SUCC']]);
+                    }else{
+                        echo json_encode(['status' => 0, 'msg' => \App\MSG::TAGS['ERR_ADD']]);
+                    }
+                }else{
+                    echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
+                }
+            break;
+        case 'process_delete_tag':
+            $TAGS = new \App\Tags();
+            $TAGS->delete($_POST['id']);
+            echo json_encode(['status' => 1, 'msg' => \App\MSG::TAGS['DLT_SCC']]);
+            break;
+        case 'process_get_tag':
+            $TAGS = new \App\Tags();
+            echo json_encode(['status' => 1, 'msg' => 'tag data', 'data' => $TAGS->get_by_id($_POST['tagID'])]);
+            break;
+        case 'process_update_tag':
+            $validation = new \App\Validator();
+            $valData = $validation->validate($_POST,[
+                'name' => [
+                    'min' => 1,
+                    'max' => 45,
+                    'unique' => \App\Config::TBL_NAMES['TAGS']
+                ]
+            ]);
+
+            if($valData->passed()){
+                $TAGS = new \App\Tags();
+                if($TAGS->update($_POST['id'],[
+                    'name' => \App\Security::clean($_POST['name'])
+                ])){
+                    echo json_encode(['status' => 1, 'msg' => \App\MSG::TAGS['UDT_SCC']]);
+                }else{
+                    echo json_encode(['status' => 0, 'msg' => \App\MSG::TAGS['UDT_ERR']]);
+                }
+            }else{
+                echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
+            }
+            break;
         default:
             echo json_encode(['status' => 0, 'msg' => \App\MSG::ACTION['INV_RQT']]);
             break;
