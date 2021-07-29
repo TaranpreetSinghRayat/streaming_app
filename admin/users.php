@@ -1,10 +1,9 @@
 <?php
 /**
  * User: Taranpreet Singh Ray
- * Date: 20-07-2021
- * Time: 11:53
+ * Date: 29-07-2021
+ * Time: 16:28
  */
-
 include 'config.php';
 ?>
 
@@ -19,7 +18,7 @@ $UPD = new \App\Updator();
 $TPL = new \App\Template(TEMPLATE.'/'. \App\Settings::get_value('app.admin.theme'));
 echo $TPL->render('include/header',[
     'app_auth' => $_ENV['DEV'],
-    'page_title' => 'App Updator | '. APP_NAME,
+    'page_title' => 'Users | '. APP_NAME,
     'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo')
 ]);
 ?>
@@ -42,7 +41,7 @@ echo $TPL->render('include/nav',[
 
 <!-- Body Section -->
 <?php
-echo $TPL->render('updator/index',[
+echo $TPL->render('users/view', [
     'app_name' => \App\Settings::get_value('app.name'),
     'app_logo' => ADMIN_BASE_URL_ASSETS. \App\Settings::get_value('app.logo'),
     'ENTITIES' => $ENTITIES,
@@ -50,11 +49,10 @@ echo $TPL->render('updator/index',[
     'CASTS' => $CASTS,
     'TAGS' => $TAGS,
     'USER' => $USER,
-    'USR' => $USR_DATA,
-    'UPD' => $UPD
+    'USR' => $USR_DATA
 ]);
 ?>
-<!-- // Body Section -->
+<!-- //Body Secrtion -->
 
 <!-- Footer Section -->
 <?php
@@ -67,32 +65,6 @@ echo $TPL->render('include/footer',[
 
 <!-- Custom script -->
 <script>
-function check_for_update() {
-    $.ajax({
-        type: "POST",
-        url: "<?= BASE_URL ?>ajax/ajax-admin-updator.php",
-        data: {action: "process_check_update"},
-        dataType: "html",
-        beforeSend: function () {
-            $('.avail_version').html('Please wait checking for latest version.');
-        },
-        success: function (resp) {
-            console.log(resp);
-            var parsed_data = JSON.parse(resp);
 
-            if(parsed_data.status == 1){
-                $('.avail_version').html(parsed_data.msg);
-                $('.updt_btn').css('display','inline');
-            }
-        },
-        error: function (err) {
-            alert("Critical Error Contact Developer");
-        },
-        complete: function () {
-
-        }
-    });
-}
 </script>
-<!-- //Custom Script -->
-
+<!-- //Custom script -->

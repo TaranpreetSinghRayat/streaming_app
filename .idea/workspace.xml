@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/admin/users.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/template/admin/users/view.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/tags.php" afterPath="$PROJECT_DIR$/admin/tags.php" />
-      <change beforePath="$PROJECT_DIR$/ajax/ajax-admin-entities.php" afterPath="$PROJECT_DIR$/ajax/ajax-admin-entities.php" />
+      <change beforePath="$PROJECT_DIR$/admin/updator.php" afterPath="$PROJECT_DIR$/admin/updator.php" />
       <change beforePath="$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js" afterPath="$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js" />
-      <change beforePath="$PROJECT_DIR$/modules/MSG.php" afterPath="$PROJECT_DIR$/modules/MSG.php" />
-      <change beforePath="$PROJECT_DIR$/modules/Tags.php" afterPath="$PROJECT_DIR$/modules/Tags.php" />
-      <change beforePath="$PROJECT_DIR$/template/admin/tags/view.php" afterPath="$PROJECT_DIR$/template/admin/tags/view.php" />
+      <change beforePath="$PROJECT_DIR$/template/admin/include/nav.php" afterPath="$PROJECT_DIR$/template/admin/include/nav.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,14 +48,14 @@
       <file leaf-file-name="genre.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/genre.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="214" column="7" lean-forward="true" selection-start-line="183" selection-start-column="4" selection-end-line="214" selection-end-column="7" />
+            <state relative-caret-position="660">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tags.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tags.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/tags.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="762">
@@ -71,31 +70,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="casts.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/casts.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4216">
-              <caret line="252" column="7" lean-forward="false" selection-start-line="211" selection-start-column="4" selection-end-line="252" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="nav.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/admin/include/nav.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="62" lean-forward="false" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+            <state relative-caret-position="537">
+              <caret line="266" column="67" lean-forward="false" selection-start-line="266" selection-start-column="67" selection-end-line="266" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/admin/tags/view.php">
+      <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="119" column="38" lean-forward="false" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="38" />
+            <state relative-caret-position="626">
+              <caret line="44" column="35" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template/admin/users/view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom-datatables.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+              <folding>
+                <element signature="e#60#1069#0" expanded="false" />
+                <element signature="e#1101#2145#0" expanded="false" />
+                <element signature="e#2178#3218#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updator.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/updator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="67" column="22" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="67" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -125,8 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>?</find>
-      <find>?en</find>
       <find>more like</find>
       <find>More l</find>
       <find>sing</find>
@@ -155,6 +176,8 @@
       <find>CNF_DLT</find>
       <find>$GEN</find>
       <find>form-data</find>
+      <find>updator</find>
+      <find>tab-up</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -201,8 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modules/Pages.php" />
-        <option value="$PROJECT_DIR$/template/default/page/index.php" />
         <option value="$PROJECT_DIR$/template/default/include/nav2.php" />
         <option value="$PROJECT_DIR$/contact.php" />
         <option value="$PROJECT_DIR$/page.php" />
@@ -231,7 +252,6 @@
         <option value="$PROJECT_DIR$/template/admin/include/footer.php" />
         <option value="$PROJECT_DIR$/ajax/ajax-admin-updator.php" />
         <option value="$PROJECT_DIR$/template/admin/updator/index.php" />
-        <option value="$PROJECT_DIR$/admin/updator.php" />
         <option value="$PROJECT_DIR$/modules/Updator.php" />
         <option value="$PROJECT_DIR$/template/admin/settings/index.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
@@ -241,17 +261,20 @@
         <option value="$PROJECT_DIR$/template/admin/casts/view.php" />
         <option value="$PROJECT_DIR$/modules/Casts.php" />
         <option value="$PROJECT_DIR$/home.php" />
-        <option value="$PROJECT_DIR$/template/admin/include/nav.php" />
         <option value="$PROJECT_DIR$/modules/Genre.php" />
         <option value="$PROJECT_DIR$/admin/casts.php" />
         <option value="$PROJECT_DIR$/template/admin/genre/view.php" />
         <option value="$PROJECT_DIR$/admin/genre.php" />
-        <option value="$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js" />
         <option value="$PROJECT_DIR$/template/admin/tags/view.php" />
         <option value="$PROJECT_DIR$/modules/Tags.php" />
         <option value="$PROJECT_DIR$/admin/tags.php" />
         <option value="$PROJECT_DIR$/ajax/ajax-admin-entities.php" />
         <option value="$PROJECT_DIR$/modules/MSG.php" />
+        <option value="$PROJECT_DIR$/template/admin/include/nav.php" />
+        <option value="$PROJECT_DIR$/admin/updator.php" />
+        <option value="$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js" />
+        <option value="$PROJECT_DIR$/admin/users.php" />
+        <option value="$PROJECT_DIR$/template/admin/users/view.php" />
       </list>
     </option>
   </component>
@@ -501,14 +524,7 @@
       <workItem from="1627367300162" duration="9565000" />
       <workItem from="1627455169442" duration="5596000" />
       <workItem from="1627540847997" duration="1365000" />
-      <workItem from="1627543790426" duration="3532000" />
-    </task>
-    <task id="LOCAL-00015" summary="shows page updated">
-      <created>1624970049857</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1624970049857</updated>
+      <workItem from="1627543790426" duration="4494000" />
     </task>
     <task id="LOCAL-00016" summary="Updated readme">
       <created>1624971420562</created>
@@ -846,11 +862,18 @@
       <option name="project" value="LOCAL" />
       <updated>1627467340008</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Tags tab completed!">
+      <created>1627556015158</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1627556015158</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206088000" />
+    <option name="totallyTimeSpent" value="207050000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -908,7 +931,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="schema update" />
     <MESSAGE value="bug fix&#10;added subscribed and non subscibed playback" />
     <MESSAGE value="sql schema update" />
     <MESSAGE value="account details update function working" />
@@ -933,29 +955,16 @@
     <MESSAGE value="minor bug fix" />
     <MESSAGE value="admin genre complete." />
     <MESSAGE value="push check" />
-    <option name="LAST_COMMIT_MESSAGE" value="push check" />
+    <MESSAGE value="Tags tab completed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tags tab completed!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/recover-password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/default/entities/movies.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="97" column="53" lean-forward="true" selection-start-line="84" selection-start-column="47" selection-end-line="97" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/default/page/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1138,14 +1147,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/updator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="83" column="52" lean-forward="false" selection-start-line="83" selection-start-column="52" selection-end-line="83" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/Updator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1232,14 +1233,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/admin/include/nav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="62" lean-forward="false" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/casts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4216">
@@ -1252,13 +1245,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="113" column="39" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="133" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="105" column="35" lean-forward="false" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1284,14 +1270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
           <caret line="30" column="57" lean-forward="false" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/genre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="214" column="7" lean-forward="true" selection-start-line="183" selection-start-column="4" selection-end-line="214" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1335,6 +1313,58 @@
             <element signature="e#4077#5574#0#HTML" expanded="false" />
             <element signature="e#5619#6655#0#HTML" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/admin/include/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="266" column="67" lean-forward="false" selection-start-line="266" selection-start-column="67" selection-end-line="266" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/updator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="67" column="22" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="67" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="e#60#1069#0" expanded="false" />
+            <element signature="e#1101#2145#0" expanded="false" />
+            <element signature="e#2178#3218#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/genre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="44" column="35" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/admin/users/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

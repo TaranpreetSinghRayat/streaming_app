@@ -28,10 +28,18 @@ $active_arr = ['/admin/casts.php','/admin/genre.php', '/admin/tags.php'];
                 <i class="icon-controller-play"></i>
                 <span class="nav-link-text">Entities</span>
             </a>
+
+            <a class="nav-link <?= ($_SERVER['SCRIPT_NAME'] == '/admin/users.php') ? 'active' : '' ?>" id="pages-tab" data-bs-toggle="tab" href="#tab-users" role="tab" aria-controls="tab-pages" aria-selected="false">
+                <i class="icon-users"></i>
+                <span class="nav-link-text">Users</span>
+            </a>
+
             <a class="nav-link" id="pages-tab" data-bs-toggle="tab" href="#tab-pages" role="tab" aria-controls="tab-pages" aria-selected="false">
                 <i class="icon-book-open"></i>
                 <span class="nav-link-text">Pages</span>
             </a>
+
+
             <a class="nav-link <?= ($_SERVER['SCRIPT_NAME'] == '/admin/updator.php') ? 'active' : '' ?>" id="pages-tab" data-bs-toggle="tab" href="#tab-updator" role="tab" aria-controls="tab-pages" aria-selected="false">
                 <i class="icon-refresh-cw"></i>
                 <span class="nav-link-text">Updator</span>
@@ -240,6 +248,37 @@ $active_arr = ['/admin/casts.php','/admin/genre.php', '/admin/tags.php'];
                     </div>
                 </div>
                 <!-- Sidebar actions ends -->
+            </div>
+
+            <!-- Users tab -->
+            <div class="tab-pane fade <?= ($_SERVER['SCRIPT_NAME'] == '/admin/users.php') ? 'show active' : '' ?>" id="tab-users" role="tabpanel" aria-labelledby="cast-tab">
+
+                <!-- Tab content header start -->
+                <div class="tab-pane-header">
+                    Users
+                </div>
+                <!-- Tab content header end -->
+
+                <!-- Sidebar menu starts -->
+                <div class="sidebarMenuScroll">
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li>
+                                <a href="<?= BASE_URL_ADMIN ?>users.php" class="<?= ($_SERVER['SCRIPT_NAME'] == '/admin/users.php') ? 'current-page' : '' ?>">Users</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Sidebar menu ends -->
+
+                <!-- Sidebar actions starts -->
+                <div class="sidebar-actions">
+                    <!--div class="support-tile">
+                        <i class="icon-headphones"></i> 24/7 Support
+                    </div-->
+                </div>
+                <!-- Sidebar actions ends -->
+
             </div>
 
             <!-- Updator tab -->
