@@ -61,9 +61,10 @@
                     <div class="gen-register-form">
                         <h2><?= $title ?> Avatar</h2>
                         <label>Change Avatar </label>
-                        <input type="file" name="avatar">
+                        <input type="file" name="avatar" required>
 
                         <div class="form-button">
+                            <input type="hidden" name="userID" value="<?= $user_data['id'] ?>">
                             <button type="submit" name="update" value="Update">Update Avatar</button>
                         </div>
                     </div>

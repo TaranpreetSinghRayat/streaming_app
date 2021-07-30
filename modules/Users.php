@@ -126,6 +126,14 @@ class Users
         return 0;
     }
 
+    public function list_all()
+    {
+        if($result = $this->db->get(Config::TBL_NAMES['USERS'])){
+            return $result;
+        }
+        return null;
+    }
+
     /**
      * CRUD OPERATIONS
      */

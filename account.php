@@ -159,5 +159,10 @@ echo $TPL->render('include/footer',[
             },
         });
     });
+
+    $("#update_avatar").submit((e) => {
+        e.preventDefault();
+        console.log('process avatar change request.')
+    });
 </script>
 <!-- //Custom Script -->

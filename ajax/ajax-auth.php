@@ -62,6 +62,7 @@ if(isset($_POST) && isset($_POST['action'])){
                     'password' => \App\Security::encrypt($_POST['password']),
                     'avatar' => BASE_URL_ASSETS . 'images/avatars/default.png',
                     'last_login' => timestamp(),
+                    'ip' => get_ip(),
                     'account_key' => $acc_key
                 ])){
                     $MAILER = new \App\Mailer();
@@ -247,6 +248,9 @@ if(isset($_POST) && isset($_POST['action'])){
                 }else{
                     echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
                 }
+            break;
+        case 'update_avatar':
+
             break;
         default:
             echo(json_encode(['status' => 0, 'msg' => 'Invalid parameters supplied.']));
