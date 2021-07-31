@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/account.php" afterPath="$PROJECT_DIR$/account.php" />
-      <change beforePath="$PROJECT_DIR$/ajax/ajax-auth.php" afterPath="$PROJECT_DIR$/ajax/ajax-auth.php" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change beforePath="$PROJECT_DIR$/template/admin/include/nav.php" afterPath="$PROJECT_DIR$/template/admin/include/nav.php" />
-      <change beforePath="$PROJECT_DIR$/template/admin/users/view.php" afterPath="$PROJECT_DIR$/template/admin/users/view.php" />
+      <change beforePath="$PROJECT_DIR$/admin/config.php" afterPath="$PROJECT_DIR$/admin/config.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nav.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/admin/include/nav.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
               <caret line="366" column="66" lean-forward="false" selection-start-line="366" selection-start-column="66" selection-end-line="366" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -111,30 +117,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="507">
               <caret line="240" column="19" lean-forward="false" selection-start-line="229" selection-start-column="16" selection-end-line="240" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom-datatables.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="145" column="36" lean-forward="false" selection-start-line="145" selection-start-column="36" selection-end-line="145" selection-end-column="36" />
-              <folding>
-                <element signature="e#60#1069#0" expanded="false" />
-                <element signature="e#1101#2145#0" expanded="false" />
-                <element signature="e#2178#3218#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="updator.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/updator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="67" column="22" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="67" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -234,7 +216,6 @@
         <option value="$PROJECT_DIR$/template/default/search/index.php" />
         <option value="$PROJECT_DIR$/config/.env" />
         <option value="$PROJECT_DIR$/admin/index.php" />
-        <option value="$PROJECT_DIR$/admin/config.php" />
         <option value="$PROJECT_DIR$/admin/login.php" />
         <option value="$PROJECT_DIR$/template/admin/auth/login.php" />
         <option value="$PROJECT_DIR$/modules/Settings.php" />
@@ -271,6 +252,7 @@
         <option value="$PROJECT_DIR$/account.php" />
         <option value="$PROJECT_DIR$/template/admin/users/view.php" />
         <option value="$PROJECT_DIR$/template/admin/include/nav.php" />
+        <option value="$PROJECT_DIR$/admin/config.php" />
       </list>
     </option>
   </component>
@@ -542,14 +524,7 @@
       <workItem from="1627540847997" duration="1365000" />
       <workItem from="1627543790426" duration="4545000" />
       <workItem from="1627627026180" duration="6828000" />
-      <workItem from="1627712034066" duration="1060000" />
-    </task>
-    <task id="LOCAL-00018" summary="Updated readme">
-      <created>1624971557944</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1624971557944</updated>
+      <workItem from="1627712034066" duration="1393000" />
     </task>
     <task id="LOCAL-00019" summary="Updated readme">
       <created>1624972215000</created>
@@ -887,11 +862,18 @@
       <option name="project" value="LOCAL" />
       <updated>1627642184914</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Accounts avatar update form working&#10;bug fix">
+      <created>1627713123194</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1627713123195</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214989000" />
+    <option name="totallyTimeSpent" value="215322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -949,7 +931,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="account details update function working" />
     <MESSAGE value="account password reset works." />
     <MESSAGE value="bug fix&#10;password token expire after 5min of recovert requested for security reasons." />
     <MESSAGE value="bug fix&#10;search titles working" />
@@ -974,7 +955,8 @@
     <MESSAGE value="Tags tab completed!" />
     <MESSAGE value="users tab added in admin" />
     <MESSAGE value="bug fix&#10;admin panel users table added" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix&#10;admin panel users table added" />
+    <MESSAGE value="Accounts avatar update form working&#10;bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Accounts avatar update form working&#10;bug fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -997,13 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ajax/ajax-contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
@@ -1022,13 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="715">
           <caret line="124" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1383,6 +1351,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="366" column="66" lean-forward="false" selection-start-line="366" selection-start-column="66" selection-end-line="366" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
           <folding />
         </state>
       </provider>

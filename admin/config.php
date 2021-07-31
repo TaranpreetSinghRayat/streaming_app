@@ -12,7 +12,11 @@ include '../config/config.php';
 //  ADMIN MIDDLE WARE
 if(!\App\Session::exists('isLoggedIn') || \App\Session::get('role') != 'Administrator'){
     if(($_SERVER['SCRIPT_NAME'] != '/admin/login.php')){
-        header('Location: login.php');
+        if(\App\Session::exists('isLoggedIn')){
+            header('Location: '. BASE_URL .'');
+        }else{
+            header('Location: login.php');
+        }
     }
 }
 
