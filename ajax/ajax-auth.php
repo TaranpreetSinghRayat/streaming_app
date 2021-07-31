@@ -250,7 +250,20 @@ if(isset($_POST) && isset($_POST['action'])){
                 }
             break;
         case 'update_avatar':
-
+            $upload_dir = mkdir(AVATAR_ASSETS . $_POST['id'] .'/');
+            $upload_dir = AVATAR_ASSETS . $_POST['id'] . '/';
+            $UPLOAD = new \App\Uploader($_FILES['avatar'], $upload_dir, \App\Settings::get_value('uploader.max_size') * 1024, explode(',', \App\Settings::get_value('uploader.allowed_mime')));
+            $imgResult = $UPLOAD->getResult();
+            if ($imgResult['type'] == 'success') {
+                $USER = new \App\Users();
+                if($USER->update($_POST['id'],['avatar' => substr($imgResult['path'], 3)])){
+                    echo json_encode(['status' => 1, 'msg' => \App\MSG::CASTS['AVT_UPL']]);
+                }else{
+                    echo json_encode(['status' => 0, 'msg' => \App\MSG::CASTS['AVT_ERR']]);
+                }
+            }else{
+                echo json_encode(['status' => 0, 'msg' => $imgResult['message']]);
+            }
             break;
         default:
             echo(json_encode(['status' => 0, 'msg' => 'Invalid parameters supplied.']));

@@ -58,7 +58,7 @@
                                                     <?= date("F j, Y, g:i a",strtotime($user['created_at'])); ?>
                                                 </td>
                                                 <td>
-                                                    <a href="<?= $user['avatar'] ?>" target="_blank"><img src="<?= $user['avatar'] ?>" class="img-64" /></a>
+                                                    <a href="<?= BASE_URL ?><?= $user['avatar'] ?>" target="_blank"><img src="<?= BASE_URL ?><?= $user['avatar'] ?>" class="img-64" /></a>
                                                 </td>
                                                 <td>
                                                     <?= date("F j, Y, g:i a",strtotime($user['last_login'])); ?>

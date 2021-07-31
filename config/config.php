@@ -45,6 +45,7 @@ define('BASE_URL_ASSETS',$_ENV['BASE_URL'] . 'assets/'.\App\Settings::get_value(
 define('CAST_ASSETS','../assets/cast/');
 define('ENTITIES_ASSETS', '../assets/entities/');
 define('VIDEO_ASSETS', '../assets/videos/');
+define('AVATAR_ASSETS', '../assets/avatars/');
 define('ADMIN_BASE_URL_ASSETS',$_ENV['BASE_URL'] . 'assets/'.\App\Settings::get_value('app.admin.theme').'/');
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 define('CURRENT_LINK',$actual_link);

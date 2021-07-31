@@ -364,7 +364,7 @@ $active_arr = ['/admin/casts.php','/admin/genre.php', '/admin/tags.php'];
                     <li class="dropdown">
                         <a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
 										<span class="avatar">
-											<img src="<?= $USR['avatar'] ?>" alt="User Avatar">
+											<img src="<?= BASE_URL ?><?= $USR['avatar'] ?>" alt="User Avatar">
 											<span class="status busy"></span>
 										</span>
                         </a>

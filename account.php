@@ -162,7 +162,29 @@ echo $TPL->render('include/footer',[
 
     $("#update_avatar").submit((e) => {
         e.preventDefault();
-        console.log('process avatar change request.')
+
+        var formData = new FormData();
+        formData.append('avatar', $('form#update_avatar input[name=avatar]').prop('files')[0]);
+        formData.append('id', $("form#update_avatar input[name=userID]").val());
+        formData.append('action','update_avatar');
+
+        $.ajax({
+            url: "<?= BASE_URL ?>ajax/ajax-auth.php",
+            dataType: 'text',  // what to expect back from the PHP script, if anything
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: formData,
+            type: 'post',
+            success: function(resp){
+                Toast.create("Success", 'Avatar updated', TOAST_STATUS.SUCCESS, 5000);
+            },
+            error : function (err) {
+                console.log(err);
+                alert('Something went wrong.');
+            }
+        });
+
     });
 </script>
 <!-- //Custom Script -->
