@@ -65,6 +65,72 @@ echo $TPL->render('include/footer',[
 
 <!-- Custom script -->
 <script>
+$('.gen_password').click(function(){
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-users.php",
+        data: {
+            action: "process_generate_password",
+        },
+        dataType: "html",
+        beforeSend: function () {
 
+        },
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                $('form#add_user_frm input[name=password]').val(parsed_data.msg);
+            }else{
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            alert("Critical Error Contact Developer");
+        },
+        complete: function () {
+
+        }
+    });
+});
+
+$('#add_user_frm').submit(function (e) {
+    e.preventDefault();
+
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-users.php",
+        data: {
+            action: "process_add_new_user",
+            username : $('form#add_user_frm input[name=user_name]').val(),
+            email: $('form#add_user_frm input[name=email]').val(),
+            password : $('form#add_user_frm input[name=password]').val(),
+            role : $('form#add_user_frm select[name=role]').val(),
+            status : $('form#add_user_frm select[name=status]').val()
+        },
+        dataType: "html",
+        beforeSend: function () {
+            $('form#add_user_frm button[type=submit]').attr('disabled',true);
+        },
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                Toast.create('Success', parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+                setTimeout(function () {
+                    window.location.reload(true);
+                },1000);
+            }else{
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            alert("Critical Error Contact Developer");
+        },
+        complete: function () {
+
+        }
+    });
+});
 </script>
 <!-- //Custom script -->

@@ -120,5 +120,74 @@
     <div class="app-footer">&copy; <?= \App\Settings::get_value('app.name') .' ' . date('Y') ?> </div>
     <!-- App footer end -->
 
+    <!-- Models -->
+
+    <!-- Add New User Model -->
+    <div class="modal fade" id="add_new_user" tabindex="-1" aria-labelledby="add_new_user" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add New User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="add_user_frm" method="post" enctype="multipart/form-data" action="<?= $_SERVER['PHP_SELF'] ?>">
+                        <div class="field-wrapper">
+                            <input class="form-control" type="text" name="user_name" required>
+                            <div class="field-placeholder">Username <span class="text-danger">*</span></div>
+                            <div class="form-text">
+                                Please enter username for the user.
+                            </div>
+                        </div>
+
+                        <div class="field-wrapper">
+                            <input class="form-control" type="email" name="email" required>
+                            <div class="field-placeholder">E-Mail <span class="text-danger">*</span></div>
+                            <div class="form-text">
+                                Please enter email of the user.
+                            </div>
+                        </div>
+
+                        <div class="field-wrapper">
+                            <input class="form-control" type="password" name="password" required>
+                            <div class="field-placeholder">Password <span class="text-danger">*</span></div>
+                            <div class="form-text">
+                                Please enter password of the user.
+                            </div>
+                            <button type="button" class="btn-sm btn-light gen_password">Generate Password</button>
+                        </div>
+
+                        <div class="field-wrapper">
+                            <select name="role">
+                                <option value="0">Member</option>
+                                <option value="1">Administrator</option>
+                            </select>
+                            <div class="field-placeholder">Role <span class="text-danger">*</span></div>
+                            <div class="form-text">
+                                Please select user role.
+                            </div>
+                        </div>
+
+                        <div class="field-wrapper">
+                            <select name="status">
+                                <option value="0">In-Active</option>
+                                <option value="1">Active</option>
+                            </select>
+                            <div class="field-placeholder">Status <span class="text-danger">*</span></div>
+                            <div class="form-text">
+                                Please select user account status. (In-active : Account activation email will be sent to user to activate account and start using it)
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Add New</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Add New User Model -->
 </div>
 <!-- Content wrapper scroll end -->

@@ -38,7 +38,8 @@ class MSG
         'PASS_RST_SUCC' => 'Password token updated.',
         'PRF_UPDT_SUCC' => 'Profile information updated success.',
         'PRF_UPDT_FAIL' => 'Something went wrong while updating profile. Please try again later',
-        'INV_PASS' => 'Provided password is invalid. Please try again'
+        'INV_PASS' => 'Provided password is invalid. Please try again',
+        'USR_CRET' => 'New user created!'
     ];
 
     const MAIL = [

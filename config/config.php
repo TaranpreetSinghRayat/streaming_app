@@ -42,6 +42,7 @@ define('ENC_KEY',$_ENV['ENC_INV']); //Random Encryption key
 define('BASE_URL',$_ENV['BASE_URL']);
 define('BASE_URL_ADMIN',$_ENV['BASE_URL'] . ''. $_ENV['BASE_URL_ADMIN'] .'/');
 define('BASE_URL_ASSETS',$_ENV['BASE_URL'] . 'assets/'.\App\Settings::get_value('app.theme').'/');
+define('BASE_ASSETS','assets/'.\App\Settings::get_value('app.theme').'/');
 define('CAST_ASSETS','../assets/cast/');
 define('ENTITIES_ASSETS', '../assets/entities/');
 define('VIDEO_ASSETS', '../assets/videos/');
