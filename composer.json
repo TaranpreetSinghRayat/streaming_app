@@ -1,0 +1,25 @@
+{
+    "name": "tweekersnut/netflix",
+    "description": "Complete online streaming platform with subscriptions",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "TweekersNut Network",
+            "email": "dmin@tweekersnut.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "modules/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "tommyknocker/pdo-database-class": "dev-master",
+        "vlucas/phpdotenv": "4.2.x-dev",
+        "phpmailer/phpmailer": "dev-master",
+        "nass600/get-id3": "^1.0@dev",
+        "verot/class.upload.php": "dev-master"
+    }
+}
