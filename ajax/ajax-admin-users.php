@@ -98,6 +98,32 @@ if(isset($_POST) && isset($_POST['action'])) {
         case 'process_generate_password':
             echo json_encode(['status' => 1, 'msg' => \App\Security::random_password(8)]);
             break;
+        case 'process_resend_acc_act_mail':
+            $USER = new \App\Users();
+            $userData = $USER->find($_POST['userID']);
+            $MAILER = new \App\Mailer();
+            $TPL = new \App\Template();
+            $TPL->set_folder(TEMPLATE.'/'. \App\Settings::get_value('app.theme') . '/emails');
+            $MAILER->sendMail(
+                \App\Security::clean($userData['email']),
+                \App\Settings::get_value('app.name') . 'Account Activation',
+                $TPL->render('account_active',[
+                    'app_name' => \App\Settings::get_value('app.name'),
+                    'username' => \App\Security::clean($userData['username']),
+                    'user_email' => \App\Security::clean($userData['email']),
+                    'welcome_text' => \App\MSG::MAIL['ACC_ACTIVE_WLC'],
+                    'acc_activation_link' => BASE_URL . '/login.php?p=activate&k='. $userData['account_key'],
+                    'btn_text' => 'Activate Account',
+                    'emergency_note' => '',
+                    'admin_mail' => \App\Settings::get_value('admin.email')
+                ]));
+            if($MAILER->getStatus()){
+                echo json_encode(['status' => 1, 'msg' => \App\MSG::AUTH['CHK_MAIL']]);
+            }else{
+                echo json_encode(['status' => 2, 'msg' => \App\MSG::AUTH['ERR_MAIL']]);
+            }
+            break;
+
         default:
             echo json_encode(['status' =>1 , 'msg' => 'Invalid Request.']);
             break;

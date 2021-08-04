@@ -79,7 +79,7 @@
                                                 </td>
                                                 <td>
                                                     <?= $user['ip'] ?>
-                                                    <a href="#" data-ip="<?= $user['ip'] ?>">Lookup?</a>
+                                                    <a href="#" class="ip-lookup" data-ip="<?= $user['ip'] ?>">Lookup?</a>
                                                 </td>
                                                 <td>
                                                     <?php if($user['status'] == 1): ?>
@@ -87,16 +87,17 @@
                                                     <?php else: ?>
                                                         <b style="color: red">In-Active</b>
                                                         <br />
-                                                        <a href="#" data-userID="<?= $user['id'] ?>">Resent Acc. Activation Mail</a>
+                                                        <a href="#" class="send_acc_act_mail" data-userID="<?= $user['id'] ?>">Resent Acc. Activation Mail</a>
                                                     <?php endif; ?>
                                                 </td>
                                                 <td>
-                                                    <button>Edit</button>
-                                                    <button>Login As <?= $user['username'] ?></button>
-                                                    <?= (($user['id'] != \App\Session::get('UID'))) ?  (($user['status'] == 1)) ?  '<button>De-Activate Account</button>' : '<button>Activate Account</button>' : ''?>
+                                                    <button class="btn-sm btn-info">Edit</button>
 
-                                                    <button>Send Password Reset Mail</button>
-                                                    <?= (($user['id'] == \App\Session::get('UID'))) ? '' : '<button>Delete</button>' ?>
+                                                    <?= (($user['id'] === \App\Session::get('UID'))) ? '' : '<button class="btn-sm btn-secondary btn-outline-warning">Login As '.$user['username'].'</button>' ?>
+                                                    <?= (($user['id'] != \App\Session::get('UID'))) ?  (($user['status'] == 1)) ?  '<button class="btn-warning btn-sm btn-outline-dark">De-Activate Account</button>' : '<button class="btn-success btn-sm btn-outline-warning">Activate Account</button>' : ''?>
+
+                                                    <button class="btn-sm btn-dark btn-outline-success">Send Password Reset Mail</button>
+                                                    <?= (($user['id'] == \App\Session::get('UID'))) ? '' : '<button class="btn-outline-danger btn-sm btn-dark">Delete</button>' ?>
                                                 </td>
 
                                             </tr>
@@ -189,5 +190,44 @@
         </div>
     </div>
     <!-- //Add New User Model -->
+
+    <!-- IP Lookup Model -->
+    <div class="modal fade" id="ip-lookup" tabindex="-1" aria-labelledby="ip-lookup" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ip-lookup-title">Lookup </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="ip-lookup-data">
+                        <b>Type : </b><span class="type"></span>
+                        <br />
+                        <b>Continent Code : </b><span class="cc"></span>
+                        <br />
+                        <b>Continent Name : </b><span class="cn"></span>
+                        <br />
+                        <b>Country Code : </b><span class="ccode"></span>
+                        <br />
+                        <b>Country Name : </b><span class="cname"></span>
+                        <br />
+                        <b>Region Code : </b><span class="rc"></span>
+                        <br />
+                        <b>Region Name : </b><span class="rn"></span>
+                        <br />
+                        <b>City : </b><span class="city"></span>
+                        <br />
+                        <b>Zip : </b><span class="zip"></span>
+                        <br />
+                        <b>Lat, Long : </b><span class="ltll"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- IP Lookup Model -->
 </div>
 <!-- Content wrapper scroll end -->

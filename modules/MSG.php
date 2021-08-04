@@ -39,7 +39,9 @@ class MSG
         'PRF_UPDT_SUCC' => 'Profile information updated success.',
         'PRF_UPDT_FAIL' => 'Something went wrong while updating profile. Please try again later',
         'INV_PASS' => 'Provided password is invalid. Please try again',
-        'USR_CRET' => 'New user created!'
+        'USR_CRET' => 'New user created!',
+        'CHK_MAIL' => 'Account activation mail sent.',
+        'ERR_MAIL' => 'Something went wrong while sending account activation email. Please check email configuration.'
     ];
 
     const MAIL = [
