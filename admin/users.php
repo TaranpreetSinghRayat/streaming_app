@@ -205,5 +205,117 @@ $('.ip-lookup').click(function(){
 
     }
 });
+
+$('.pass_rst_mail').click(function () {
+    var userID = $(this).attr('data-userID')
+    var btn = $(this);
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-users.php",
+        data: {
+            action:'process_send_reset_pass_mail',
+            userID
+        },
+        dataType: "html",
+        beforeSend: function () {
+            btn.html('Processing...');
+            btn.attr('disabled', true);
+        },
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                Toast.create('Success', parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+            }else{
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            console.log(err);
+            alert('Soemthing went wrong');
+        },
+        complete: function () {
+            btn.html('Send Password Reset Mail');
+            btn.attr('disabled', false);
+        }
+    });
+
+});
+
+$('.activate_acc').click(function () {
+    var btn = $(this);
+    var userID = btn.attr('data-userID');
+
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-users.php",
+        data: {
+            action:'process_activate_acc',
+            userID
+        },
+        dataType: "html",
+        beforeSend: function () {
+            btn.html('Processing...');
+            btn.attr('disabled', true);
+        },
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                Toast.create('Success', parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+                setTimeout(function () {
+                    window.location.reload(true);
+                },1000);
+            }else{
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            console.log(err);
+            alert('Soemthing went wrong');
+        },
+        complete: function () {
+
+        }
+    });
+});
+
+$('.deactive_acc').click(function () {
+    var btn = $(this);
+    var userID = btn.attr('data-userID');
+
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-users.php",
+        data: {
+            action:'process_activate_deacc',
+            userID
+        },
+        dataType: "html",
+        beforeSend: function () {
+            btn.html('Processing...');
+            btn.attr('disabled', true);
+        },
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                Toast.create('Success', parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+
+            }else{
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            console.log(err);
+            alert('Soemthing went wrong');
+        },
+        complete: function () {
+            setTimeout(function () {
+                window.location.reload(true);
+            },1000);
+        }
+    });
+});
 </script>
 <!-- //Custom script -->

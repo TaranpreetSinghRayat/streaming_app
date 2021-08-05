@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/template/default/emails/notification.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/admin/users.php" afterPath="$PROJECT_DIR$/admin/users.php" />
       <change beforePath="$PROJECT_DIR$/ajax/ajax-admin-users.php" afterPath="$PROJECT_DIR$/ajax/ajax-admin-users.php" />
       <change beforePath="$PROJECT_DIR$/modules/MSG.php" afterPath="$PROJECT_DIR$/modules/MSG.php" />
-      <change beforePath="$PROJECT_DIR$/sql dump/netflix_clone.sql" afterPath="$PROJECT_DIR$/sql dump/netflix_clone.sql" />
+      <change beforePath="$PROJECT_DIR$/modules/Users.php" afterPath="$PROJECT_DIR$/modules/Users.php" />
       <change beforePath="$PROJECT_DIR$/template/admin/users/view.php" afterPath="$PROJECT_DIR$/template/admin/users/view.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,20 +26,18 @@
       <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/admin/users/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="221" column="60" lean-forward="false" selection-start-line="221" selection-start-column="56" selection-end-line="221" selection-end-column="60" />
-              <folding>
-                <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="96" column="195" lean-forward="false" selection-start-line="96" selection-start-column="183" selection-end-line="96" selection-end-column="195" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax-admin-users.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ajax-admin-users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ajax/ajax-admin-users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+            <state relative-caret-position="575">
+              <caret line="193" column="82" lean-forward="false" selection-start-line="193" selection-start-column="82" selection-end-line="193" selection-end-column="82" />
               <folding>
                 <element signature="e#337#5347#0#PHP" expanded="false" />
                 <element signature="e#5356#5499#0#PHP" expanded="false" />
@@ -48,14 +47,75 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="notification.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/default/emails/notification.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="120" column="165" lean-forward="false" selection-start-line="120" selection-start-column="165" selection-end-line="120" selection-end-column="165" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#4091#4097#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1628150280928" expanded="true" signature="8089:8553" ph="..." />
+                <marker date="1628150280928" expanded="false" signature="8163:8302" ph="..." />
+                <marker date="1628150280928" expanded="true" signature="8303:8523" ph="..." />
+                <marker date="1628150280928" expanded="false" signature="8389:8464" ph="..." />
+                <marker date="1628150280928" expanded="false" signature="8750:8812" ph="..." />
+                <marker date="1628150280928" expanded="false" signature="8814:8820" ph=" " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account_active.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/default/emails/account_active.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="490">
+              <caret line="393" column="46" lean-forward="true" selection-start-line="393" selection-start-column="46" selection-end-line="393" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Users.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/Users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="24" />
+              <folding>
+                <marker date="1628148978243" expanded="true" signature="3755:3829" ph="SELECT COUNT... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ajax-auth.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajax/ajax-auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="87" column="21" lean-forward="true" selection-start-line="67" selection-start-column="20" selection-end-line="87" selection-end-column="21" />
+            <state relative-caret-position="289">
+              <caret line="122" column="41" lean-forward="false" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
               <folding>
                 <element signature="e#361#928#0#PHP" expanded="false" />
                 <element signature="e#937#1505#0#PHP" expanded="false" />
+                <element signature="e#1514#4228#0#PHP" expanded="false" />
                 <element signature="e#4237#5003#0#PHP" expanded="false" />
                 <element signature="e#5012#5391#0#PHP" expanded="false" />
                 <element signature="e#5400#6882#0#PHP" expanded="false" />
@@ -63,6 +123,7 @@
                 <element signature="e#7776#8763#0#PHP" expanded="false" />
                 <element signature="e#8772#10012#0#PHP" expanded="false" />
                 <element signature="e#10021#11367#0#PHP" expanded="false" />
+                <element signature="e#11376#12312#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,19 +142,24 @@
       <file leaf-file-name="MSG.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/MSG.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="43" column="117" lean-forward="false" selection-start-line="43" selection-start-column="117" selection-end-line="43" selection-end-column="117" />
+            <state relative-caret-position="762">
+              <caret line="103" column="21" lean-forward="false" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="201" column="91" lean-forward="false" selection-start-line="201" selection-start-column="91" selection-end-line="201" selection-end-column="91" />
-              <folding />
+            <state relative-caret-position="337">
+              <caret line="291" column="18" lean-forward="false" selection-start-line="291" selection-start-column="12" selection-end-line="291" selection-end-column="18" />
+              <folding>
+                <element signature="e#1577#2348#0#HTML" expanded="false" />
+                <element signature="e#2391#3732#0#HTML" expanded="false" />
+                <element signature="e#3776#4907#0#HTML" expanded="false" />
+                <element signature="e#4943#6461#0#HTML" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,8 +182,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>match</find>
-      <find>user_pass_txt</find>
       <find>password</find>
       <find>mail</find>
       <find>$MAI</find>
@@ -146,6 +210,8 @@
       <find>reh</find>
       <find>lookuop</find>
       <find>lookup</find>
+      <find>Send Pas</find>
+      <find>usr_data</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -192,7 +258,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/template/default/entities/single_show.php" />
         <option value="$PROJECT_DIR$/template/default/entities/title_movie.php" />
         <option value="$PROJECT_DIR$/helper/server.php" />
@@ -231,7 +296,6 @@
         <option value="$PROJECT_DIR$/ajax/ajax-admin-entities.php" />
         <option value="$PROJECT_DIR$/admin/updator.php" />
         <option value="$PROJECT_DIR$/assets/admin/vendor/datatables/custom/custom-datatables.js" />
-        <option value="$PROJECT_DIR$/modules/Users.php" />
         <option value="$PROJECT_DIR$/template/default/auth/account.php" />
         <option value="$PROJECT_DIR$/ajax/ajax-auth.php" />
         <option value="$PROJECT_DIR$/account.php" />
@@ -239,10 +303,12 @@
         <option value="$PROJECT_DIR$/admin/config.php" />
         <option value="$PROJECT_DIR$/modules/Security.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
-        <option value="$PROJECT_DIR$/modules/MSG.php" />
-        <option value="$PROJECT_DIR$/ajax/ajax-admin-users.php" />
         <option value="$PROJECT_DIR$/template/admin/users/view.php" />
         <option value="$PROJECT_DIR$/admin/users.php" />
+        <option value="$PROJECT_DIR$/modules/Users.php" />
+        <option value="$PROJECT_DIR$/template/default/emails/notification.php" />
+        <option value="$PROJECT_DIR$/modules/MSG.php" />
+        <option value="$PROJECT_DIR$/ajax/ajax-admin-users.php" />
       </list>
     </option>
   </component>
@@ -288,6 +354,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -433,14 +501,12 @@
               <item name="netflix.local" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="emails" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -467,6 +533,16 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="emails" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/template/default/emails" />
+    </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.emails" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -516,14 +592,8 @@
       <workItem from="1627627026180" duration="6828000" />
       <workItem from="1627712034066" duration="10603000" />
       <workItem from="1628061795020" duration="2466000" />
-      <workItem from="1628065930992" duration="4362000" />
-    </task>
-    <task id="LOCAL-00021" summary="Updated readme">
-      <created>1624972368836</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1624972368836</updated>
+      <workItem from="1628065930992" duration="5752000" />
+      <workItem from="1628145707860" duration="5640000" />
     </task>
     <task id="LOCAL-00022" summary="Updated readme">
       <created>1624972376250</created>
@@ -861,26 +931,32 @@
       <option name="project" value="LOCAL" />
       <updated>1627728514107</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Admin Panel updates :&#10;new btn css in admin users tab&#10;ip lookup added&#10;account activatin email send added">
+      <created>1628072776096</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1628072776097</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231360000" />
+    <option name="totallyTimeSpent" value="238390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14791666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -890,6 +966,7 @@
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -923,7 +1000,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bug fix&#10;search titles working" />
     <MESSAGE value="bug fix&#10;admin panel upates along with admin login page" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="Admin settings page updated." />
@@ -948,7 +1024,8 @@
     <MESSAGE value="Accounts avatar update form working&#10;bug fix" />
     <MESSAGE value="admin redirection glitch solved." />
     <MESSAGE value="admin add new user&#10;bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin add new user&#10;bug fix" />
+    <MESSAGE value="Admin Panel updates :&#10;new btn css in admin users tab&#10;ip lookup added&#10;account activatin email send added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin Panel updates :&#10;new btn css in admin users tab&#10;ip lookup added&#10;account activatin email send added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -957,20 +1034,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/template/default/include/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="124" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/admin/auth/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="90" column="60" lean-forward="false" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entitie.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-598">
@@ -1163,16 +1226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="95" column="25" lean-forward="false" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="25" />
-          <folding>
-            <marker date="1627627919817" expanded="true" signature="3755:3829" ph="SELECT COUNT... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/default/auth/account.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -1304,11 +1357,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax/ajax-auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="87" column="21" lean-forward="true" selection-start-line="67" selection-start-column="20" selection-end-line="87" selection-end-column="21" />
+        <state relative-caret-position="289">
+          <caret line="122" column="41" lean-forward="false" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
           <folding>
             <element signature="e#361#928#0#PHP" expanded="false" />
             <element signature="e#937#1505#0#PHP" expanded="false" />
+            <element signature="e#1514#4228#0#PHP" expanded="false" />
             <element signature="e#4237#5003#0#PHP" expanded="false" />
             <element signature="e#5012#5391#0#PHP" expanded="false" />
             <element signature="e#5400#6882#0#PHP" expanded="false" />
@@ -1316,45 +1370,103 @@
             <element signature="e#7776#8763#0#PHP" expanded="false" />
             <element signature="e#8772#10012#0#PHP" expanded="false" />
             <element signature="e#10021#11367#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/MSG.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="43" column="117" lean-forward="false" selection-start-line="43" selection-start-column="117" selection-end-line="43" selection-end-column="117" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/ajax-admin-users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding>
-            <element signature="e#337#5347#0#PHP" expanded="false" />
-            <element signature="e#5356#5499#0#PHP" expanded="false" />
-            <element signature="e#5508#6898#0#PHP" expanded="false" />
+            <element signature="e#11376#12312#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/admin/users/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="221" column="60" lean-forward="false" selection-start-line="221" selection-start-column="56" selection-end-line="221" selection-end-column="60" />
-          <folding>
-            <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="96" column="195" lean-forward="false" selection-start-line="96" selection-start-column="183" selection-end-line="96" selection-end-column="195" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="201" column="91" lean-forward="false" selection-start-line="201" selection-start-column="91" selection-end-line="201" selection-end-column="91" />
+        <state relative-caret-position="337">
+          <caret line="291" column="18" lean-forward="false" selection-start-line="291" selection-start-column="12" selection-end-line="291" selection-end-column="18" />
+          <folding>
+            <element signature="e#1577#2348#0#HTML" expanded="false" />
+            <element signature="e#2391#3732#0#HTML" expanded="false" />
+            <element signature="e#3776#4907#0#HTML" expanded="false" />
+            <element signature="e#4943#6461#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/default/emails/account_active.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="393" column="46" lean-forward="true" selection-start-line="393" selection-start-column="46" selection-end-line="393" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <marker date="1628148978243" expanded="true" signature="3755:3829" ph="SELECT COUNT... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/default/emails/notification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="120" column="165" lean-forward="false" selection-start-line="120" selection-start-column="165" selection-end-line="120" selection-end-column="165" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4091#4097#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1628150280928" expanded="true" signature="8089:8553" ph="..." />
+            <marker date="1628150280928" expanded="false" signature="8163:8302" ph="..." />
+            <marker date="1628150280928" expanded="true" signature="8303:8523" ph="..." />
+            <marker date="1628150280928" expanded="false" signature="8389:8464" ph="..." />
+            <marker date="1628150280928" expanded="false" signature="8750:8812" ph="..." />
+            <marker date="1628150280928" expanded="false" signature="8814:8820" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/MSG.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="103" column="21" lean-forward="false" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/ajax-admin-users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="193" column="82" lean-forward="false" selection-start-line="193" selection-start-column="82" selection-end-line="193" selection-end-column="82" />
+          <folding>
+            <element signature="e#337#5347#0#PHP" expanded="false" />
+            <element signature="e#5356#5499#0#PHP" expanded="false" />
+            <element signature="e#5508#6898#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -155,7 +155,7 @@ class Users
      * @param array $data
      * @return bool
      */
-    public function update(int $id,array $data)
+    public function update($id,array $data)
     {
         if($this->db->where('id', $id)->update(Config::TBL_NAMES['USERS'],$data)){
             return true;
