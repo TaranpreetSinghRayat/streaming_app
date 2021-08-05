@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2021 at 08:28 AM
+-- Generation Time: Aug 04, 2021 at 12:25 PM
 -- Server version: 5.7.18-log
 -- PHP Version: 7.1.1
 
@@ -49,8 +49,9 @@ CREATE TABLE `casts` (
 --
 
 INSERT INTO `casts` (`id`, `name`, `avatar`, `role`, `description`) VALUES
-(1, 'Anna', 'assets/cast/1/1.jpg', '0', 'this is description'),
-(2, 'Robert', 'assets/cast/2/2.jpg', '0', 'this is just a description about the actor and stuff');
+(1, 'fear', 'assets/cast/1/png-dodge-challenger-srt-hellcat-dodge-demon-concept-car-dodge-charger-srt-hellcat-dodge-white-face-logo-car-clipart.png', '0', 'fear'),
+(2, 'fear', 'assets/cast/2/cookie.jpg', '0', 'fear'),
+(5, 'ASDF', 'assets/cast/5/rohan.jpg', '2', 'Pikabu');
 
 -- --------------------------------------------------------
 
@@ -213,7 +214,11 @@ INSERT INTO `settings` (`id`, `name`, `value`, `description`, `type`, `status`) 
 (13, 'contact.phone', '+91 9988066776', 'contact phone number', '1', 1),
 (14, 'contact.location', 'Tweekersnut network, Phase-6 Ind. Area', 'contact location address', '1', 1),
 (15, 'contact.map', 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13718.33363343875!2d76.7092702!3d30.7301099!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc2418f4ab36a780!2sTweekersNut%20Network!5e0!3m2!1sen!2sin!4v1625470829485!5m2!1sen!2sin', 'map', '3', 1),
-(16, 'app.admin.theme', 'admin', 'administration panel theme', '1', 1);
+(16, 'app.admin.theme', 'admin', 'administration panel theme', '1', 1),
+(17, 'uploader.max_size', '4096', 'Max file upload size', '1', 1),
+(18, 'uploader.allowed_mime', 'png,jpeg,jpg', 'allowed upload formats', '1', 1),
+(19, 'iplookup.service_provider', 'http://api.ipstack.com/', 'ipstack', '1', 1),
+(20, 'iplookup.auth_key', '2dda8a934ea837d3b92e5a95d4385823', 'iplookup auth key', '1', 1);
 
 -- --------------------------------------------------------
 
@@ -264,7 +269,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`, `password`, `created_at`, `avatar`, `last_login`, `account_key`, `is_subscribed`, `role`, `ip`, `status`) VALUES
-(3, 'fear126', 'fear126@live.com', 'Fear', 'Fear', 'c2RBbDgwSjNFbmkrUlI2UG1JMGh6dz09', '2021-06-23 11:43:11', 'http://netflix.local//assets/default/images/avatars/default.png', '2021-07-05 13:17:58', '60e70203de4e6', '0', '1', '127.0.0.1', '1');
+(3, 'fear126', 'fear126@live.com', 'Fear', 'Fear', 'c2RBbDgwSjNFbmkrUlI2UG1JMGh6dz09', '2021-06-23 11:43:11', 'assets/avatars/3/deamon.png', '2021-07-05 13:17:58', '60e70203de4e6', '0', '1', '122.173.28.208', '1'),
+(4, 'cadell', 'cadell126@live.com', 'cadell', 'cadell', 'c2RBbDgwSjNFbmkrUlI2UG1JMGh6dz09', '2021-07-30 07:51:03', 'assets/avatars/4/harsh.jpg', '2021-07-30 09:51:03', '6103b083e70ba', '1', '0', '122.173.28.210', '1'),
+(8, 'qwerty', 'qwerty@yopmail.com', 'John', 'Doe', 'ajNxU0U0THl5OVNKbzVRak5vc0lJZz09', '2021-07-31 10:40:08', 'assets/avatars/8/web-application-development-react-js.jpg', '2021-07-31 12:40:08', '610528d333667', '0', '0', '122.173.28.110', '0');
 
 -- --------------------------------------------------------
 
@@ -291,17 +298,17 @@ CREATE TABLE `videos` (
 --
 
 INSERT INTO `videos` (`id`, `title`, `filePath`, `uploadDate`, `releaseDate`, `views`, `season`, `episode`, `language`, `audio_languages`, `entityId`) VALUES
-(1, 'The Express', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 5, 0, 0, 'English', 'English', 1),
-(2, 'The Express 2', '/assets/videos/2/2.mp4', '2021-06-30 12:21:46', '2021-06-09', 10, 0, 0, 'English', 'English', 2),
-(3, 'The Express 3', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 5, 0, 0, 'English', 'English', 3),
+(1, 'The Express', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 6, 0, 0, 'English', 'English', 1),
+(2, 'The Express 2', '/assets/videos/2/2.mp4', '2021-06-30 12:21:46', '2021-06-09', 14, 0, 0, 'English', 'English', 2),
+(3, 'The Express 3', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 8, 0, 0, 'English', 'English', 3),
 (4, 'The Express 4', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 1, 0, 0, 'English', 'English', 4),
 (5, 'The Express 5', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 1, 0, 0, 'English', 'English', 5),
-(6, 'pika', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 14, 1, 1, 'English', 'English', 6),
-(7, 'chu', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 14, 1, 2, 'English', 'English', 6),
-(8, 'ash', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 14, 2, 1, 'English', 'English', 6),
-(9, 'dina', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 14, 2, 2, 'English', 'English', 6),
-(10, 'saur', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 14, 2, 3, 'English', 'English', 6),
-(11, 'omg', '/assets/videos/2/2.mp4', '2021-06-30 12:21:46', '2021-06-09', 14, 3, 1, 'English', 'English', 6);
+(6, 'pika', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 1, 1, 'English', 'English', 6),
+(7, 'chu', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 1, 2, 'English', 'English', 6),
+(8, 'ash', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 2, 1, 'English', 'English', 6),
+(9, 'dina', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 2, 2, 'English', 'English', 6),
+(10, 'saur', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 2, 3, 'English', 'English', 6),
+(11, 'omg', '/assets/videos/2/2.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 3, 1, 'English', 'English', 6);
 
 --
 -- Indexes for dumped tables
@@ -376,7 +383,7 @@ ALTER TABLE `videos`
 -- AUTO_INCREMENT for table `casts`
 --
 ALTER TABLE `casts`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `contact`
 --
@@ -406,7 +413,7 @@ ALTER TABLE `page_headers`
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `tags`
 --
@@ -416,12 +423,20 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `videos`
 --
 ALTER TABLE `videos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+DELIMITER $$
+--
+-- Events
+--
+CREATE DEFINER=`fear`@`%` EVENT `update_user_token_3` ON SCHEDULE AT '2021-08-02 19:18:34' ON COMPLETION NOT PRESERVE ENABLE DO call netflix_clone.update_user_token(3, '6107f6860a053')$$
+
+DELIMITER ;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

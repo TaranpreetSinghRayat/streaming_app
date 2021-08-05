@@ -39,7 +39,15 @@ class MSG
         'PRF_UPDT_SUCC' => 'Profile information updated success.',
         'PRF_UPDT_FAIL' => 'Something went wrong while updating profile. Please try again later',
         'INV_PASS' => 'Provided password is invalid. Please try again',
-        'USR_CRET' => 'New user created!'
+        'USR_CRET' => 'New user created!',
+        'CHK_MAIL' => 'Account activation mail sent.',
+        'ERR_MAIL' => 'Something went wrong while sending account activation email. Please check email configuration.',
+        'ACC_PSS_RST_SUCC' => 'Password email sent succesfully to the user. Password reset link will be valid for 24 hours only.',
+        'ACC_PSS_RST_ERR' => 'Something went wrong while sending password reset email. Please try again later.',
+        'ACC_ACT_SCC' => 'Account marked activated and notification email sent to user.',
+        'ACC_ACT_FAIL' => 'Something went wrong while marking account active. Please try again later.',
+        'ACC_DEACT_SCC' => 'Account marked de-activated and notification email sent to user.',
+        'ACC_DEACT_FAIL' => 'Something went wrong while marking account de-activating account. Please try again later.'
     ];
 
     const MAIL = [
@@ -89,5 +97,10 @@ class MSG
         'DLT_SCC' => 'Tag removed successfully.',
         'UDT_ERR' => 'Something went wrong while updating tag. Please try again later.',
         'UDT_SCC' => 'Tag updated!'
+    ];
+
+    const NOTIFICATION = [
+        'ACC_ACT_AD' => "Your account is marked activated by administrator. You can now login  <a href='". BASE_URL ."login.php'></a>",
+        'ACC_DEACT_AD' => 'Your account is marked de-activated by administrator. You not be able to use your account until it marked activated. Please contact adminstrator for more information'
     ];
 }
