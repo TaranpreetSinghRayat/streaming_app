@@ -60,6 +60,7 @@ echo $TPL->render('include/footer',[
     'app_name' => \App\Settings::get_value('app.name'),
     'USR' => $USR_DATA
 ]);
+
 ?>
 <!-- //Footer Section -->
 
@@ -314,6 +315,37 @@ $('.deactive_acc').click(function () {
             setTimeout(function () {
                 window.location.reload(true);
             },1000);
+        }
+    });
+});
+
+$('.login_as_user').click(function () {
+    var btn = $(this);
+    var userID =  btn.attr('data-userID');
+
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-users.php",
+        data: {
+            action:'process_login_user',
+            userID
+        },
+        dataType: "html",
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                Toast.create('Success', parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+                setTimeout(function(){
+                    window.open(parsed_data.redir, '_blank');
+                },2000);
+            }else{
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            console.log(err);
+            alert('Soemthing went wrong');
         }
     });
 });

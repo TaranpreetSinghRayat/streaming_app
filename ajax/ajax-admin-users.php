@@ -199,6 +199,13 @@ if(isset($_POST) && isset($_POST['action'])) {
                 echo json_encode(['status' => 0, 'msg' => \App\MSG::AUTH['ACC_DEACT_FAIL']]);
             }
             break;
+        case 'process_login_user':
+            \App\Session::insert('O_UID', \App\Session::get('UID'));
+            \App\Session::insert('UID', (int)$_POST['userID']);
+            \App\Session::insert('O_role', \App\Session::get('role'));
+            \App\Session::insert('role', 'Subscriber');
+            echo json_encode(['status' => 1, 'msg' => 'Logging you as other user.', 'redir' => BASE_URL . 'home.php']);
+            break;
         default:
             echo json_encode(['status' =>1 , 'msg' => 'Invalid Request.']);
             break;

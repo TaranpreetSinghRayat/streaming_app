@@ -9,6 +9,14 @@ include '../config/config.php';
 ?>
 
 <?php
+//check if user was logged in as other user or not and then reset it back if its logged in as other user.
+if(\App\Session::exists('O_UID')){
+    \App\Session::insert('UID', \App\Session::get('O_UID'));
+    \App\Session::del('O_UID');
+    \App\Session::insert('role', \App\Session::get('O_role'));
+    \App\Session::del('O_role');
+}
+
 //  ADMIN MIDDLE WARE
 if(!\App\Session::exists('isLoggedIn') || \App\Session::get('role') != 'Administrator'){
     if(($_SERVER['SCRIPT_NAME'] != '/admin/login.php')){
