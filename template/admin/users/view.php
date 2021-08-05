@@ -97,7 +97,7 @@
                                                     <?= (($user['id'] != \App\Session::get('UID'))) ?  (($user['status'] == 1)) ?  '<button class="btn-warning btn-sm btn-outline-dark deactive_acc" data-userID=" '. $user['id'] .' ">De-Activate Account</button>' : '<button class="btn-success btn-sm btn-outline-warning activate_acc" data-userID=" '. $user['id'] .' ">Activate Account</button>' : ''?>
 
                                                     <button class="btn-sm btn-dark btn-outline-success pass_rst_mail" data-userID="<?= $user['id'] ?>">Send Password Reset Mail</button>
-                                                    <?= (($user['id'] == \App\Session::get('UID'))) ? '' : '<button class="btn-outline-danger btn-sm btn-dark">Delete</button>' ?>
+                                                    <?= (($user['id'] == \App\Session::get('UID'))) ? '' : '<button class="btn-outline-danger btn-sm btn-dark delete_usr" data-userID="'. $user['id'] .'">Delete</button>' ?>
                                                 </td>
 
                                             </tr>

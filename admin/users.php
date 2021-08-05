@@ -349,5 +349,37 @@ $('.login_as_user').click(function () {
         }
     });
 });
+
+$('.delete_usr').click(function () {
+    var btn = $(this);
+    var userID = btn.attr('data-userID');
+
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-users.php",
+        data: {
+            action:'process_login_user',
+            userID
+        },
+        dataType: "html",
+        success: function(resp){
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+
+            }else{
+
+            }
+        },
+        error: function (err) {
+            console.log(err)
+        },
+        complete: function () {
+            setTimeout(function () {
+                window.location.reload(true);
+            },2000)
+        }
+    });
+});
 </script>
 <!-- //Custom script -->

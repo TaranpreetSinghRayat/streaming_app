@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="58bc9674-afde-4494-a192-72a0b2e6a86c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/config.php" afterPath="$PROJECT_DIR$/admin/config.php" />
       <change beforePath="$PROJECT_DIR$/admin/users.php" afterPath="$PROJECT_DIR$/admin/users.php" />
-      <change beforePath="$PROJECT_DIR$/ajax/ajax-admin-users.php" afterPath="$PROJECT_DIR$/ajax/ajax-admin-users.php" />
       <change beforePath="$PROJECT_DIR$/template/admin/users/view.php" afterPath="$PROJECT_DIR$/template/admin/users/view.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +22,8 @@
       <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/admin/users/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="95" column="178" lean-forward="false" selection-start-line="95" selection-start-column="165" selection-end-line="95" selection-end-column="178" />
+            <state relative-caret-position="357">
+              <caret line="99" column="195" lean-forward="false" selection-start-line="99" selection-start-column="195" selection-end-line="99" selection-end-column="195" />
               <folding />
             </state>
           </provider>
@@ -44,16 +42,6 @@
                 <element signature="e#8408#9586#0#PHP" expanded="false" />
                 <element signature="e#9595#10780#0#PHP" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -112,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/template/default/emails/account_active.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="490">
-              <caret line="393" column="46" lean-forward="true" selection-start-line="393" selection-start-column="46" selection-end-line="393" selection-end-column="46" />
+              <caret line="393" column="46" lean-forward="false" selection-start-line="393" selection-start-column="46" selection-end-line="393" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -160,11 +148,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="337" column="49" lean-forward="true" selection-start-line="337" selection-start-column="49" selection-end-line="337" selection-end-column="49" />
+            <state relative-caret-position="745">
+              <caret line="372" column="10" lean-forward="true" selection-start-line="372" selection-start-column="10" selection-end-line="372" selection-end-column="10" />
               <folding>
                 <element signature="e#1578#2349#0#HTML" expanded="false" />
                 <element signature="e#2392#3733#0#HTML" expanded="false" />
@@ -305,10 +293,10 @@
         <option value="$PROJECT_DIR$/modules/Users.php" />
         <option value="$PROJECT_DIR$/template/default/emails/notification.php" />
         <option value="$PROJECT_DIR$/modules/MSG.php" />
-        <option value="$PROJECT_DIR$/template/admin/users/view.php" />
-        <option value="$PROJECT_DIR$/admin/users.php" />
         <option value="$PROJECT_DIR$/ajax/ajax-admin-users.php" />
         <option value="$PROJECT_DIR$/admin/config.php" />
+        <option value="$PROJECT_DIR$/template/admin/users/view.php" />
+        <option value="$PROJECT_DIR$/admin/users.php" />
       </list>
     </option>
   </component>
@@ -524,14 +512,7 @@
       <workItem from="1627712034066" duration="10603000" />
       <workItem from="1628061795020" duration="2466000" />
       <workItem from="1628065930992" duration="5752000" />
-      <workItem from="1628145707860" duration="9754000" />
-    </task>
-    <task id="LOCAL-00023" summary="Updated readme">
-      <created>1624972419913</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1624972419913</updated>
+      <workItem from="1628145707860" duration="11963000" />
     </task>
     <task id="LOCAL-00024" summary="Updated readme">
       <created>1624972786872</created>
@@ -869,11 +850,18 @@
       <option name="project" value="LOCAL" />
       <updated>1628151581487</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Admin Panel updates :&#10;login as other user btn works">
+      <created>1628159587559</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1628159587559</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242504000" />
+    <option name="totallyTimeSpent" value="244713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -931,7 +919,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bug fix" />
     <MESSAGE value="Admin settings page updated." />
     <MESSAGE value="nav bar settings backend implimented." />
     <MESSAGE value="admin casts page added&#10;bug fix&#10;new 404 page added" />
@@ -956,7 +943,8 @@
     <MESSAGE value="admin add new user&#10;bug fix" />
     <MESSAGE value="Admin Panel updates :&#10;new btn css in admin users tab&#10;ip lookup added&#10;account activatin email send added" />
     <MESSAGE value="Admin Panel updates :&#10;user active,deactive btn works&#10;send password reset btn works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin Panel updates :&#10;user active,deactive btn works&#10;send password reset btn works" />
+    <MESSAGE value="Admin Panel updates :&#10;login as other user btn works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin Panel updates :&#10;login as other user btn works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1267,7 +1255,7 @@
     <entry file="file://$PROJECT_DIR$/template/default/emails/account_active.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
-          <caret line="393" column="46" lean-forward="true" selection-start-line="393" selection-start-column="46" selection-end-line="393" selection-end-column="46" />
+          <caret line="393" column="46" lean-forward="false" selection-start-line="393" selection-start-column="46" selection-end-line="393" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1305,14 +1293,6 @@
             <marker date="1628150280928" expanded="false" signature="8750:8812" ph="..." />
             <marker date="1628150280928" expanded="false" signature="8814:8820" ph=" " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/admin/users/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="95" column="178" lean-forward="false" selection-start-line="95" selection-start-column="165" selection-end-line="95" selection-end-column="178" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1360,22 +1340,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="337" column="49" lean-forward="true" selection-start-line="337" selection-start-column="49" selection-end-line="337" selection-end-column="49" />
-          <folding>
-            <element signature="e#1578#2349#0#HTML" expanded="false" />
-            <element signature="e#2392#3733#0#HTML" expanded="false" />
-            <element signature="e#3777#4908#0#HTML" expanded="false" />
-            <element signature="e#4944#6462#0#HTML" expanded="false" />
-            <element signature="e#6504#7555#0#HTML" expanded="false" />
-            <element signature="e#7596#8662#0#HTML" expanded="false" />
-            <element signature="e#8703#9759#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/Users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
@@ -1383,6 +1347,14 @@
           <folding>
             <marker date="1628148978243" expanded="true" signature="3755:3829" ph="SELECT COUNT... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1401,11 +1373,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/config.php">
+    <entry file="file://$PROJECT_DIR$/template/admin/users/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="99" column="195" lean-forward="false" selection-start-line="99" selection-start-column="195" selection-end-line="99" selection-end-column="195" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="745">
+          <caret line="372" column="10" lean-forward="true" selection-start-line="372" selection-start-column="10" selection-end-line="372" selection-end-column="10" />
+          <folding>
+            <element signature="e#1578#2349#0#HTML" expanded="false" />
+            <element signature="e#2392#3733#0#HTML" expanded="false" />
+            <element signature="e#3777#4908#0#HTML" expanded="false" />
+            <element signature="e#4944#6462#0#HTML" expanded="false" />
+            <element signature="e#6504#7555#0#HTML" expanded="false" />
+            <element signature="e#7596#8662#0#HTML" expanded="false" />
+            <element signature="e#8703#9759#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
