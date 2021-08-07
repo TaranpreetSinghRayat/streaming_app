@@ -206,10 +206,60 @@ if(isset($_POST) && isset($_POST['action'])) {
             \App\Session::insert('role', 'Subscriber');
             echo json_encode(['status' => 1, 'msg' => 'Logging you as other user.', 'redir' => BASE_URL . 'home.php']);
             break;
+        case 'process_delete_user':
+            $USER = new \App\Users();
+            $USER->delete($_POST['userID']);
+                if(\App\Settings::get_value('app.delete_user_data') == 1){
+                    //@TODO:process remove all files and folders related to user.
+                }
+                echo json_encode(['status' => 1, 'msg' => \App\MSG::AUTH['USR_DEL_SCC']]);
+            break;
+        case 'process_get_user':
+            $USER = new \App\Users();
+            if($user_data = $USER->find($_POST['userID'])){
+                echo json_encode(['status' => 1, 'msg' => \App\MSG::AUTH['FT_USR_SCC'], 'data' => $user_data]);
+            }else{
+                echo json_encode(['status' => 0, 'msg' => \App\MSG::ACTION['INV_RQT']]);
+            }
+            break;
+        case 'process_edit_user':
+            $USER = new \App\Users();
+            $acc_key = generate_account_key();
+            $current_user = $USER->find($_POST['userID']);
+            $pass = ( (!empty($_POST['password'])) ) ? \App\Security::encrypt($_POST['password']) : $current_user['password'];
+            $data_arr = [
+                'username' => \App\Security::clean($_POST['username']),
+                'password' => $pass,
+                'email' => \App\Security::clean($_POST['email']),
+                'account_key' => $acc_key,
+                'role' => $_POST['role'],
+                'status' => $_POST['status']
+            ];
+            if($USER->update($_POST['userID'],$data_arr)){
+                //Send email notification to the user about account updated by admin.
+                $MAILER = new \App\Mailer();
+                $TPL = new \App\Template();
+                $TPL->set_folder(TEMPLATE.'/'. \App\Settings::get_value('app.theme') . '/emails');
+                $MAILER->sendMail(
+                    $_POST['email'],
+                    \App\Settings::get_value('app.name') . ' Notification',
+                    $TPL->render('notification',[
+                        'app_name' => \App\Settings::get_value('app.name'),
+                        'call_btn' => false,
+                        'user' => $_POST['username'] . "(".$_POST['email'].")",
+                        'notification_msg' => \App\MSG::NOTIFICATION['ACC_DATA_UPD']
+                    ])
+                );
+                echo json_encode(['status' => 1, 'msg' => \App\MSG::AUTH['SCC_UPD_DTL']]);
+            }else{
+                echo json_encode(['status' => 0, 'msg' => \App\MSG::AUTH['ERR_UPD_DTL']]);
+            }
+
+            break;
         default:
-            echo json_encode(['status' =>1 , 'msg' => 'Invalid Request.']);
+            echo json_encode(['status' =>1 , 'msg' => \App\MSG::ACTION['INV_RQT']]);
             break;
     }
 }else{
-    echo json_encode(['status' => 0, 'msg' => 'Invalid request.']);
+    echo json_encode(['status' => 0, 'msg' => \App\MSG::ACTION['INV_RQT']]);
 }

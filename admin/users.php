@@ -95,6 +95,35 @@ $('.gen_password').click(function(){
     });
 });
 
+$('.gen_password_edt').click(function () {
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-users.php",
+        data: {
+            action: "process_generate_password",
+        },
+        dataType: "html",
+        beforeSend: function () {
+
+        },
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                $('form#edit_user_frm input[name=password]').val(parsed_data.msg);
+            }else{
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            alert("Critical Error Contact Developer");
+        },
+        complete: function () {
+
+        }
+    });
+})
+
 $('#add_user_frm').submit(function (e) {
     e.preventDefault();
 
@@ -354,30 +383,120 @@ $('.delete_usr').click(function () {
     var btn = $(this);
     var userID = btn.attr('data-userID');
 
+    var delete_user = confirm("Are you sure ? You won't be able to revert this action.");
+
+    if(delete_user == true){
+        $.ajax({
+            type: "POST",
+            url: "<?= BASE_URL ?>ajax/ajax-admin-users.php",
+            data: {
+                action:'process_delete_user',
+                userID
+            },
+            dataType: "html",
+            success: function(resp){
+                console.log(resp);
+                var parsed_data = JSON.parse(resp);
+                if(parsed_data.status == 1){
+                    Toast.create('Success', parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+                }else{
+                    Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+                }
+            },
+            error: function (err) {
+                console.log(err)
+            },
+            complete: function () {
+                setTimeout(function () {
+                    window.location.reload(true);
+                },2000)
+            }
+        });
+    }else{
+        //handle if choose not to delete user.
+    }
+});
+
+$('.edit_user').click(function () {
+    var userID = $(this).attr('data-userID');
+
+    $('#edit_user').modal('show');
+
     $.ajax({
         type: "POST",
         url: "<?= BASE_URL ?>ajax/ajax-admin-users.php",
         data: {
-            action:'process_login_user',
+            action:'process_get_user',
             userID
         },
         dataType: "html",
+        beforeSend: function () {
+            $('div.spinner-border').css('display','block');
+            $('div.form-data').css('display','none');
+        },
         success: function(resp){
             console.log(resp);
             var parsed_data = JSON.parse(resp);
             if(parsed_data.status == 1){
-
+                //process stuff
+                $('#edit_userTitle').html('Edit ' + parsed_data.data.username)
+                $('form#edit_user_frm input[name=user_name]').val(parsed_data.data.username)
+                $('form#edit_user_frm input[name=email]').val(parsed_data.data.email)
+                $('form#edit_user_frm select[name=role]').val(parsed_data.data.role)
+                $('form#edit_user_frm select[name=status]').val(parsed_data.data.status)
+                $('form#edit_user_frm input[name=userID]').val(parsed_data.data.id)
             }else{
-
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
             }
         },
         error: function (err) {
             console.log(err)
         },
         complete: function () {
-            setTimeout(function () {
-                window.location.reload(true);
-            },2000)
+            $('div.spinner-border').css('display','none');
+            $('div.form-data').css('display','block');
+        }
+    });
+
+});
+
+$('#edit_user').on('hidden.bs.modal', function (e) {
+    window.location.reload(true);
+})
+    
+$('#edit_user_frm').submit(function (e) {
+    e.preventDefault();
+
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-users.php",
+        data: {
+            action: "process_edit_user",
+            username : $('form#edit_user_frm input[name=user_name]').val(),
+            email: $('form#edit_user_frm input[name=email]').val(),
+            password : $('form#edit_user_frm input[name=password]').val(),
+            role : $('form#edit_user_frm select[name=role]').val(),
+            status : $('form#edit_user_frm select[name=status]').val(),
+            userID : $('form#edit_user_frm input[name=userID]').val()
+        },
+        dataType: "html",
+        beforeSend: function () {
+            $('form#edit_user_frm button[type=submit]').attr('disabled',true);
+        },
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                Toast.create("Success", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+            }else{
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            alert("Critical Error Contact Developer");
+        },
+        complete: function () {
+
         }
     });
 });

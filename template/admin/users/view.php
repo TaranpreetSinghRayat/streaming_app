@@ -91,8 +91,9 @@
                                                     <?php endif; ?>
                                                 </td>
                                                 <td>
-                                                    <button class="btn-sm btn-info">Edit</button>
-
+                                                    <?php if(\App\Session::get('UID') != $user['id']): ?>
+                                                        <button class="btn-sm btn-info edit_user"  data-userID="<?= $user['id'] ?>">Edit</button>
+                                                    <?php endif; ?>
                                                     <?= (($user['id'] === \App\Session::get('UID'))) ? '' : '<button class="btn-sm btn-secondary btn-outline-warning login_as_user" data-userID="'. $user['id'] .'">Login As '.$user['username'].'</button>' ?>
                                                     <?= (($user['id'] != \App\Session::get('UID'))) ?  (($user['status'] == 1)) ?  '<button class="btn-warning btn-sm btn-outline-dark deactive_acc" data-userID=" '. $user['id'] .' ">De-Activate Account</button>' : '<button class="btn-success btn-sm btn-outline-warning activate_acc" data-userID=" '. $user['id'] .' ">Activate Account</button>' : ''?>
 
@@ -229,5 +230,78 @@
         </div>
     </div>
     <!-- IP Lookup Model -->
+
+    <!-- Edit user Model -->
+    <div class="modal fade" id="edit_user" tabindex="-1" aria-labelledby="edit_userTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="edit_userTitle">Edit</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="spinner-border" style="width: 3rem; height: 3rem; display:none" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="form-data">
+                        <form id="edit_user_frm" method="post" enctype="multipart/form-data" action="<?= $_SERVER['PHP_SELF'] ?>">
+                            <div class="field-wrapper">
+                                <input class="form-control" type="text" name="user_name" required>
+                                <div class="field-placeholder">Edit Username <span class="text-danger">*</span></div>
+                                <div class="form-text">
+                                    Please enter username for the user.
+                                </div>
+                            </div>
+
+                            <div class="field-wrapper">
+                                <input class="form-control" type="email" name="email" required>
+                                <div class="field-placeholder">Edit E-Mail <span class="text-danger">*</span></div>
+                                <div class="form-text">
+                                    Please enter email of the user.
+                                </div>
+                            </div>
+
+                            <div class="field-wrapper">
+                                <input class="form-control" type="password" name="password" >
+                                <div class="field-placeholder">Edit Password <span class="text-danger"></span></div>
+                                <div class="form-text">
+                                    Enter new password or leave it blank for keep using the old password.
+                                </div>
+                                <button type="button" class="btn-sm btn-light gen_password_edt">Generate Password</button>
+                            </div>
+
+                            <div class="field-wrapper">
+                                <select name="role">
+                                    <option value="0">Member</option>
+                                    <option value="1">Administrator</option>
+                                </select>
+                                <div class="field-placeholder">Edit Role <span class="text-danger">*</span></div>
+                                <div class="form-text">
+                                    Please select user role.
+                                </div>
+                            </div>
+
+                            <div class="field-wrapper">
+                                <select name="status">
+                                    <option value="0">In-Active</option>
+                                    <option value="1">Active</option>
+                                </select>
+                                <div class="field-placeholder">Edit Status <span class="text-danger">*</span></div>
+                                <div class="form-text">
+                                    Please select user account status. (In-active : Account activation email will be sent to user to activate account and start using it)
+                                </div>
+                            </div>
+                            <input type="hidden" name="userID" value="">
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Edit User Model -->
 </div>
 <!-- Content wrapper scroll end -->

@@ -47,7 +47,11 @@ class MSG
         'ACC_ACT_SCC' => 'Account marked activated and notification email sent to user.',
         'ACC_ACT_FAIL' => 'Something went wrong while marking account active. Please try again later.',
         'ACC_DEACT_SCC' => 'Account marked de-activated and notification email sent to user.',
-        'ACC_DEACT_FAIL' => 'Something went wrong while marking account de-activating account. Please try again later.'
+        'ACC_DEACT_FAIL' => 'Something went wrong while marking account de-activating account. Please try again later.',
+        'USR_DEL_SCC' => 'User deleted successfully.',
+        'FT_USR_SCC' => 'User data fetched succesfully.',
+        'ERR_UPD_DTL' => 'Something went wrong while updating user data. Please try again later.',
+        'SCC_UPD_DTL' => 'User data updated successfully.'
     ];
 
     const MAIL = [
@@ -101,6 +105,7 @@ class MSG
 
     const NOTIFICATION = [
         'ACC_ACT_AD' => "Your account is marked activated by administrator. You can now login  <a href='". BASE_URL ."login.php'></a>",
-        'ACC_DEACT_AD' => 'Your account is marked de-activated by administrator. You not be able to use your account until it marked activated. Please contact adminstrator for more information'
+        'ACC_DEACT_AD' => 'Your account is marked de-activated by administrator. You not be able to use your account until it marked activated. Please contact adminstrator for more information',
+        'ACC_DATA_UPD' => 'User your account has been updated by the administrator. Please contact administrator for more information.'
     ];
 }
