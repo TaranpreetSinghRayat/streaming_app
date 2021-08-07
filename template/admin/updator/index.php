@@ -25,12 +25,16 @@
                         <p><b>Current Version : </b><?= \App\Settings::get_value('app.version') ?></p>
                         <p><b>Available Version : </b><span class="avail_version"></span></p>
                         <button class="btn btn-light btn-sm" onclick="check_for_update()">Check</button>
-                        <button class="btn btn-success btn-sm updt_btn" style="display:none">Update <?= \App\Settings::get_value('app.name') ?></button>
+                        <progress style="display: none" id="progress" value="0"></progress>
+                        <span id="progress-text"></span>
+                        <button id="save-file" class="btn btn-success btn-sm updt_btn" style="display:none">Update <?= \App\Settings::get_value('app.name') ?></button>
+                        <button class="btn btn-success btn-sm install_btn" style="display:none">Install </button>
                     </div>
 
                 </div>
 
             </div>
         </div>
+        <p id="updt_msg"></p>
     </div>
 </div>

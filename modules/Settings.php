@@ -40,6 +40,13 @@ class Settings
         return $all_settings;
     }
 
+    public static function get_id_by_key(string $key)
+    {
+        $db = \PDODb::getInstance();
+        $setting_val = $db->where('name', $key)->where('status',1)->getOne(Config::TBL_NAMES['SETTINGS']);
+        return $setting_val['id'];
+    }
+
     public static function create(array $data)
     {
         $db = \PDODb::getInstance();

@@ -108,4 +108,14 @@ class MSG
         'ACC_DEACT_AD' => 'Your account is marked de-activated by administrator. You not be able to use your account until it marked activated. Please contact adminstrator for more information',
         'ACC_DATA_UPD' => 'User your account has been updated by the administrator. Please contact administrator for more information.'
     ];
+
+    const UPDATOR = [
+      'FL_DWN_SCC' => 'Updated files downloaded succesfully.',
+      'FL_DWN_ERR' => 'Something went wrong wile downloading update. Please try again later.',
+        'INS_SCC' => 'Update installed successfully.',
+        'INS_FAL' => 'Something went wrong while installing update. Please try again later or contact developer.',
+        'ERR_CLN' => 'Something went wrong while cleaning the updator files. Please try again later.',
+        'SCC_CLN' => 'Updator files cleared.',
+        'ERR_FL' => 'Updator files not found.'
+    ];
 }

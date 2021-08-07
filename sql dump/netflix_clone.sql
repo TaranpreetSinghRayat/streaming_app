@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2021 at 12:25 PM
+-- Generation Time: Aug 07, 2021 at 03:29 PM
 -- Server version: 5.7.18-log
 -- PHP Version: 7.1.1
 
@@ -199,7 +199,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `name`, `value`, `description`, `type`, `status`) VALUES
-(1, 'app.version', '1.0', 'Current application version', '0', 1),
+(1, 'app.version', '1.1', 'Current application version', '0', 1),
 (2, 'app.name', 'Stream', 'Application name', '1', 1),
 (3, 'app.description', 'Online streaming app and some other stuff and all', 'Application description', '3', 1),
 (4, 'app.theme', 'default', 'Application themes', '1', 1),
@@ -218,7 +218,9 @@ INSERT INTO `settings` (`id`, `name`, `value`, `description`, `type`, `status`) 
 (17, 'uploader.max_size', '4096', 'Max file upload size', '1', 1),
 (18, 'uploader.allowed_mime', 'png,jpeg,jpg', 'allowed upload formats', '1', 1),
 (19, 'iplookup.service_provider', 'http://api.ipstack.com/', 'ipstack', '1', 1),
-(20, 'iplookup.auth_key', '2dda8a934ea837d3b92e5a95d4385823', 'iplookup auth key', '1', 1);
+(20, 'iplookup.auth_key', '2dda8a934ea837d3b92e5a95d4385823', 'iplookup auth key', '1', 1),
+(21, 'app.delete_user_data', '0', 'Delete all data related to user or just remove the user from db. 0 = No | 1= yes', '1', 1),
+(22, 'updator.mirror', 'https://getmypc.in/netflix_updates/', 'server to check updates from', '1', 1);
 
 -- --------------------------------------------------------
 
@@ -269,9 +271,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`, `password`, `created_at`, `avatar`, `last_login`, `account_key`, `is_subscribed`, `role`, `ip`, `status`) VALUES
-(3, 'fear126', 'fear126@live.com', 'Fear', 'Fear', 'c2RBbDgwSjNFbmkrUlI2UG1JMGh6dz09', '2021-06-23 11:43:11', 'assets/avatars/3/deamon.png', '2021-07-05 13:17:58', '60e70203de4e6', '0', '1', '122.173.28.208', '1'),
+(3, 'fear126', 'fear126@live.com', 'Fear', 'Fear', 'c2RBbDgwSjNFbmkrUlI2UG1JMGh6dz09', '2021-06-23 11:43:11', 'assets/avatars/3/deamon.png', '2021-07-05 13:17:58', '60e70203de4e6', '0', '1', '127.0.0.1', '1'),
 (4, 'cadell', 'cadell126@live.com', 'cadell', 'cadell', 'c2RBbDgwSjNFbmkrUlI2UG1JMGh6dz09', '2021-07-30 07:51:03', 'assets/avatars/4/harsh.jpg', '2021-07-30 09:51:03', '6103b083e70ba', '1', '0', '122.173.28.210', '1'),
-(8, 'qwerty', 'qwerty@yopmail.com', 'John', 'Doe', 'ajNxU0U0THl5OVNKbzVRak5vc0lJZz09', '2021-07-31 10:40:08', 'assets/avatars/8/web-application-development-react-js.jpg', '2021-07-31 12:40:08', '610528d333667', '0', '0', '122.173.28.110', '0');
+(9, 'qwerty', 'qwerty@yopmail.com', 'John', 'Doe', 'YzRpNDZCM0JnRVFiRnNtVVZhT0gvdz09', '2021-08-07 07:59:32', 'assets/avatars/9/logo.png', '2021-08-07 09:59:32', '610e60136f6fa', '0', '0', '127.0.0.1', '1');
 
 -- --------------------------------------------------------
 
@@ -298,17 +300,17 @@ CREATE TABLE `videos` (
 --
 
 INSERT INTO `videos` (`id`, `title`, `filePath`, `uploadDate`, `releaseDate`, `views`, `season`, `episode`, `language`, `audio_languages`, `entityId`) VALUES
-(1, 'The Express', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 6, 0, 0, 'English', 'English', 1),
+(1, 'The Express', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 7, 0, 0, 'English', 'English', 1),
 (2, 'The Express 2', '/assets/videos/2/2.mp4', '2021-06-30 12:21:46', '2021-06-09', 14, 0, 0, 'English', 'English', 2),
-(3, 'The Express 3', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 8, 0, 0, 'English', 'English', 3),
+(3, 'The Express 3', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 9, 0, 0, 'English', 'English', 3),
 (4, 'The Express 4', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 1, 0, 0, 'English', 'English', 4),
 (5, 'The Express 5', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 1, 0, 0, 'English', 'English', 5),
-(6, 'pika', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 1, 1, 'English', 'English', 6),
-(7, 'chu', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 1, 2, 'English', 'English', 6),
-(8, 'ash', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 2, 1, 'English', 'English', 6),
-(9, 'dina', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 2, 2, 'English', 'English', 6),
-(10, 'saur', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 2, 3, 'English', 'English', 6),
-(11, 'omg', '/assets/videos/2/2.mp4', '2021-06-30 12:21:46', '2021-06-09', 18, 3, 1, 'English', 'English', 6);
+(6, 'pika', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 19, 1, 1, 'English', 'English', 6),
+(7, 'chu', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 19, 1, 2, 'English', 'English', 6),
+(8, 'ash', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 19, 2, 1, 'English', 'English', 6),
+(9, 'dina', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 19, 2, 2, 'English', 'English', 6),
+(10, 'saur', '/assets/videos/1/1.mp4', '2021-06-30 12:21:46', '2021-06-09', 19, 2, 3, 'English', 'English', 6),
+(11, 'omg', '/assets/videos/2/2.mp4', '2021-06-30 12:21:46', '2021-06-09', 19, 3, 1, 'English', 'English', 6);
 
 --
 -- Indexes for dumped tables
@@ -413,7 +415,7 @@ ALTER TABLE `page_headers`
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `tags`
 --
@@ -423,7 +425,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `videos`
 --
@@ -433,7 +435,7 @@ DELIMITER $$
 --
 -- Events
 --
-CREATE DEFINER=`fear`@`%` EVENT `update_user_token_3` ON SCHEDULE AT '2021-08-02 19:18:34' ON COMPLETION NOT PRESERVE ENABLE DO call netflix_clone.update_user_token(3, '6107f6860a053')$$
+CREATE DEFINER=`fear`@`%` EVENT `update_user_token_8` ON SCHEDULE AT '2021-08-06 12:29:43' ON COMPLETION NOT PRESERVE ENABLE DO call netflix_clone.update_user_token(8, '610b8c5f19ecf')$$
 
 DELIMITER ;
 
