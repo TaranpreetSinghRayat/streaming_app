@@ -52,6 +52,9 @@
     <link rel="stylesheet" href="<?= ADMIN_BASE_URL_ASSETS ?>vendor/search-filter/search-filter.css">
     <link rel="stylesheet" href="<?= ADMIN_BASE_URL_ASSETS ?>vendor/search-filter/custom-search-filter.css">
 
+    <!-- Summernote CSS -->
+    <link rel="stylesheet" href="<?= ADMIN_BASE_URL_ASSETS ?>vendor/summernote/summernote-bs4.css" />
+
 </head>
 <body>
 

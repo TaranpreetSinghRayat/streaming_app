@@ -268,7 +268,7 @@
     <!-- Content wrapper end -->
 
     <!-- App Footer start -->
-    <div class="app-footer">&copy; <?= APP_NAME ?> v<?= APP_VER ?> <?= date('Y') ?></div>
+    <div class="app-footer">&copy; <?= \App\Settings::get_value('app.name') .' | version : '. \App\Settings::get_value('app.version') .' | ' . date('Y') ?> </div>
     <!-- App footer end -->
 
 </div>

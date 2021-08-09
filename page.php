@@ -12,6 +12,7 @@ include "./config/config.php";
 <?php
 $PAGES = new \App\Pages();
 $PAGE_DATA = $PAGES->get_page_by_slug($_GET['view']);
+$TPL = new \App\Template(TEMPLATE.'/'. \App\Settings::get_value('app.theme'));
 ?>
 <!-- Header Section -->
 <?php if(!empty($PAGE_DATA)): ?>
@@ -22,7 +23,6 @@ $PAGE_DATA = $PAGES->get_page_by_slug($_GET['view']);
             exit();
         }
     endif;
-    $TPL = new \App\Template(TEMPLATE.'/'. \App\Settings::get_value('app.theme'));
     echo $TPL->render('include/header',[
         'page_description' => $PAGE_DATA['content'],
         'app_auth' => $_ENV['DEV'],
@@ -71,6 +71,7 @@ $PAGE_DATA = $PAGES->get_page_by_slug($_GET['view']);
 <!-- Footer Section -->
 <?php
 $PAGES = new \App\Pages();
+$GENRE = new \App\Genre();
 echo $TPL->render('include/footer',[
     'app_description' => \App\Settings::get_value('app.description'),
     'app_logo' => BASE_URL_ASSETS . \App\Settings::get_value('app.logo'),

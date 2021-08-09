@@ -36,5 +36,7 @@
             </div>
         </div>
         <p id="updt_msg"></p>
+
+        <div class="app-footer">&copy; <?= \App\Settings::get_value('app.name') .' | version : '. \App\Settings::get_value('app.version') .' | ' . date('Y') ?> </div>
     </div>
 </div>

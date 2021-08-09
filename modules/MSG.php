@@ -118,4 +118,14 @@ class MSG
         'SCC_CLN' => 'Updator files cleared.',
         'ERR_FL' => 'Updator files not found.'
     ];
+
+    const PAGES = [
+        'DRF_FAL' => 'Something went wrong while changing page status. Please try again later.',
+        'DRF_SUCC' => 'Page marked draft successfully.',
+        'PUB_SUCC' => 'Page published successfully.',
+        'PUB_FAL' => 'Something went wrong while publishing page. Please try again later.',
+        'DEL_SCC' => 'Page deleted successfully.',
+        'CRT_SUCC' => 'Page created successfully.',
+        'CRT_FAL' => 'Something went wrong while creating page. Please try again later.'
+    ];
 }

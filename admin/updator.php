@@ -197,6 +197,9 @@ $('.install_btn').click(function () {
                 },
                 error: function(err){
                     console.log(err);
+                },
+                complete: function(){
+                    window.location.reload(true)
                 }
             });
         }

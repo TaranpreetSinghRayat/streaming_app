@@ -70,6 +70,25 @@
 <script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/html5.min.js"></script>
 <script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/datatables/buttons.print.min.js"></script>
 
+<!-- Summernote JS -->
+<script src="<?= ADMIN_BASE_URL_ASSETS ?>vendor/summernote/summernote-bs4.js"></script>
+<script>
+    // Summernote
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            height: 210,
+            tabsize: 2,
+            focus: true,
+            toolbar: [
+                ['font', ['bold', 'underline', 'clear']],
+                ['para', ['ul', 'ol']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']],
+            ]
+        });
+    });
+</script>
+
 
 <!-- Main Js Required -->
 <script src="<?= ADMIN_BASE_URL_ASSETS ?>js/main.js"></script>

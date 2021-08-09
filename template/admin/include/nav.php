@@ -34,11 +34,10 @@ $active_arr = ['/admin/casts.php','/admin/genre.php', '/admin/tags.php'];
                 <span class="nav-link-text">Users</span>
             </a>
 
-            <a class="nav-link" id="pages-tab" data-bs-toggle="tab" href="#tab-pages" role="tab" aria-controls="tab-pages" aria-selected="false">
+            <a class="nav-link <?= ($_SERVER['SCRIPT_NAME'] == '/admin/pages.php') ? 'active' : '' ?>" id="pages-tab" data-bs-toggle="tab" href="#tab-pages" role="tab" aria-controls="tab-pages" aria-selected="false">
                 <i class="icon-book-open"></i>
                 <span class="nav-link-text">Pages</span>
             </a>
-
 
             <a class="nav-link <?= ($_SERVER['SCRIPT_NAME'] == '/admin/updator.php') ? 'active' : '' ?>" id="pages-tab" data-bs-toggle="tab" href="#tab-updator" role="tab" aria-controls="tab-pages" aria-selected="false">
                 <i class="icon-refresh-cw"></i>
@@ -133,7 +132,7 @@ $active_arr = ['/admin/casts.php','/admin/genre.php', '/admin/tags.php'];
 
 
             <!-- Pages tab -->
-            <div class="tab-pane fade" id="tab-pages" role="tabpanel" aria-labelledby="pages-tab">
+            <div class="tab-pane fade <?= ($_SERVER['SCRIPT_NAME'] == '/admin/pages.php') ? 'show active' : '' ?>" id="tab-pages" role="tabpanel" aria-labelledby="pages-tab">
 
                 <!-- Tab content header start -->
                 <div class="tab-pane-header">
@@ -145,7 +144,9 @@ $active_arr = ['/admin/casts.php','/admin/genre.php', '/admin/tags.php'];
                 <div class="sidebarMenuScroll">
                     <div class="sidebar-menu">
                         <ul>
-
+                            <li>
+                                <a href="<?= BASE_URL_ADMIN ?>pages.php" class="<?= ($_SERVER['SCRIPT_NAME'] == '/admin/pages.php') ? 'current-page' : '' ?>">Pages</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -365,7 +366,7 @@ $active_arr = ['/admin/casts.php','/admin/genre.php', '/admin/tags.php'];
                         <a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
 										<span class="avatar">
 											<img src="<?= BASE_URL ?><?= $USR['avatar'] ?>" alt="User Avatar">
-											<span class="status busy"></span>
+											<span class="status"></span>
 										</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end md" aria-labelledby="userSettings">
