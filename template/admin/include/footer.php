@@ -86,6 +86,17 @@
                 ['view', ['fullscreen', 'codeview', 'help']],
             ]
         });
+        $('#summernote_edit').summernote({
+            height: 210,
+            tabsize: 2,
+            focus: true,
+            toolbar: [
+                ['font', ['bold', 'underline', 'clear']],
+                ['para', ['ul', 'ol']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']],
+            ]
+        });
     });
 </script>
 

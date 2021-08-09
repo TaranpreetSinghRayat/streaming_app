@@ -224,5 +224,88 @@ $('.delete_page').click(function () {
         });
 
     });
+
+$('#edit_page').on('shown.bs.modal', function (event) {
+    var button = $(event.relatedTarget); // Button that triggered the modal
+    var pageID = button.attr('data-pageID');
+    var modal = $(this);
+    //ajax load single cast data to modal
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-pages.php",
+        data: {
+            action: "process_get_page",
+            pageID
+        },
+        dataType: "html",
+        beforeSend: function () {
+            $('div.spinner-border').css('display','block');
+            $('div.form-data').css('display','none');
+        },
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                modal.find('.modal-title').text('Edit '+ parsed_data.data.title);
+                modal.find('input[name=page_title]').val(parsed_data.data.title);
+                modal.find('input[name=page_slug]').val(parsed_data.data.slug);
+                modal.find('select[name=page_header]').val(parsed_data.data.headerID);
+                modal.find('select[name=page_permissions]').val(parsed_data.data.isLoggedIn);
+                modal.find('input[name=pageID]').val(parsed_data.data.id);
+                $("#summernote_edit").summernote("code", parsed_data.data.content);
+
+            }else{
+                Toast.create("Attention!", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            alert("Critical Error Contact Developer");
+        },
+        complete: function () {
+            $('div.spinner-border').css('display','none');
+            $('div.form-data').css('display','block');
+        }
+    });
+
+});
+
+$('#edit_page_frm').submit(function (e) {
+    e.preventDefault();
+
+    $.ajax({
+        type: "POST",
+        url: "<?= BASE_URL ?>ajax/ajax-admin-pages.php",
+        data: {
+            action: "process_update_page",
+            title : $('form#edit_page_frm input[name=page_title]').val(),
+            content : $('#summernote_edit').summernote('code'),
+            header: $('form#edit_page_frm select[name=page_header]').val(),
+            permission: $('form#edit_page_frm select[name=page_permissions]').val(),
+            slug: $('form#edit_page_frm input[name=page_slug]').val(),
+            pageID : $('form#edit_page_frm input[name=pageID]').val()
+        },
+        dataType: "html",
+        beforeSend: function () {
+
+        },
+        success: function (resp) {
+            console.log(resp);
+            var parsed_data = JSON.parse(resp);
+            if(parsed_data.status == 1){
+                Toast.create("Success", parsed_data.msg, TOAST_STATUS.SUCCESS, 5000);
+            }else{
+                Toast.create("Something went wrong", parsed_data.msg, TOAST_STATUS.DANGER, 5000);
+            }
+        },
+        error: function (err) {
+            alert("Critical Error Contact Developer");
+        },
+        complete: function () {
+            setTimeout(function(){
+                window.location.reload();
+            },2000);
+        }
+    });
+});
 </script>
 <!-- //Custon Script -->

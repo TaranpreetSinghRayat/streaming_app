@@ -67,6 +67,14 @@ class Pages
         return null;
     }
 
+    public function get_page(int $pageID)
+    {
+        if($result = $this->db->where('id', $pageID)->getOne(Config::TBL_NAMES['PAGES'])){
+            return $result;
+        }
+        return null;
+    }
+
     /**
      * CRUD OPERATIONS
      */

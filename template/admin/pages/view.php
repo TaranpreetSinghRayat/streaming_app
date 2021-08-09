@@ -47,7 +47,7 @@
                                             <td><?= ( ($page['status'] == 1) ) ? '<span style="color:greenyellow">Published</span>' : '<span style="color: darkred">Draft</span>' ?></td>
 
                                             <td>
-                                                <button data-bs-toggle="modal" data-bs-target="#edit_page data-pageID="<?= $page['id'] ?>" class="btn btn-sm btn-dark btn-outline-info" >Edit</button>
+                                                <button data-bs-toggle="modal" data-bs-target="#edit_page" data-pageID="<?= $page['id'] ?>" class="btn btn-sm btn-dark btn-outline-info" >Edit</button>
                                                 <?= ( ($page['status'] == 1) ) ? '<button data-pageID="'.$page['id'].'" class="btn btn-sm btn-outline-light draft_page">Draft Page</button>' : '<button data-pageID="'.$page['id'].'" class="btn btn-sm btn-outline-light publish_page">Publish Page</button>' ?>
 
                                                 <button data-pageID="<?= $page['id'] ?>" class="btn btn-sm btn-dark btn-outline-danger delete_page">Delete</button>
@@ -136,3 +136,69 @@
     </div>
 </div>
 <!-- //Add New Page Modal -->
+
+<!-- Edit Page Modal -->
+<div class="modal fade" id="edit_page" tabindex="-1" aria-labelledby="AddNewPageTitle" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalExtraLargeTitle">Edit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="spinner-border" style="width: 3rem; height: 3rem; display:none" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="form-data">
+                    <form method="post" id="edit_page_frm" action="<?= $_SERVER['PHP_SELF'] ?>">
+
+                        <div class="field-wrapper">
+                            <input name="page_title" class="form-control" type="text" required>
+                            <div class="field-placeholder">Title <span class="text-danger">*</span></div>
+                            <div class="form-text">
+                                Page title.
+                            </div>
+                        </div>
+
+                        <div class="field-wrapper mb-2">
+                            <textarea id="summernote_edit" name="editordata"></textarea>
+                            <div class="field-placeholder">Page Content<span class="text-danger">*</span></div>
+                        </div>
+
+                        <div class="field-wrapper">
+                            <select name="page_header" required>
+                                <?php foreach ( $PAGES->list_all_page_headers() as $header):?>
+                                    <option value="<?= $header['id'] ?>"><?= $header['name'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <div class="field-placeholder">Display Area <span class="text-danger">*</span></div>
+                            <div class="form-text">
+                                Select page header where page should be published.
+                            </div>
+                        </div>
+
+                        <div class="field-wrapper">
+                            <select name="page_permissions">
+                                <option value="0">Guests</option>
+                                <option value="1">Members</option>
+                            </select>
+                            <div class="field-placeholder">Page Permissions <span class="text-danger">*</span></div>
+                            <div class="form-text">
+                                Select permissions which group should able to view page.
+                            </div>
+                        </div>
+
+                        <input type="hidden" name="page_slug" value="">
+                        <input type="hidden" name="pageID" value="">
+
+                        <button class="btn btn-primary" type="submit">Update Page</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Edit Page Modal -->

@@ -67,6 +67,30 @@ if(isset($_POST) && isset($_POST['action'])) {
                 echo json_encode(['status' => 0, 'msg' => $valData->errors()]);
             }
             break;
+        case 'process_get_page':
+            $PAGES = new \App\Pages();
+            $PAGE = $PAGES->get_page((int)$_POST['pageID']);
+            if(!empty($PAGE)){
+                echo json_encode(['status' => 1, 'msg' => \App\MSG::PAGES['FTC_SCC'], 'data' => $PAGE]);
+            }else{
+                echo json_encode(['status' => 0, 'msg' => \App\MSG::PAGES['FTC_FAL']]);
+            }
+            break;
+        case 'process_update_page':
+            $PAGES = new \App\Pages();
+            if($PAGES->update($_POST['pageID'],[
+                'slug' => $_POST['slug'],
+                'title' => \App\Security::clean($_POST['title']),
+                'content' => $_POST['content'],
+                'headerID' => $_POST['header'],
+                'isLoggedIn' => $_POST['permission'],
+                'status' => 1
+            ])){
+                echo json_encode(['status' => 1, 'msg' => \App\MSG::PAGES['UPD_SUCC']]);
+            }else{
+                echo json_encode(['status' => 0, 'msg' => \App\MSG::PAGES['UPD_FAIL']]);
+            }
+            break;
         default:
             echo json_encode(['status' => 0, 'msg' => \App\MSG::ACTION['INV_RQT']]);
             break;

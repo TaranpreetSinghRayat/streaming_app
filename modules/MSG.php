@@ -126,6 +126,10 @@ class MSG
         'PUB_FAL' => 'Something went wrong while publishing page. Please try again later.',
         'DEL_SCC' => 'Page deleted successfully.',
         'CRT_SUCC' => 'Page created successfully.',
-        'CRT_FAL' => 'Something went wrong while creating page. Please try again later.'
+        'CRT_FAL' => 'Something went wrong while creating page. Please try again later.',
+        'FTC_SCC' => 'Page fetched success.',
+        'FTC_FAL' => 'Something went wrong while fetching page. Please try again later.',
+        'UPD_SUCC' => 'Page updated succesfully.',
+        'UPD_FAIL' => 'Something went wrong while updating page. Please try again later.'
     ];
 }
